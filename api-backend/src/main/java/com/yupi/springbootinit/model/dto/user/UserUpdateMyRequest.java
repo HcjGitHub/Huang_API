@@ -18,6 +18,11 @@ public class UserUpdateMyRequest implements Serializable {
     private String userName;
 
     /**
+     * 性别
+     */
+    private Integer gender;
+
+    /**
      * 用户头像
      */
     private String userAvatar;

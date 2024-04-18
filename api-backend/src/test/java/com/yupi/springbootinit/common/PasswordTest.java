@@ -14,7 +14,7 @@ public class PasswordTest {
     @Test
     public void productPassword(){
         String userPassword = "12345678";
-        String encryptPassword = DigestUtils.md5DigestAsHex(("yupi" + userPassword).getBytes());
+        String encryptPassword = DigestUtils.md5DigestAsHex(("huang" + userPassword).getBytes());
         System.out.println(encryptPassword);
     }
 }

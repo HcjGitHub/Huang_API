@@ -18,6 +18,7 @@ import com.yupi.springbootinit.model.dto.user.UserUpdateMyRequest;
 import com.yupi.springbootinit.model.dto.user.UserUpdateRequest;
 import com.yupi.springbootinit.model.entity.User;
 import com.yupi.springbootinit.model.vo.LoginUserVO;
+import com.yupi.springbootinit.model.vo.UserDevKeyVO;
 import com.yupi.springbootinit.model.vo.UserVO;
 import com.yupi.springbootinit.service.UserService;
 
@@ -316,5 +317,30 @@ public class UserController {
         boolean result = userService.updateById(user);
         ThrowUtils.throwIf(!result, ErrorCode.OPERATION_ERROR);
         return ResultUtils.success(true);
+    }
+
+    /**
+     * 获取当前登录用户ak/sk
+     *
+     * @return
+     */
+    @GetMapping("/key")
+    public BaseResponse<UserDevKeyVO> getKey(HttpServletRequest request) {
+        User user = userService.getLoginUser(request);
+        UserDevKeyVO userDevKeyVO = new UserDevKeyVO();
+        userDevKeyVO.setAccessKey(user.getAccessKey());
+        userDevKeyVO.setSecretKey(user.getSecretKey());
+        return ResultUtils.success(userDevKeyVO);
+    }
+
+    /**
+     * 重新生成ak/sk
+     *
+     * @return
+     */
+    @PostMapping("/gen/key")
+    public BaseResponse<UserDevKeyVO> genKey(HttpServletRequest request) {
+        UserDevKeyVO userDevKeyVO = userService.genKey(request);
+        return ResultUtils.success(userDevKeyVO);
     }
 }
