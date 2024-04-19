@@ -1,4 +1,4 @@
-package com.yupi.springbootinit.model.dto.interfaceinfo;
+package com.yupi.springbootinit.common;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
 @Data
-public class IdInterfaceInfoRequest implements Serializable {
+public class IdRequest implements Serializable {
 
     /**
      * 主键

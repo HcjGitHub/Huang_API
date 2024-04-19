@@ -44,8 +44,6 @@ Fapi-backend/src/main/java/com/yupi/springbootinit/model/vo/PostVO.java,4\f\4fd
 ê
 `api-backend/src/main/java/com/yupi/springbootinit/model/dto/postfavour/PostFavourAddRequest.java,b\3\b3768543f4dc8d9aa009da00ddafdb4eccdb6f98
 Ü
-Vapi-backend/src/main/java/com/yupi/springbootinit/model/dto/user/UserQueryRequest.java,4\d\4d2772e75fa7f3c9efac988860bd0c99299d1abb
-Ü
 Vapi-backend/src/main/java/com/yupi/springbootinit/model/dto/post/PostQueryRequest.java,1\2\1261f02894cbdfcf078e033fa85c0ca3beded71e
 
 Oapi-backend/src/main/java/com/yupi/springbootinit/model/dto/post/PostEsDTO.java,9\0\90d74b7bcbbacd6a5d8cbf0f6dbc651edc373d5e
@@ -77,8 +75,6 @@ Lapi-backend/src/main/java/com/yupi/springbootinit/constant/FileConstant.java,4
 Napi-backend/src/main/java/com/yupi/springbootinit/constant/CommonConstant.java,8\1\8192c46df51625efdaf478e643e37307e214ab36
 Ç
 Rapi-backend/src/main/java/com/yupi/springbootinit/exception/BusinessException.java,e\7\e71124e337a1c8b6d9ed264e6f5f3a483e2f5349
-|
-Lapi-backend/src/main/java/com/yupi/springbootinit/constant/UserConstant.java,b\4\b4f54b8da1e7319b3692b39891e407a4bb9f2674
 z
 Japi-backend/src/main/java/com/yupi/springbootinit/service/PostService.java,5\1\51c26262196503b79b22dd4e5625b792da6d768a
 Ä
@@ -165,8 +161,6 @@ z
 Japi-backend/src/main/java/com/yupi/springbootinit/common/BaseResponse.java,1\a\1a09823c53e1a35123fdea35f212ac06ac5c6bea
 â
 Yapi-backend/src/main/java/com/yupi/springbootinit/model/dto/user/UserRegisterRequest.java,8\4\84540f81effb7ab83915146ca39d26e3d32161f6
-Ü
-Vapi-backend/src/main/java/com/yupi/springbootinit/model/dto/user/UserLoginRequest.java,e\a\ea8c15fbd8000d3188992bcec4b44a12a2a42638
 Ñ
 Tapi-backend/src/main/java/com/yupi/springbootinit/model/dto/user/UserAddRequest.java,a\c\accc8e1647ad7376575f1dc4d7e82c8f18957305
 z

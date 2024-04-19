@@ -28,11 +28,10 @@ public class NameApiClient {
 
     public static final String LOCAL_ADDRESS = "http://localhost:8030";
 
-    public void getNameApi(String name) {
+    public String getNameApi(String name) {
         Map<String, Object> map = new HashMap<>();
         map.put("name", name);
-        String result = HttpUtil.get(LOCAL_ADDRESS + "/api/name/", map);
-        System.out.println(result);
+        return HttpUtil.get(LOCAL_ADDRESS + "/api/name/", map);
     }
 
 

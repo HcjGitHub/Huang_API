@@ -27,8 +27,8 @@ public class NameController {
         String sign = request.getHeader("sign");
         String body = request.getHeader("body");
         String accessKeys = request.getHeader("accessKey");
-        String secretKey = "70bf15b1924986aba2260b1f262bb71c";
-        String accessKey = "d12cbb4792fc7eb89139e18c0cb74020";
+        String secretKey = "d12cbb4792fc7eb89139e18c0cb74020";
+        String accessKey = "70bf15b1924986aba2260b1f262bb71c";
         secretKey = SignUtils.getSign(body, secretKey);
 
         if (!sign.equals(secretKey) || !accessKey.equals(accessKeys)) {
