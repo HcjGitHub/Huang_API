@@ -37,4 +37,22 @@ VALUES (2, 'huang', 'b0dd3697a192885d7c055db46155b26a', NULL, NULL, 'huang', NUL
         '163c5da70c75caf832d3109e0753db93', 'f15a031ee34532019827b0283d725e1b', '2023-07-08 19:56:04',
         '2023-08-02 15:20:00', 1);
 
-
+-- 接口信息
+create table if not exists huang_api.`interface_info`
+(
+    `id`               bigint                             not null auto_increment comment '主键' primary key,
+    `name`             varchar(256)                       not null comment '接口名字',
+    `description`      varchar(256)                       null comment '描述',
+    `url`              varchar(512)                       not null comment '接口地址',
+    `requestHeader`    text                               null comment '请求头',
+    `responseHeader`   text                               null comment '响应头',
+    `userId`           bigint                             null comment '创建者',
+    `status`           int      default 0                 not null comment '接口状态（0 - 关闭， 1 - 开启））',
+    `requestParams`    text                               NULL COMMENT '请求参数',
+    `method`           varchar(256)                       not null comment '请求类型',
+    `sdk`              varchar(255)                       NULL DEFAULT NULL COMMENT '接口对应的SDK类路径',
+    `parameterExample` varchar(255)                       NULL DEFAULT NULL COMMENT '参数示例',
+    `createTime`       datetime default CURRENT_TIMESTAMP not null comment '创建时间',
+    `updateTime`       datetime default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP comment '更新时间',
+    `isDelete`         tinyint  default 0                 not null comment '是否删除(0-未删, 1-已删)'
+) comment '接口信息' collate = utf8mb4_unicode_ci;

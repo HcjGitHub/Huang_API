@@ -101,3 +101,11 @@ knife4j:
         api-rule: package
         api-rule-resources:
           - com.yupi.springbootinit.controller
+
+# 自定义sdk
+
+
+huang:
+  api:
+    access-key: 70bf15b1924986aba2260b1f262bb71c
+    secret-key: d12cbb4792fc7eb89139e18c0cb74020

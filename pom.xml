@@ -11,5 +11,7 @@
 
     <modules>
         <module>api-backend</module>
+        <module>api-interface</module>
+        <module>api-client-sdk</module>
     </modules>
 </project>
