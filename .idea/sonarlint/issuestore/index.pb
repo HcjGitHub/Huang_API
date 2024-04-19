@@ -3,8 +3,6 @@
 Kapi-backend/src/test/java/com/yupi/springbootinit/MainApplicationTests.java,5\c\5c617e447e7c7f3125ddf3ffcacfc0bc1465499c
 ù
 m.idea/dataSources/b1e88ccb-16ab-4a22-b0d0-1c99c914d62a/storage_v2/_src_/schema/information_schema.FNRwLQ.meta,9\d\9df7efa7ab0f76cc606802084fc33ba8dc2049aa
-v
-Fapi-backend/src/main/java/com/yupi/springbootinit/MainApplication.java,a\1\a122cee21bfd47896796ea9e8749eb948c61b624
 D
 api-backend/mvnw.cmd,f\6\f6b1400183d8a21fad3113600185dca9470e4aa6
 E

@@ -1,0 +1,3 @@
+#Dubbo metadataReport Cache
+#Fri Apr 19 23:39:17 CST 2024
+com.yupi.springbootinit.provider.DemoService\:\:\:consumer\:huangapi-rpc-nacos={"release"\:"3.0.9","pid"\:"16192","interface"\:"com.yupi.springbootinit.provider.DemoService","application"\:"huangapi-rpc-nacos","dubbo"\:"2.0.2","side"\:"consumer","sticky"\:"false","register.ip"\:"192.168.209.1","methods"\:"sayHello","background"\:"false","timestamp"\:"1713541156453"}

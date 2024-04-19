@@ -1,0 +1,32 @@
+server:
+  port: 8040
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: path_route
+          uri: http://localhost:8030
+          predicates:
+            - Path=/api/name/user
+#          filters:
+#            - AddRequestParameter=name, jack
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: trace
+
+dubbo:
+  application:
+    name: huangapi-rpc-nacos
+#  scan:
+#    base-packages: com.anyan.apigateway.provider
+  protocol:
+    dubbo:
+      name: dubbo
+      port: 20881
+  registry:
+    address: nacos://localhost:8848

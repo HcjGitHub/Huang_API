@@ -1,0 +1,64 @@
+2024-04-19 23:37:04.760 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property : null
+2024-04-19 23:37:04.760 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Environment :null
+2024-04-19 23:37:04.760 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property :null
+2024-04-19 23:37:04.887 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.naming] Grpc connection connect
+2024-04-19 23:37:05.013 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:com.anyan.common.service.InnerUserService::, group:DEFAULT_GROUP, clusters: 
+2024-04-19 23:37:05.029 INFO [restartedMain:c.a.n.c.naming] init new ips(0) service: DEFAULT_GROUP@@providers:com.anyan.common.service.InnerUserService:: -> []
+2024-04-19 23:37:05.046 INFO [restartedMain:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@providers:com.anyan.common.service.InnerUserService:: -> []
+2024-04-19 23:37:05.046 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:com.anyan.common.service.InnerUserService, group:DEFAULT_GROUP, clusters: 
+2024-04-19 23:37:05.046 INFO [restartedMain:c.a.n.c.naming] init new ips(0) service: DEFAULT_GROUP@@providers:com.anyan.common.service.InnerUserService -> []
+2024-04-19 23:37:05.046 INFO [restartedMain:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@providers:com.anyan.common.service.InnerUserService -> []
+2024-04-19 23:37:05.046 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:com.anyan.common.service.InnerUserService::, group:DEFAULT_GROUP, clusters: 
+2024-04-19 23:37:05.046 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:com.anyan.common.service.InnerUserService, group:DEFAULT_GROUP, clusters: 
+2024-04-19 23:37:05.092 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property : null
+2024-04-19 23:37:05.092 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Environment :null
+2024-04-19 23:37:05.092 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property :null
+2024-04-19 23:37:05.219 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.naming] Grpc connection connect
+2024-04-19 23:37:05.403 INFO [restartedMain:c.a.n.c.naming] [DEREGISTER-SERVICE] public deregistering service consumers:com.anyan.common.service.InnerUserService:: with instance: Instance{instanceId='null', ip='192.168.209.1', port=0, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={}}
+2024-04-19 23:37:05.718 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos, group:DEFAULT_GROUP, clusters: 
+2024-04-19 23:37:05.718 INFO [restartedMain:c.a.n.c.naming] init new ips(0) service: DEFAULT_GROUP@@providers:org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos -> []
+2024-04-19 23:37:05.718 INFO [restartedMain:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@providers:org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos -> []
+2024-04-19 23:37:05.718 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos, group:DEFAULT_GROUP, clusters: 
+2024-04-19 23:37:05.784 INFO [restartedMain:c.a.n.c.naming] com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown begin
+2024-04-19 23:37:05.784 INFO [restartedMain:c.a.n.c.naming] com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown begin
+2024-04-19 23:37:06.127 INFO [restartedMain:c.a.n.c.naming] com.alibaba.nacos.client.naming.backups.FailoverReactor do shutdown stop
+2024-04-19 23:37:06.127 INFO [restartedMain:c.a.n.c.naming] com.alibaba.nacos.client.naming.cache.ServiceInfoHolder do shutdown stop
+2024-04-19 23:37:06.127 INFO [restartedMain:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown begin
+2024-04-19 23:37:06.127 INFO [restartedMain:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown begin
+2024-04-19 23:37:06.127 INFO [restartedMain:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServiceInfoUpdateService do shutdown stop
+2024-04-19 23:37:06.127 INFO [restartedMain:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServerListManager do shutdown begin
+2024-04-19 23:37:06.127 WARN [restartedMain:c.a.n.c.naming] [NamingHttpClientManager] Start destroying NacosRestTemplate
+2024-04-19 23:37:06.127 WARN [restartedMain:c.a.n.c.naming] [NamingHttpClientManager] Destruction of the end
+2024-04-19 23:37:06.127 INFO [restartedMain:c.a.n.c.naming] com.alibaba.nacos.client.naming.core.ServerListManager do shutdown stop
+2024-04-19 23:37:06.127 INFO [restartedMain:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown begin
+2024-04-19 23:37:06.127 INFO [restartedMain:c.a.n.c.naming] com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown begin
+2024-04-19 23:37:06.127 INFO [restartedMain:c.a.n.c.naming] com.alibaba.nacos.client.naming.beat.BeatReactor do shutdown stop
+2024-04-19 23:37:06.127 WARN [restartedMain:c.a.n.c.naming] [NamingHttpClientManager] Start destroying NacosRestTemplate
+2024-04-19 23:37:06.127 WARN [restartedMain:c.a.n.c.naming] [NamingHttpClientManager] Destruction of the end
+2024-04-19 23:37:06.127 INFO [restartedMain:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.http.NamingHttpClientProxy do shutdown stop
+2024-04-19 23:37:06.127 INFO [restartedMain:c.a.n.c.naming] Shutdown grpc redo service executor java.util.concurrent.ScheduledThreadPoolExecutor@5e4c14fa[Running, pool size = 1, active threads = 0, queued tasks = 1, completed tasks = 0]
+2024-04-19 23:37:06.127 INFO [restartedMain:c.a.n.c.naming] com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate do shutdown stop
+2024-04-19 23:39:16.500 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property : null
+2024-04-19 23:39:16.500 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Environment :null
+2024-04-19 23:39:16.500 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property :null
+2024-04-19 23:39:16.658 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.naming] Grpc connection connect
+2024-04-19 23:39:16.745 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:com.yupi.springbootinit.provider.DemoService::, group:DEFAULT_GROUP, clusters: 
+2024-04-19 23:39:16.753 INFO [restartedMain:c.a.n.c.naming] init new ips(1) service: DEFAULT_GROUP@@providers:com.yupi.springbootinit.provider.DemoService:: -> [{"instanceId":"192.168.209.1#20880#null#DEFAULT_GROUP@@providers:com.yupi.springbootinit.provider.DemoService::","ip":"192.168.209.1","port":20880,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@providers:com.yupi.springbootinit.provider.DemoService::","metadata":{"side":"provider","release":"3.0.9","methods":"sayHello","deprecated":"false","dubbo":"2.0.2","pid":"29768","interface":"com.yupi.springbootinit.provider.DemoService","service-name-mapping":"true","generic":"false","path":"com.yupi.springbootinit.provider.DemoService","protocol":"dubbo","application":"huangapi-rpc-nacos","background":"false","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1713541076408"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2024-04-19 23:39:16.753 INFO [restartedMain:c.a.n.c.naming] current ips:(1) service: DEFAULT_GROUP@@providers:com.yupi.springbootinit.provider.DemoService:: -> [{"instanceId":"192.168.209.1#20880#null#DEFAULT_GROUP@@providers:com.yupi.springbootinit.provider.DemoService::","ip":"192.168.209.1","port":20880,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@providers:com.yupi.springbootinit.provider.DemoService::","metadata":{"side":"provider","release":"3.0.9","methods":"sayHello","deprecated":"false","dubbo":"2.0.2","pid":"29768","interface":"com.yupi.springbootinit.provider.DemoService","service-name-mapping":"true","generic":"false","path":"com.yupi.springbootinit.provider.DemoService","protocol":"dubbo","application":"huangapi-rpc-nacos","background":"false","dynamic":"true","category":"providers","anyhost":"true","timestamp":"1713541076408"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2024-04-19 23:39:16.753 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:com.yupi.springbootinit.provider.DemoService, group:DEFAULT_GROUP, clusters: 
+2024-04-19 23:39:16.769 INFO [restartedMain:c.a.n.c.naming] init new ips(0) service: DEFAULT_GROUP@@providers:com.yupi.springbootinit.provider.DemoService -> []
+2024-04-19 23:39:16.769 INFO [restartedMain:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@providers:com.yupi.springbootinit.provider.DemoService -> []
+2024-04-19 23:39:16.896 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:com.yupi.springbootinit.provider.DemoService::, group:DEFAULT_GROUP, clusters: 
+2024-04-19 23:39:16.896 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:com.yupi.springbootinit.provider.DemoService, group:DEFAULT_GROUP, clusters: 
+2024-04-19 23:39:16.927 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property : null
+2024-04-19 23:39:16.927 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Environment :null
+2024-04-19 23:39:16.927 INFO [restartedMain:c.a.n.c.naming] initializer namespace from System Property :null
+2024-04-19 23:39:17.054 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.naming] Grpc connection connect
+2024-04-19 23:39:17.242 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:huangapi-rpc-nacos, group:DEFAULT_GROUP, clusters: 
+2024-04-19 23:39:17.246 INFO [restartedMain:c.a.n.c.naming] init new ips(1) service: DEFAULT_GROUP@@huangapi-rpc-nacos -> [{"instanceId":"192.168.209.1#20880#null#huangapi-rpc-nacos","ip":"192.168.209.1","port":20880,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@huangapi-rpc-nacos","metadata":{"dubbo.metadata-service.url-params":"{\"connections\":\"1\",\"version\":\"1.0.0\",\"dubbo\":\"2.0.2\",\"release\":\"3.0.9\",\"side\":\"provider\",\"port\":\"20880\",\"protocol\":\"dubbo\"}","dubbo.endpoints":"[{\"port\":20880,\"protocol\":\"dubbo\"}]","dubbo.metadata.revision":"6bc2a3ffef8150543d53355fe534f034","dubbo.metadata.storage-type":"local","timestamp":"1713541076408"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2024-04-19 23:39:17.246 INFO [restartedMain:c.a.n.c.naming] current ips:(1) service: DEFAULT_GROUP@@huangapi-rpc-nacos -> [{"instanceId":"192.168.209.1#20880#null#huangapi-rpc-nacos","ip":"192.168.209.1","port":20880,"weight":1.0,"healthy":true,"enabled":true,"ephemeral":true,"clusterName":"DEFAULT","serviceName":"DEFAULT_GROUP@@huangapi-rpc-nacos","metadata":{"dubbo.metadata-service.url-params":"{\"connections\":\"1\",\"version\":\"1.0.0\",\"dubbo\":\"2.0.2\",\"release\":\"3.0.9\",\"side\":\"provider\",\"port\":\"20880\",\"protocol\":\"dubbo\"}","dubbo.endpoints":"[{\"port\":20880,\"protocol\":\"dubbo\"}]","dubbo.metadata.revision":"6bc2a3ffef8150543d53355fe534f034","dubbo.metadata.storage-type":"local","timestamp":"1713541076408"},"instanceHeartBeatInterval":5000,"ipDeleteTimeout":30000,"instanceHeartBeatTimeOut":15000}]
+2024-04-19 23:39:17.479 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:huangapi-rpc-nacos, group:DEFAULT_GROUP, clusters: 
+2024-04-19 23:39:17.876 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos, group:DEFAULT_GROUP, clusters: 
+2024-04-19 23:39:17.876 INFO [restartedMain:c.a.n.c.naming] init new ips(0) service: DEFAULT_GROUP@@providers:org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos -> []
+2024-04-19 23:39:17.876 INFO [restartedMain:c.a.n.c.naming] current ips:(0) service: DEFAULT_GROUP@@providers:org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos -> []
+2024-04-19 23:39:17.876 INFO [restartedMain:c.a.n.c.naming] [SUBSCRIBE-SERVICE] service:providers:org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos, group:DEFAULT_GROUP, clusters: 

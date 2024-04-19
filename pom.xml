@@ -13,5 +13,6 @@
         <module>api-backend</module>
         <module>api-interface</module>
         <module>api-client-sdk</module>
+        <module>api-gateway</module>
     </modules>
 </project>
