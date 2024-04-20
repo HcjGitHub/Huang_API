@@ -1,15 +1,11 @@
 package com.anyan.apiclientsdk.client;
 
-import cn.hutool.core.util.RandomUtil;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.http.HttpResponse;
 import cn.hutool.http.HttpUtil;
 import cn.hutool.json.JSONUtil;
 import com.anyan.apiclientsdk.model.User;
-import com.anyan.apiclientsdk.utils.SignUtils;
-
-import java.util.HashMap;
-import java.util.Map;
+import com.anyan.apiclientsdk.utils.HeaderUtils;
 
 /**
  * @author 兕神
@@ -26,36 +22,25 @@ public class NameApiClient {
         this.secretKey = secretKey;
     }
 
-    public static final String LOCAL_ADDRESS = "http://localhost:8030";
+    public static final String GATEWAY_HOST = "http://localhost:8040";
 
     public String getNameApi(String name) {
-        Map<String, Object> map = new HashMap<>();
-        map.put("name", name);
-        return HttpUtil.get(LOCAL_ADDRESS + "/api/name/", map);
+        HttpRequest httpRequest = HttpUtil.createGet(GATEWAY_HOST + "/api/name/?name=" + name);
+        HttpResponse response = httpRequest
+                .addHeaders(HeaderUtils.getPostHeader(name, accessKey, secretKey))
+                .execute();
+        return response.body();
     }
 
 
     public String postNameApi(User user) {
         String json = JSONUtil.toJsonStr(user);
-        HttpResponse response = HttpRequest.post(LOCAL_ADDRESS + "/api/name/user/")
-                .addHeaders(getHeader(json))
+        HttpResponse response = HttpRequest.post(GATEWAY_HOST + "/api/name/user/")
+                .addHeaders(HeaderUtils.getPostHeader(json, accessKey, secretKey))
                 .body(json)
                 .execute();
-
-        System.out.println("状态码：" + response.getStatus());
         return response.body();
     }
 
-    private Map<String, String> getHeader(String body) {
-        Map<String, String> map = new HashMap<>();
-        map.put("accessKey", accessKey);
-        //密钥一定不要明文传输
-//        map.put("secretKey", secretKey);
-        map.put("body", body);
-        map.put("nonce", RandomUtil.randomNumbers(5));
-        map.put("timestamp", String.valueOf(System.currentTimeMillis() / 1000));
-        map.put("sign", SignUtils.getSign(body, secretKey));
-        return map;
-    }
 
 }

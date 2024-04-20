@@ -1,0 +1,6 @@
+#Dubbo cache
+#Sat Apr 20 11:45:25 CST 2024
+com.anyan.common.service.InnerUserInterfaceInfoService=["huangapi-rpc-nacos"]
+com.yupi.springbootinit.provider.DemoService=["huangapi-rpc-nacos"]
+com.anyan.common.service.InnerUserService=["huangapi-rpc-nacos"]
+com.anyan.common.service.InnerInterfaceInfoService=["huangapi-rpc-nacos"]

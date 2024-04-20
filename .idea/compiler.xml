@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
+        <module name="api-common" />
         <module name="api-client-sdk" />
         <module name="api-backend" />
         <module name="api-interface" />

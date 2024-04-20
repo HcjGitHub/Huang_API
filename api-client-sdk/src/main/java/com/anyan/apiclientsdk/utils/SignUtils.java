@@ -4,6 +4,7 @@ import cn.hutool.crypto.digest.DigestAlgorithm;
 import cn.hutool.crypto.digest.Digester;
 
 /**
+ * 签名工具类
  * @author 兕神
  * DateTime: 2024/4/10
  */
