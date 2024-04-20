@@ -57,7 +57,7 @@
 
         <dependency>
             <groupId>com.anyan</groupId>
-            <artifactId>anyanapi-common</artifactId>
+            <artifactId>api-common</artifactId>
             <version>0.0.1</version>
         </dependency>
 

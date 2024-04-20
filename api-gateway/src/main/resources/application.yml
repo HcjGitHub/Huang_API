@@ -8,7 +8,7 @@ spring:
         - id: path_route
           uri: http://localhost:8030
           predicates:
-            - Path=/api/name/user
+            - Path=/api/**
 #          filters:
 #            - AddRequestParameter=name, jack
 
