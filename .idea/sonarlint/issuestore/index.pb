@@ -155,8 +155,6 @@ H
 api-interface/.gitignore,b\1\b1ffbaed1ddb0d471d24aafd800eab2f62e1ca35
 „
 Tapi-interface/src/test/java/com/anyan/apiinterface/ApiInterfaceApplicationTests.java,c\8\c853667d8ef219ea0b2dd99574845e11a8bef8a4
-E
-api-interface/pom.xml,d\a\da98db113a83b6e24f8a9bed41a6d37c09de053c
 I
 api-client-sdk/.gitignore,c\5\c5acc1c5f2f58a8dfb22cda1a5a3f08b15545031
 s
@@ -171,8 +169,6 @@ Kapi-backend/src/main/java/com/yupi/springbootinit/model/vo/LoginUserVO.java,1\
 Vapi-backend/src/main/java/com/yupi/springbootinit/model/dto/user/UserLoginRequest.java,e\a\ea8c15fbd8000d3188992bcec4b44a12a2a42638
 †
 Vapi-backend/src/main/java/com/yupi/springbootinit/model/dto/user/UserQueryRequest.java,4\d\4d2772e75fa7f3c9efac988860bd0c99299d1abb
-
-Oapi-interface/src/main/java/com/anyan/apiinterface/ApiInterfaceApplication.java,5\7\57926da2a54d83fc6974be3176033c60eae6f86e
 w
 Gapi-backend/src/main/java/com/yupi/springbootinit/common/IdRequest.java,3\b\3bc1aedfbd17330b0e91166ebbf42b0682e46ac2
 |
@@ -183,15 +179,9 @@ F
 Oapi-backend/src/main/java/com/yupi/springbootinit/provider/DemoServiceImpl.java,c\a\ca7a7cd2a552b6af676b5729963ab22166290bf5
 {
 Kapi-backend/src/main/java/com/yupi/springbootinit/provider/DemoService.java,0\7\07b36f8981f4d83bcd58c0299f45e693024198eb
-Å
-”gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos,c\8\c8180f296f9c3927eea96e9b6bc7adaacfbf4a23
 §
 wgatewayDubboCache/nacos/config/fixed-localhost_8848_nacos/snapshot/mapping/com.yupi.springbootinit.provider.DemoService,d\5\d587cf388cefc26045869c3c02740b250b9348bc
 v
 Fapi-backend/src/main/java/com/yupi/springbootinit/MainApplication.java,a\1\a122cee21bfd47896796ea9e8749eb948c61b624
-±
-€gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A,8\c\8c1f87484bab71aa346803a897d3674823e3dfe4
 ~
 Napi-gateway/src/test/java/com/anyan/apigateway/ApiGatewayApplicationTests.java,7\6\765a653404b11aaff31161f07f44635b90dfd38d
-ª
-zgatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService,4\8\488ed1956c5dcc1c3b973c491781307b1a70fa56

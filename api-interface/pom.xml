@@ -48,6 +48,13 @@
             <version>0.0.1</version>
         </dependency>
 
+        <!--服务发现-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <version>2021.0.5.0</version>
+        </dependency>
+
     </dependencies>
     <dependencyManagement>
         <dependencies>
