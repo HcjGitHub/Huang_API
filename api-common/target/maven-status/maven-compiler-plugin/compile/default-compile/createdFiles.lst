@@ -1,0 +1,9 @@
+com\anyan\common\model\entity\PostThumb.class
+com\anyan\common\model\entity\Post.class
+com\anyan\common\service\InnerUserService.class
+com\anyan\common\service\InnerInterfaceInfoService.class
+com\anyan\common\model\entity\InterfaceInfo.class
+com\anyan\common\model\entity\UserInterfaceInfo.class
+com\anyan\common\service\InnerUserInterfaceInfoService.class
+com\anyan\common\model\entity\PostFavour.class
+com\anyan\common\model\entity\User.class

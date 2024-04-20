@@ -1,7 +1,7 @@
 package com.yupi.springbootinit.model.vo;
 
 
-import com.yupi.springbootinit.model.entity.InterfaceInfo;
+import com.anyan.common.model.entity.InterfaceInfo;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
 
