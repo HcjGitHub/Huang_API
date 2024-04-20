@@ -9,6 +9,7 @@ import com.anyan.common.service.InnerUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.reactivestreams.Publisher;
+import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
@@ -29,12 +30,14 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * 模拟接口调用自定义拦截器
+ *
  * @author 兕神
  * DateTime: 2024/4/14
  */
 @Component
 @Slf4j
-public class CustomGlobalFilter implements GlobalFilter, Ordered {
+public class InterfaceInfoInvokeFilter implements GatewayFilter, Ordered {
 
     @DubboReference
     private InnerUserService innerUserService;

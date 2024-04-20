@@ -22,10 +22,17 @@ public class NameApiClient {
         this.secretKey = secretKey;
     }
 
+    /**
+     * 网关host
+     */
     public static final String GATEWAY_HOST = "http://localhost:8040";
+    /**
+     * 用于区分接口管理和模拟接口平台
+     */
+    public static final String BASIS_PATH = "/api/interface";
 
     public String getNameApi(String name) {
-        HttpRequest httpRequest = HttpUtil.createGet(GATEWAY_HOST + "/api/name/?name=" + name);
+        HttpRequest httpRequest = HttpUtil.createGet(GATEWAY_HOST + BASIS_PATH + "/name/?name=" + name);
         HttpResponse response = httpRequest
                 .addHeaders(HeaderUtils.getPostHeader(name, accessKey, secretKey))
                 .execute();
@@ -35,7 +42,7 @@ public class NameApiClient {
 
     public String postNameApi(User user) {
         String json = JSONUtil.toJsonStr(user);
-        HttpResponse response = HttpRequest.post(GATEWAY_HOST + "/api/name/user/")
+        HttpResponse response = HttpRequest.post(GATEWAY_HOST + BASIS_PATH + "/name/user/")
                 .addHeaders(HeaderUtils.getPostHeader(json, accessKey, secretKey))
                 .body(json)
                 .execute();
