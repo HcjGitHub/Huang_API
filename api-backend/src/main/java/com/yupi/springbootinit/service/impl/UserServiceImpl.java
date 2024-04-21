@@ -1,5 +1,6 @@
 package com.yupi.springbootinit.service.impl;
 
+import static com.anyan.apicommon.utils.JwtUtils.SECRET_KEY;
 import static com.yupi.springbootinit.constant.UserConstant.USER_LOGIN_STATE;
 
 import cn.hutool.core.collection.CollUtil;
@@ -11,12 +12,18 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.google.gson.Gson;
+import com.yupi.springbootinit.common.BaseResponse;
 import com.yupi.springbootinit.common.ErrorCode;
+import com.yupi.springbootinit.common.ResultUtils;
 import com.yupi.springbootinit.constant.CommonConstant;
 import com.yupi.springbootinit.exception.BusinessException;
+import com.yupi.springbootinit.exception.ThrowUtils;
 import com.yupi.springbootinit.mapper.UserMapper;
+import com.yupi.springbootinit.model.dto.user.UserAddRequest;
 import com.yupi.springbootinit.model.dto.user.UserQueryRequest;
 import com.anyan.apicommon.model.entity.User;
+import com.yupi.springbootinit.model.dto.user.UserUpdateMyRequest;
+import com.yupi.springbootinit.model.dto.user.UserUpdateRequest;
 import com.yupi.springbootinit.model.enums.UserRoleEnum;
 import com.yupi.springbootinit.model.vo.LoginUserVO;
 import com.yupi.springbootinit.model.vo.UserDevKeyVO;
@@ -33,6 +40,9 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
+import io.jsonwebtoken.Jwts;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.bean.WxOAuth2UserInfo;
 import org.apache.commons.lang3.StringUtils;
@@ -207,25 +217,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     /**
-     * 获取当前登录用户（允许未登录）
-     *
-     * @param request
-     * @return
-     */
-    @Override
-    public User getLoginUserPermitNull(HttpServletRequest request) {
-        // 先判断是否已登录
-        Object userObj = request.getSession().getAttribute(USER_LOGIN_STATE);
-        User currentUser = (User) userObj;
-        if (currentUser == null || currentUser.getId() == null) {
-            return null;
-        }
-        // 从数据库查询（追求性能的话可以注释，直接走缓存）
-        long userId = currentUser.getId();
-        return this.getById(userId);
-    }
-
-    /**
      * 是否为管理员
      *
      * @param request
@@ -248,15 +239,35 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
      * 用户注销
      *
      * @param request
+     * @param response
      */
     @Override
-    public boolean userLogout(HttpServletRequest request) {
-        if (request.getSession().getAttribute(USER_LOGIN_STATE) == null) {
+    public boolean userLogout(HttpServletRequest request, HttpServletResponse response) {
+        Cookie[] cookies = request.getCookies();
+        if (cookies.length == 0) {
             throw new BusinessException(ErrorCode.OPERATION_ERROR, "未登录");
         }
-        // 移除登录态
-        request.getSession().removeAttribute(USER_LOGIN_STATE);
-        return true;
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("token")) {
+                String token = cookie.getValue();
+                if (!StringUtils.isEmpty(token)) {
+                    try {
+                        Jws<Claims> claimsJws = Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token);
+                        Claims claims = claimsJws.getBody();
+                        long userId = Long.parseLong(claims.get("id").toString());
+                        // 移除登录态
+                        stringRedisTemplate.delete(USER_LOGIN_STATE + userId);
+                        Cookie coo = new Cookie(cookie.getName(), token);
+                        coo.setMaxAge(0);
+                        response.addCookie(coo);
+                        return true;
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        throw new BusinessException(ErrorCode.OPERATION_ERROR, "未登录");
     }
 
     @Override
@@ -296,6 +307,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         String unionId = userQueryRequest.getUnionId();
         String mpOpenId = userQueryRequest.getMpOpenId();
         String userName = userQueryRequest.getUserName();
+        Integer gender = userQueryRequest.getGender();
         String userProfile = userQueryRequest.getUserProfile();
         String userRole = userQueryRequest.getUserRole();
         String sortField = userQueryRequest.getSortField();
@@ -305,6 +317,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         queryWrapper.eq(StringUtils.isNotBlank(unionId), "unionId", unionId);
         queryWrapper.eq(StringUtils.isNotBlank(mpOpenId), "mpOpenId", mpOpenId);
         queryWrapper.eq(StringUtils.isNotBlank(userRole), "userRole", userRole);
+        queryWrapper.eq(StringUtils.isNotBlank(userRole), "gender", gender);
         queryWrapper.like(StringUtils.isNotBlank(userProfile), "userProfile", userProfile);
         queryWrapper.like(StringUtils.isNotBlank(userName), "userName", userName);
         queryWrapper.orderBy(SqlUtils.validSortField(sortField), sortOrder.equals(CommonConstant.SORT_ORDER_ASC),
@@ -327,7 +340,88 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         updateWrapper.set("secretKey", userDevKeyVO.getSecretKey());
         this.update(updateWrapper);
 
+        //更新缓存信息
+        loginUser.setAccessKey(userDevKeyVO.getAccessKey());
+        loginUser.setSecretKey(userDevKeyVO.getSecretKey());
+        String userToJson = gson.toJson(loginUser);
+        stringRedisTemplate.opsForValue().set(USER_LOGIN_STATE + loginUser.getId(), userToJson
+                , JwtUtils.EXPIRE, TimeUnit.MILLISECONDS);
         return userDevKeyVO;
+    }
+
+    @Override
+    public BaseResponse<Boolean> updateMyUser(UserUpdateMyRequest userUpdateMyRequest, HttpServletRequest request) {
+        if (userUpdateMyRequest == null) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        User loginUser = getLoginUser(request);
+        if (loginUser == null) {
+            throw new BusinessException(ErrorCode.NOT_LOGIN_ERROR);
+        }
+        User user = new User();
+        BeanUtils.copyProperties(userUpdateMyRequest, user);
+        user.setId(loginUser.getId());
+        boolean result = this.updateById(user);
+        ThrowUtils.throwIf(!result, ErrorCode.OPERATION_ERROR);
+
+        //更新缓存
+        loginUser.setUserName(userUpdateMyRequest.getUserName());
+        loginUser.setGender(userUpdateMyRequest.getGender());
+        String toJson = gson.toJson(loginUser);
+        stringRedisTemplate.opsForValue().set(USER_LOGIN_STATE + loginUser.getId(), toJson
+                , JwtUtils.EXPIRE, TimeUnit.MILLISECONDS);
+        return ResultUtils.success(true);
+    }
+
+    @Override
+    public BaseResponse<Boolean> updateUser(UserUpdateRequest userUpdateRequest) {
+        if (userUpdateRequest == null) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        User user = new User();
+        BeanUtils.copyProperties(userUpdateRequest, user);
+        boolean result = this.updateById(user);
+        ThrowUtils.throwIf(!result, ErrorCode.OPERATION_ERROR);
+
+        User newUser = this.getById(user.getId());
+        String toJson = gson.toJson(newUser);
+        String redisKey = USER_LOGIN_STATE + newUser.getId();
+        String userFromUser = stringRedisTemplate.opsForValue().get(redisKey);
+        if (!StringUtils.isBlank(userFromUser)) {
+            stringRedisTemplate.opsForValue().set(redisKey, toJson
+                    , JwtUtils.EXPIRE, TimeUnit.MILLISECONDS);
+        }
+        return ResultUtils.success(true);
+    }
+
+    @Override
+    public BaseResponse<Boolean> removeUser(Long userId) {
+        if (userId == null) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        boolean result = this.removeById(userId);
+
+        //清除缓存数据
+        stringRedisTemplate.delete(USER_LOGIN_STATE + userId);
+        return ResultUtils.success(result);
+    }
+
+    @Override
+    public Long addUser(UserAddRequest userAddRequest) {
+        User user = new User();
+        BeanUtils.copyProperties(userAddRequest, user);
+        // 默认密码 12345678
+        String defaultPassword = "12345678";
+        String encryptPassword = DigestUtils.md5DigestAsHex((SALT + defaultPassword).getBytes());
+        user.setUserPassword(encryptPassword);
+        UserDevKeyVO userDevKeyVO = genKey(user.getUserAccount());
+        user.setAccessKey(userDevKeyVO.getAccessKey());
+        user.setSecretKey(userDevKeyVO.getSecretKey());
+        boolean result = this.save(user);
+        if (result) {
+            return user.getId();
+        }
+        return null;
     }
 
     private UserDevKeyVO genKey(String userAccount) {

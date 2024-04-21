@@ -1,6 +1,7 @@
 package com.yupi.springbootinit.model.dto.user;
 
 import java.io.Serializable;
+
 import lombok.Data;
 
 /**
@@ -16,6 +17,11 @@ public class UserAddRequest implements Serializable {
      * 用户昵称
      */
     private String userName;
+
+    /**
+     * 性别
+     */
+    private Integer gender;
 
     /**
      * 账号

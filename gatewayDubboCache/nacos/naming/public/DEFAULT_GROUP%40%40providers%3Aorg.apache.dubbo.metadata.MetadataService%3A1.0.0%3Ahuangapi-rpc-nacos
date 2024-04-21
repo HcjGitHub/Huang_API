@@ -1,1 +1,1 @@
-{"name":"providers:org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos","groupName":"DEFAULT_GROUP","clusters":"","cacheMillis":10000,"hosts":[],"lastRefTime":1713680247814,"checksum":"","allIPs":false,"reachProtectionThreshold":false,"valid":true}
+{"name":"providers:org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos","groupName":"DEFAULT_GROUP","clusters":"","cacheMillis":10000,"hosts":[],"lastRefTime":1713714524179,"checksum":"","allIPs":false,"reachProtectionThreshold":false,"valid":true}

@@ -2,11 +2,16 @@ package com.yupi.springbootinit.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.yupi.springbootinit.common.BaseResponse;
+import com.yupi.springbootinit.model.dto.user.UserAddRequest;
 import com.yupi.springbootinit.model.dto.user.UserQueryRequest;
 import com.anyan.apicommon.model.entity.User;
+import com.yupi.springbootinit.model.dto.user.UserUpdateMyRequest;
+import com.yupi.springbootinit.model.dto.user.UserUpdateRequest;
 import com.yupi.springbootinit.model.vo.LoginUserVO;
 import com.yupi.springbootinit.model.vo.UserDevKeyVO;
 import com.yupi.springbootinit.model.vo.UserVO;
+
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -60,14 +65,6 @@ public interface UserService extends IService<User> {
     User getLoginUser(HttpServletRequest request);
 
     /**
-     * 获取当前登录用户（允许未登录）
-     *
-     * @param request
-     * @return
-     */
-    User getLoginUserPermitNull(HttpServletRequest request);
-
-    /**
      * 是否为管理员
      *
      * @param request
@@ -87,9 +84,10 @@ public interface UserService extends IService<User> {
      * 用户注销
      *
      * @param request
+     * @param response
      * @return
      */
-    boolean userLogout(HttpServletRequest request);
+    boolean userLogout(HttpServletRequest request, HttpServletResponse response);
 
     /**
      * 获取脱敏的已登录用户信息
@@ -124,8 +122,42 @@ public interface UserService extends IService<User> {
 
     /**
      * 重新生成ak/sk
+     *
      * @param request
      * @return
      */
     UserDevKeyVO genKey(HttpServletRequest request);
+
+    /**
+     * 更新当前登录用户信息
+     *
+     * @param userUpdateMyRequest
+     * @param request
+     * @return
+     */
+    BaseResponse<Boolean> updateMyUser(UserUpdateMyRequest userUpdateMyRequest, HttpServletRequest request);
+
+    /**
+     * 更新用户数据
+     *
+     * @param userUpdateRequest
+     * @return
+     */
+    BaseResponse<Boolean> updateUser(UserUpdateRequest userUpdateRequest);
+
+    /**
+     * 删除用户
+     *
+     * @param userId 删除用户id
+     * @return
+     */
+    BaseResponse<Boolean> removeUser(Long userId);
+
+    /**
+     * 添加用户
+     *
+     * @param userAddRequest
+     * @return 用户id
+     */
+    Long addUser(UserAddRequest userAddRequest);
 }
