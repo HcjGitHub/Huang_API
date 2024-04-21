@@ -1,6 +1,6 @@
 package com.yupi.springbootinit.service;
 
-import com.anyan.common.model.entity.UserInterfaceInfo;
+import com.anyan.apicommon.model.entity.UserInterfaceInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;

@@ -1,12 +1,12 @@
 package com.yupi.springbootinit.service.impl.inner;
 
 
-import com.anyan.common.service.InnerUserService;
+import com.anyan.apicommon.service.InnerUserService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.yupi.springbootinit.common.ErrorCode;
 import com.yupi.springbootinit.exception.BusinessException;
 import com.yupi.springbootinit.mapper.UserMapper;
-import com.anyan.common.model.entity.User;
+import com.anyan.apicommon.model.entity.User;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.dubbo.config.annotation.DubboService;
 

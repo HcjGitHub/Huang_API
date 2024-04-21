@@ -1,7 +1,7 @@
 package com.yupi.springbootinit.service.impl.inner;
 
-import com.anyan.common.model.entity.InterfaceInfo;
-import com.anyan.common.service.InnerInterfaceInfoService;
+import com.anyan.apicommon.model.entity.InterfaceInfo;
+import com.anyan.apicommon.service.InnerInterfaceInfoService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.yupi.springbootinit.common.ErrorCode;
 import com.yupi.springbootinit.exception.BusinessException;

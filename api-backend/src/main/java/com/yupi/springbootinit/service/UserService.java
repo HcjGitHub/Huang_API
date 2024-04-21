@@ -3,12 +3,14 @@ package com.yupi.springbootinit.service;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yupi.springbootinit.model.dto.user.UserQueryRequest;
-import com.anyan.common.model.entity.User;
+import com.anyan.apicommon.model.entity.User;
 import com.yupi.springbootinit.model.vo.LoginUserVO;
 import com.yupi.springbootinit.model.vo.UserDevKeyVO;
 import com.yupi.springbootinit.model.vo.UserVO;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import me.chanjar.weixin.common.bean.WxOAuth2UserInfo;
 
 /**
@@ -35,9 +37,10 @@ public interface UserService extends IService<User> {
      * @param userAccount  用户账户
      * @param userPassword 用户密码
      * @param request
+     * @param response
      * @return 脱敏后的用户信息
      */
-    LoginUserVO userLogin(String userAccount, String userPassword, HttpServletRequest request);
+    LoginUserVO userLogin(String userAccount, String userPassword, HttpServletRequest request, HttpServletResponse response);
 
     /**
      * 用户登录（微信开放平台）

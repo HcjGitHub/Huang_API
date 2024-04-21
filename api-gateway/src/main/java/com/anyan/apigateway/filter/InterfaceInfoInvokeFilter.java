@@ -1,17 +1,16 @@
 package com.anyan.apigateway.filter;
 
 import com.anyan.apiclientsdk.utils.SignUtils;
-import com.anyan.common.model.entity.InterfaceInfo;
-import com.anyan.common.model.entity.User;
-import com.anyan.common.service.InnerInterfaceInfoService;
-import com.anyan.common.service.InnerUserInterfaceInfoService;
-import com.anyan.common.service.InnerUserService;
+import com.anyan.apicommon.model.entity.InterfaceInfo;
+import com.anyan.apicommon.model.entity.User;
+import com.anyan.apicommon.service.InnerInterfaceInfoService;
+import com.anyan.apicommon.service.InnerUserInterfaceInfoService;
+import com.anyan.apicommon.service.InnerUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.reactivestreams.Publisher;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
-import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.core.io.buffer.DataBufferUtils;
@@ -206,6 +205,6 @@ public class InterfaceInfoInvokeFilter implements GatewayFilter, Ordered {
 
     @Override
     public int getOrder() {
-        return -1;
+        return -2;
     }
 }

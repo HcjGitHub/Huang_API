@@ -4,7 +4,7 @@ package com.yupi.springbootinit.service;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yupi.springbootinit.model.dto.interfaceinfo.InterfaceInfoQueryRequest;
-import com.anyan.common.model.entity.InterfaceInfo;
+import com.anyan.apicommon.model.entity.InterfaceInfo;
 import com.yupi.springbootinit.model.vo.InterfaceInfoVO;
 
 import javax.servlet.http.HttpServletRequest;

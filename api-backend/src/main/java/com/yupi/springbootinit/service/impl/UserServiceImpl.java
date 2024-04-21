@@ -5,15 +5,18 @@ import static com.yupi.springbootinit.constant.UserConstant.USER_LOGIN_STATE;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.RandomUtil;
 import cn.hutool.crypto.digest.DigestUtil;
+import cn.hutool.json.JSONUtil;
+import com.anyan.apicommon.utils.JwtUtils;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.google.gson.Gson;
 import com.yupi.springbootinit.common.ErrorCode;
 import com.yupi.springbootinit.constant.CommonConstant;
 import com.yupi.springbootinit.exception.BusinessException;
 import com.yupi.springbootinit.mapper.UserMapper;
 import com.yupi.springbootinit.model.dto.user.UserQueryRequest;
-import com.anyan.common.model.entity.User;
+import com.anyan.apicommon.model.entity.User;
 import com.yupi.springbootinit.model.enums.UserRoleEnum;
 import com.yupi.springbootinit.model.vo.LoginUserVO;
 import com.yupi.springbootinit.model.vo.UserDevKeyVO;
@@ -23,13 +26,18 @@ import com.yupi.springbootinit.utils.SqlUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
+import javax.annotation.Resource;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.bean.WxOAuth2UserInfo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
@@ -47,6 +55,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
      * 盐值，混淆密码
      */
     public static final String SALT = "huang";
+
+    @Resource
+    private StringRedisTemplate stringRedisTemplate;
+
+    @Resource
+    private Gson gson;
 
     @Override
     public long userRegister(String userAccount, String userPassword, String checkPassword) {
@@ -95,7 +109,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     @Override
-    public LoginUserVO userLogin(String userAccount, String userPassword, HttpServletRequest request) {
+    public LoginUserVO userLogin(String userAccount, String userPassword, HttpServletRequest request
+            , HttpServletResponse response) {
         // 1. 校验
         if (StringUtils.isAnyBlank(userAccount, userPassword)) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "参数为空");
@@ -119,7 +134,19 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             throw new BusinessException(ErrorCode.PARAMS_ERROR, "用户不存在或密码错误");
         }
         // 3. 记录用户的登录态
-        request.getSession().setAttribute(USER_LOGIN_STATE, user);
+        //request.getSession().setAttribute(USER_LOGIN_STATE, user);
+        //通过JWT+Redis实现分布式登录
+        //利用自定义jwt生成token
+        String token = JwtUtils.createJwtToken(user.getId(), user.getUserName());
+        //将 token 保存到前端cookie
+        Cookie cookie = new Cookie("token", token);
+        //任何路径可访问
+        cookie.setPath("/");
+        response.addCookie(cookie);
+        //json化user保存到redis
+        String userToJson = gson.toJson(user);
+        stringRedisTemplate.opsForValue().set(USER_LOGIN_STATE + user.getId(), userToJson
+                , JwtUtils.EXPIRE, TimeUnit.MILLISECONDS);
         return this.getLoginUserVO(user);
     }
 
@@ -164,14 +191,15 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public User getLoginUser(HttpServletRequest request) {
         // 先判断是否已登录
-        Object userObj = request.getSession().getAttribute(USER_LOGIN_STATE);
-        User currentUser = (User) userObj;
-        if (currentUser == null || currentUser.getId() == null) {
+//        Object userObj = request.getSession().getAttribute(USER_LOGIN_STATE);
+        Long userId = JwtUtils.parserUserIdByToken(request);
+        if (userId == null) {
             throw new BusinessException(ErrorCode.NOT_LOGIN_ERROR);
         }
-        // 从数据库查询（追求性能的话可以注释，直接走缓存）
-        long userId = currentUser.getId();
-        currentUser = this.getById(userId);
+
+        //获取redis中User,防止该用户被删除
+        String userJson = stringRedisTemplate.opsForValue().get(USER_LOGIN_STATE + userId);
+        User currentUser = gson.fromJson(userJson, User.class);
         if (currentUser == null) {
             throw new BusinessException(ErrorCode.NOT_LOGIN_ERROR);
         }
@@ -293,10 +321,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         UserDevKeyVO userDevKeyVO = genKey(loginUser.getUserAccount());
         //更新ak/sk
         UpdateWrapper<User> updateWrapper = new UpdateWrapper<>();
-        updateWrapper.eq("id",loginUser.getId());
-        updateWrapper.eq("userAccount",loginUser.getUserAccount());
-        updateWrapper.set("accessKey",userDevKeyVO.getAccessKey());
-        updateWrapper.set("secretKey",userDevKeyVO.getSecretKey());
+        updateWrapper.eq("id", loginUser.getId());
+        updateWrapper.eq("userAccount", loginUser.getUserAccount());
+        updateWrapper.set("accessKey", userDevKeyVO.getAccessKey());
+        updateWrapper.set("secretKey", userDevKeyVO.getSecretKey());
         this.update(updateWrapper);
 
         return userDevKeyVO;

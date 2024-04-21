@@ -10,8 +10,8 @@ import com.yupi.springbootinit.exception.ThrowUtils;
 import com.yupi.springbootinit.mapper.InterfaceInfoMapper;
 
 import com.yupi.springbootinit.model.dto.interfaceinfo.InterfaceInfoQueryRequest;
-import com.anyan.common.model.entity.InterfaceInfo;
-import com.anyan.common.model.entity.User;
+import com.anyan.apicommon.model.entity.InterfaceInfo;
+import com.anyan.apicommon.model.entity.User;
 import com.yupi.springbootinit.model.vo.InterfaceInfoVO;
 import com.yupi.springbootinit.model.vo.UserVO;
 import com.yupi.springbootinit.service.InterfaceInfoService;

@@ -21,7 +21,7 @@
         totalNum,leftNum,status,
         createTime,updateTime,isDelete
     </sql>
-    <select id="statisticsTopTotalNum" resultType="com.anyan.common.model.entity.UserInterfaceInfo">
+    <select id="statisticsTopTotalNum" resultType="com.anyan.apicommon.model.entity.UserInterfaceInfo">
         select interfaceInfoId, sum(totalNum) totalNum
         from user_interface_info
         where isDelete = 0

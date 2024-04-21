@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yupi.springbootinit.common.ErrorCode;
 import com.yupi.springbootinit.exception.BusinessException;
 import com.yupi.springbootinit.mapper.UserInterfaceInfoMapper;
-import com.anyan.common.model.entity.UserInterfaceInfo;
+import com.anyan.apicommon.model.entity.UserInterfaceInfo;
 import com.yupi.springbootinit.service.UserInterfaceInfoService;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
 package com.yupi.springbootinit.mapper;
 
-import com.anyan.common.model.entity.UserInterfaceInfo;
+import com.anyan.apicommon.model.entity.UserInterfaceInfo;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.List;
