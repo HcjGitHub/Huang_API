@@ -70,20 +70,6 @@ public class InterfaceInfoServiceImpl extends ServiceImpl<InterfaceInfoMapper, I
         }
     }
 
-    @Override
-    public InterfaceInfoVO getInterfaceInfoVO(InterfaceInfo interfaceInfo, HttpServletRequest request) {
-        InterfaceInfoVO interfaceInfoVO = InterfaceInfoVO.objToVo(interfaceInfo);
-        // 1. 关联查询用户信息
-        Long userId = interfaceInfo.getUserId();
-        User user = null;
-        if (userId != null && userId > 0) {
-            user = userService.getById(userId);
-        }
-        UserVO userVO = userService.getUserVO(user);
-        interfaceInfoVO.setUser(userVO);
-        return interfaceInfoVO;
-    }
-
     /**
      * 获取查询包装类
      *

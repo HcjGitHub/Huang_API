@@ -61,15 +61,35 @@ create table if not exists huang_api.`interface_info`
 DROP TABLE IF EXISTS huang_api.`user_interface_info`;
 CREATE TABLE huang_api.`user_interface_info`
 (
-    `id`              bigint(0)   NOT NULL AUTO_INCREMENT COMMENT '主键',
-    `userId`          bigint(0)   NULL DEFAULT NULL COMMENT '用户id',
-    `interfaceInfoId` bigint(0)   NULL DEFAULT NULL COMMENT '调用接口id',
-    `totalNum`        int(0)      NULL DEFAULT 0 COMMENT '接口的总调用次数',
-    `leftNum`         int(0)      NULL DEFAULT NULL COMMENT '接口剩余调用次数',
-    `status`          int(0)      NULL DEFAULT 1 COMMENT '0 禁止调用 1 允许调用',
-    `createTime`       datetime default CURRENT_TIMESTAMP not null comment '创建时间',
-    `updateTime`       datetime default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP comment '更新时间',
-    `isDelete`        int(0)      NULL DEFAULT 0 COMMENT '是否删除(0-未删, 1-已删)',
+    `id`              bigint(0) NOT NULL AUTO_INCREMENT COMMENT '主键',
+    `userId`          bigint(0) NULL DEFAULT NULL COMMENT '用户id',
+    `interfaceInfoId` bigint(0) NULL DEFAULT NULL COMMENT '调用接口id',
+    `totalNum`        int(0)    NULL DEFAULT 0 COMMENT '接口的总调用次数',
+    `leftNum`         int(0)    NULL DEFAULT NULL COMMENT '接口剩余调用次数',
+    `status`          int(0)    NULL DEFAULT 1 COMMENT '0 禁止调用 1 允许调用',
+    `createTime`      datetime       default CURRENT_TIMESTAMP not null comment '创建时间',
+    `updateTime`      datetime       default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP comment '更新时间',
+    `isDelete`        int(0)    NULL DEFAULT 0 COMMENT '是否删除(0-未删, 1-已删)',
 #     `version`         int(0)      NULL DEFAULT 0 COMMENT '乐观锁版本号',
     PRIMARY KEY (`id`) USING BTREE
 ) comment '接口信息' collate = utf8mb4_unicode_ci;
+
+use huang_api;
+DROP TABLE IF EXISTS huang_api.`interface_charging`;
+CREATE TABLE `interface_charging`
+(
+    `id`              bigint(0)                          NOT NULL AUTO_INCREMENT COMMENT '主键',
+    `interfaceId`     bigint(0)                          NOT NULL COMMENT '接口id',
+    `charging`        float(255, 2)                      NOT NULL COMMENT '计费规则（元/条）',
+    `availablePieces` varchar(255)                       NOT NULL COMMENT '接口剩余可调用次数',
+    `userId`          bigint(0)                          NOT NULL COMMENT '创建人',
+    `createTime`      datetime default CURRENT_TIMESTAMP not null comment '创建时间',
+    `updateTime`      datetime default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP comment '更新时间',
+    `isDelete`        int(0)                             NULL DEFAULT 0 COMMENT '是否删除(0-未删, 1-已删)',
+    PRIMARY KEY (`id`) USING BTREE
+) comment '接口单价信息' ENGINE = InnoDB
+                 AUTO_INCREMENT = 3
+                 CHARACTER SET = utf8
+                 COLLATE = utf8_general_ci
+                 ROW_FORMAT = DYNAMIC;
+

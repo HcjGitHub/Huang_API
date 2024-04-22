@@ -23,15 +23,6 @@ public interface InterfaceInfoService extends IService<InterfaceInfo> {
     void validInterfaceInfo(InterfaceInfo interfaceInfo, boolean add);
 
     /**
-     * 获取帖子封装
-     *
-     * @param interfaceInfo
-     * @param request
-     * @return
-     */
-    InterfaceInfoVO getInterfaceInfoVO(InterfaceInfo interfaceInfo, HttpServletRequest request);
-
-    /**
      * 获取查询条件
      *
      * @param interfaceInfoQueryRequest

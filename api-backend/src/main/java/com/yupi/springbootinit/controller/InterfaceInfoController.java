@@ -2,6 +2,10 @@ package com.yupi.springbootinit.controller;
 
 
 import com.anyan.apiclientsdk.client.NameApiClient;
+import com.anyan.apicommon.model.entity.InterfaceCharging;
+import com.anyan.apicommon.model.entity.UserInterfaceInfo;
+import com.anyan.apicommon.utils.JwtUtils;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.google.gson.Gson;
 import com.yupi.springbootinit.annotation.AuthCheck;
@@ -14,7 +18,9 @@ import com.yupi.springbootinit.model.dto.interfaceinfo.*;
 import com.anyan.apicommon.model.entity.InterfaceInfo;
 import com.anyan.apicommon.model.entity.User;
 import com.yupi.springbootinit.model.vo.InterfaceInfoVO;
+import com.yupi.springbootinit.service.InterfaceChargingService;
 import com.yupi.springbootinit.service.InterfaceInfoService;
+import com.yupi.springbootinit.service.UserInterfaceInfoService;
 import com.yupi.springbootinit.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -49,11 +55,12 @@ public class InterfaceInfoController {
     private UserService userService;
 
     @Resource
-    private NameApiClient nameApiClient;
-    /**
-     *region 增删改查
-     */
+    private InterfaceChargingService interfaceChargingService;
 
+    @Resource
+    private UserInterfaceInfoService userInterfaceInfoService;
+
+    //region 增删改查
 
     /**
      * 创建
@@ -316,29 +323,37 @@ public class InterfaceInfoController {
         if (id <= 0) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
-        InterfaceInfo interfaceInfo = interfaceInfoService.getById(id);
-        if (interfaceInfo == null) {
-            throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
-        }
-        return ResultUtils.success(interfaceInfoService.getInterfaceInfoVO(interfaceInfo, request));
-    }
 
-    /**
-     * 根据 id 获取
-     *
-     * @param id
-     * @return
-     */
-    @GetMapping("/get")
-    public BaseResponse<InterfaceInfo> getInterfaceInfoById(long id, HttpServletRequest request) {
-        if (id <= 0) {
-            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        Long userId = JwtUtils.parserUserIdByToken(request);
+        if (userId == null) {
+            throw new BusinessException(ErrorCode.NOT_LOGIN_ERROR);
         }
         InterfaceInfo interfaceInfo = interfaceInfoService.getById(id);
         if (interfaceInfo == null) {
             throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
         }
-        return ResultUtils.success(interfaceInfo);
+
+        //封装数据
+        InterfaceInfoVO interfaceInfoVO = new InterfaceInfoVO();
+        BeanUtils.copyProperties(interfaceInfo, interfaceInfoVO);
+
+        //填入单价信息
+        InterfaceCharging interfaceCharging = interfaceChargingService
+                .getOne(new QueryWrapper<InterfaceCharging>().eq("interfaceId", id));
+        if (interfaceCharging != null) {
+            interfaceInfoVO.setCharging(interfaceCharging.getCharging());
+            interfaceInfoVO.setChargingId(interfaceCharging.getId());
+        }
+
+        //填入剩余调用次数
+        QueryWrapper<UserInterfaceInfo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("userId", userId);
+        queryWrapper.eq("interfaceInfoId", id);
+        UserInterfaceInfo userInterfaceInfo = userInterfaceInfoService.getOne(queryWrapper);
+        if (userInterfaceInfo != null) {
+            interfaceInfoVO.setAvailablePieces(userInterfaceInfo.getLeftNum().toString());
+        }
+        return ResultUtils.success(interfaceInfoVO);
     }
 
 
