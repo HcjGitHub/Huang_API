@@ -137,6 +137,51 @@ public class InterfaceInfoController {
     }
 
     /**
+     * 根据 id 获取
+     *
+     * @param id
+     * @return
+     */
+    @GetMapping("/get/vo")
+    public BaseResponse<InterfaceInfoVO> getInterfaceInfoVOById(long id, HttpServletRequest request) {
+        if (id <= 0) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+
+        Long userId = JwtUtils.parserUserIdByToken(request);
+        if (userId == null) {
+            throw new BusinessException(ErrorCode.NOT_LOGIN_ERROR);
+        }
+        InterfaceInfo interfaceInfo = interfaceInfoService.getById(id);
+        if (interfaceInfo == null) {
+            throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
+        }
+
+        //封装数据
+        InterfaceInfoVO interfaceInfoVO = new InterfaceInfoVO();
+        BeanUtils.copyProperties(interfaceInfo, interfaceInfoVO);
+
+        //填入单价信息
+        InterfaceCharging interfaceCharging = interfaceChargingService
+                .getOne(new QueryWrapper<InterfaceCharging>().eq("interfaceId", id));
+        if (interfaceCharging != null) {
+            interfaceInfoVO.setCharging(interfaceCharging.getCharging());
+            interfaceInfoVO.setChargingId(interfaceCharging.getId());
+        }
+
+        //填入剩余调用次数
+        QueryWrapper<UserInterfaceInfo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("userId", userId);
+        queryWrapper.eq("interfaceInfoId", id);
+        UserInterfaceInfo userInterfaceInfo = userInterfaceInfoService.getOne(queryWrapper);
+        if (userInterfaceInfo != null) {
+            interfaceInfoVO.setAvailablePieces(userInterfaceInfo.getLeftNum().toString());
+        }
+        return ResultUtils.success(interfaceInfoVO);
+    }
+    // endregion
+
+    /**
      * 分页获取接口（仅管理员）
      *
      * @param interfaceInfoQueryRequest
@@ -311,53 +356,6 @@ public class InterfaceInfoController {
         }
 
     }
-
-    /**
-     * 根据 id 获取
-     *
-     * @param id
-     * @return
-     */
-    @GetMapping("/get/vo")
-    public BaseResponse<InterfaceInfoVO> getInterfaceInfoVOById(long id, HttpServletRequest request) {
-        if (id <= 0) {
-            throw new BusinessException(ErrorCode.PARAMS_ERROR);
-        }
-
-        Long userId = JwtUtils.parserUserIdByToken(request);
-        if (userId == null) {
-            throw new BusinessException(ErrorCode.NOT_LOGIN_ERROR);
-        }
-        InterfaceInfo interfaceInfo = interfaceInfoService.getById(id);
-        if (interfaceInfo == null) {
-            throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
-        }
-
-        //封装数据
-        InterfaceInfoVO interfaceInfoVO = new InterfaceInfoVO();
-        BeanUtils.copyProperties(interfaceInfo, interfaceInfoVO);
-
-        //填入单价信息
-        InterfaceCharging interfaceCharging = interfaceChargingService
-                .getOne(new QueryWrapper<InterfaceCharging>().eq("interfaceId", id));
-        if (interfaceCharging != null) {
-            interfaceInfoVO.setCharging(interfaceCharging.getCharging());
-            interfaceInfoVO.setChargingId(interfaceCharging.getId());
-        }
-
-        //填入剩余调用次数
-        QueryWrapper<UserInterfaceInfo> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("userId", userId);
-        queryWrapper.eq("interfaceInfoId", id);
-        UserInterfaceInfo userInterfaceInfo = userInterfaceInfoService.getOne(queryWrapper);
-        if (userInterfaceInfo != null) {
-            interfaceInfoVO.setAvailablePieces(userInterfaceInfo.getLeftNum().toString());
-        }
-        return ResultUtils.success(interfaceInfoVO);
-    }
-
-
-    // endregion
 
 
     /**

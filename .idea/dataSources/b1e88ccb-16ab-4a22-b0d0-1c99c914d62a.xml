@@ -844,7 +844,7 @@ SELECT|sys.sys_config:null
       <Comment>接口信息</Comment>
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
-    <table id="263" parent="10" name="order"/>
+    <table id="263" parent="10" name="t_order"/>
     <column id="264" parent="259" name="id">
       <Position>1</Position>
       <Comment>主键</Comment>

@@ -10,6 +10,10 @@ spring:
         server-addr: 127.0.0.1:8848
     gateway:
       routes:
+        - id: api_order_route
+          uri: lb://api-order
+          predicates:
+            - Path=/api/order/**
         - id: api_backend_route
           uri: lb://api-backend
           predicates:
@@ -26,8 +30,8 @@ logging:
 dubbo:
   application:
     name: huangapi-rpc-nacos
-#  scan:
-#    base-packages: com.anyan.apigateway.provider
+  #  scan:
+  #    base-packages: com.anyan.apigateway.provider
   protocol:
     dubbo:
       name: dubbo
