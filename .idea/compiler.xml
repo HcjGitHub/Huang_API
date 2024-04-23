@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="api-gateway" />
+        <module name="api-order" />
         <module name="api-common" />
         <module name="api-client-sdk" />
         <module name="api-backend" />
@@ -18,6 +19,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-backend" options="-parameters" />
+      <module name="api-order" options="-parameters" />
     </option>
   </component>
 </project>

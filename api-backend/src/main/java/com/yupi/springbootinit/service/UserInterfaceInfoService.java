@@ -2,6 +2,7 @@ package com.yupi.springbootinit.service;
 
 import com.anyan.apicommon.model.entity.UserInterfaceInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.yupi.springbootinit.model.dto.userinterfaceinfo.UserInterfaceInfoUpdateDTO;
 
 import java.util.List;
 
@@ -34,4 +35,12 @@ public interface UserInterfaceInfoService extends IService<UserInterfaceInfo> {
      * @return
      */
     List<UserInterfaceInfo> statisticsTopTotalNum(int limit);
+
+    /**
+     * 创建或更新用户某接口的剩余调用次数
+     *
+     * @param userInterfaceInfoUpdateDTO
+     * @return
+     */
+    boolean updateUserInterfaceInfo(UserInterfaceInfoUpdateDTO userInterfaceInfoUpdateDTO);
 }

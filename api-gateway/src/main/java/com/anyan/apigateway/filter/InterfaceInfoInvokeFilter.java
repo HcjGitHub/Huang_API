@@ -3,9 +3,7 @@ package com.anyan.apigateway.filter;
 import com.anyan.apiclientsdk.utils.SignUtils;
 import com.anyan.apicommon.model.entity.InterfaceInfo;
 import com.anyan.apicommon.model.entity.User;
-import com.anyan.apicommon.service.InnerInterfaceInfoService;
-import com.anyan.apicommon.service.InnerUserInterfaceInfoService;
-import com.anyan.apicommon.service.InnerUserService;
+import com.anyan.apicommon.service.ApiBackendService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.reactivestreams.Publisher;
@@ -39,13 +37,7 @@ import java.util.List;
 public class InterfaceInfoInvokeFilter implements GatewayFilter, Ordered {
 
     @DubboReference
-    private InnerUserService innerUserService;
-
-    @DubboReference
-    private InnerInterfaceInfoService innerInterfaceInfoService;
-
-    @DubboReference
-    private InnerUserInterfaceInfoService innerUserInterfaceInfoService;
+    private ApiBackendService apiBackendService;
 
     public static final List<String> LIST_WHITE = Arrays.asList(new String[]{"127.0.0.1"});
 
@@ -91,7 +83,7 @@ public class InterfaceInfoInvokeFilter implements GatewayFilter, Ordered {
         // 这里需要从数据库根据ak查询sk
         User user = null;
         try {
-            user = innerUserService.getUserByAccessKey(accessKey);
+            user = apiBackendService.getUserByAccessKey(accessKey);
         } catch (Exception e) {
             return handlerNoAuth(response);
         }
@@ -120,7 +112,7 @@ public class InterfaceInfoInvokeFilter implements GatewayFilter, Ordered {
         //5. 查询请求接口是否存在
         InterfaceInfo interfaceInfo = null;
         try {
-            interfaceInfo = innerInterfaceInfoService.getInterfaceInfoByUrlAndMethod(url, method);
+            interfaceInfo = apiBackendService.getInterfaceInfoByUrlAndMethod(url, method);
         } catch (Exception e) {
             return handlerInvokeError(response);
         }
@@ -134,7 +126,7 @@ public class InterfaceInfoInvokeFilter implements GatewayFilter, Ordered {
         //判断接口剩余调用次数是否大于0
         int leftCount = 0;
         try {
-            leftCount = innerUserInterfaceInfoService.getLeftCount(interfaceInfoId, userId);
+            leftCount = apiBackendService.getLeftCount(interfaceInfoId, userId);
         } catch (Exception e) {
             return handlerInvokeError(response);
         }
@@ -174,7 +166,7 @@ public class InterfaceInfoInvokeFilter implements GatewayFilter, Ordered {
 
                         //8. 请求成功，调用次数加1
                         // 接口调用次数加1
-                        boolean invokeCount = innerUserInterfaceInfoService.invokeCount(interfaceInfoId, userId);
+                        boolean invokeCount = apiBackendService.invokeCount(interfaceInfoId, userId);
                         if (!invokeCount) {
                             log.error("<=== 响应code异常：{}", getStatusCode());
                         }
