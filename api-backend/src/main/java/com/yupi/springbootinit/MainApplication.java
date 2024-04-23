@@ -22,6 +22,11 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class MainApplication {
 
     public static void main(String[] args) {
+        //将dubbo缓存的绝对目录改成相对目录，避免后续项目上线出现问题 已实现
+        String rootPath = System.getProperty("user.dir");
+        String subDirectory = "/api-backend/backendDubboCache";
+        String fullPath = rootPath + "/" + subDirectory;
+        System.setProperty("user.home", fullPath);
         SpringApplication.run(MainApplication.class, args);
     }
 

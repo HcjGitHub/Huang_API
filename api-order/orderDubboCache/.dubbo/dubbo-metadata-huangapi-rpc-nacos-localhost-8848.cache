@@ -1,0 +1,3 @@
+#Dubbo metadataReport Cache
+#Tue Apr 23 18:23:37 CST 2024
+com.anyan.apicommon.service.ApiBackendService\:\:\:consumer\:huangapi-rpc-nacos={"release"\:"3.0.9","interface"\:"com.anyan.apicommon.service.ApiBackendService","dubbo"\:"2.0.2","application"\:"huangapi-rpc-nacos","pid"\:"7004","side"\:"consumer","sticky"\:"false","register.ip"\:"192.168.209.1","methods"\:"recoverInterfaceStock,getInterfaceInfoById,invokeCount,getUserByAccessKey,getInterfaceInfoByUrlAndMethod,getLeftCount,deductInterfaceStock,updateUserInterfaceInfoInvokeCount,getInterfaceStockById","background"\:"false","timestamp"\:"1713867816001"}
