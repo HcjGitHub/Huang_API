@@ -13,6 +13,7 @@ import com.yupi.springbootinit.model.dto.userinterfaceinfo.UserInterfaceInfoAddR
 import com.yupi.springbootinit.model.dto.userinterfaceinfo.UserInterfaceInfoUpdateRequest;
 import com.anyan.apicommon.model.entity.User;
 import com.anyan.apicommon.model.entity.UserInterfaceInfo;
+import com.yupi.springbootinit.model.vo.UserInterfaceInfoVO;
 import com.yupi.springbootinit.service.UserInterfaceInfoService;
 import com.yupi.springbootinit.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * 帖子接口
@@ -126,7 +128,7 @@ public class UserInterfaceInfoController {
      * @return
      */
     @GetMapping("/get")
-    public BaseResponse<UserInterfaceInfo> getUserInterfaceInfoVOById(long id, HttpServletRequest request) {
+    public BaseResponse<UserInterfaceInfo> getUserInterfaceInfoById(long id, HttpServletRequest request) {
         if (id <= 0) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
@@ -137,4 +139,21 @@ public class UserInterfaceInfoController {
         return ResultUtils.success(userInterfaceInfo);
     }
 
+    // endregion
+
+    /**
+     * 获取用户所拥有的接口调用
+     *
+     * @param userId
+     * @param request
+     * @return
+     */
+    @GetMapping("/list/userId")
+    public BaseResponse<List<UserInterfaceInfoVO>> getUserInterfaceInfoVOById(@RequestParam Long userId, HttpServletRequest request) {
+        if (userId <= 0) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        List<UserInterfaceInfoVO> userInterfaceInfoVOList = userInterfaceInfoService.getUserInterfaceInfoVOById(userId,request);
+        return ResultUtils.success(userInterfaceInfoVOList);
+    }
 }

@@ -1,0 +1,4 @@
+#Dubbo cache
+#Tue Apr 23 21:50:26 CST 2024
+com.anyan.apicommon.service.ApiBackendService=["huangapi-rpc-nacos"]
+com.yupi.springbootinit.provider.DemoService=["huangapi-rpc-nacos"]

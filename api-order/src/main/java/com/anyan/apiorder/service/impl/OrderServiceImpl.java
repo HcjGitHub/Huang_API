@@ -26,6 +26,7 @@ import com.google.gson.Gson;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -58,6 +59,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order>
 
     public static final Gson gson = new Gson();
 
+    @Transactional
     @Override
     public Long addOrder(OrderAddRequest orderAddRequest, HttpServletRequest request) {
 

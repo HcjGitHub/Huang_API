@@ -3,20 +3,30 @@ package com.yupi.springbootinit.service.impl;
 import java.util.Date;
 
 
+import com.anyan.apicommon.model.entity.InterfaceInfo;
+import com.anyan.apicommon.model.entity.User;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yupi.springbootinit.common.ErrorCode;
+import com.yupi.springbootinit.constant.UserConstant;
 import com.yupi.springbootinit.exception.BusinessException;
+import com.yupi.springbootinit.mapper.InterfaceInfoMapper;
 import com.yupi.springbootinit.mapper.UserInterfaceInfoMapper;
 import com.anyan.apicommon.model.entity.UserInterfaceInfo;
 import com.yupi.springbootinit.model.dto.userinterfaceinfo.UserInterfaceInfoUpdateDTO;
+import com.yupi.springbootinit.model.vo.UserInterfaceInfoVO;
 import com.yupi.springbootinit.service.UserInterfaceInfoService;
+import com.yupi.springbootinit.service.UserService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * @author 兕神
@@ -28,6 +38,12 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
         implements UserInterfaceInfoService {
     @Resource
     private UserInterfaceInfoMapper userInterfaceInfoMapper;
+
+    @Resource
+    private InterfaceInfoMapper interfaceInfoMapper;
+
+    @Resource
+    private UserService userService;
 
     @Override
     public void validUserInterfaceInfo(UserInterfaceInfo userInterfaceInfo, boolean add) {
@@ -98,6 +114,39 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
         userInterfaceInfo.setInterfaceInfoId(interfaceInfoId);
         userInterfaceInfo.setLeftNum(lockNum);
         return this.save(userInterfaceInfo);
+    }
+
+    @Override
+    public List<UserInterfaceInfoVO> getUserInterfaceInfoVOById(Long userId, HttpServletRequest request) {
+        //获取登录用户
+        User loginUser = userService.getLoginUser(request);
+        if (!loginUser.getId().equals(userId) && !loginUser.getUserRole().equals(UserConstant.ADMIN_ROLE)) {
+            throw new BusinessException(ErrorCode.NO_AUTH_ERROR);
+        }
+
+        //获取用户所持有的调用接口
+        QueryWrapper<UserInterfaceInfo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("userId",userId);
+        List<UserInterfaceInfo> userInterfaceInfoList = this.list(queryWrapper);
+
+        //转换成map
+        Map<Long, List<UserInterfaceInfo>> userInterfaceInfoListMap =
+                userInterfaceInfoList.stream().collect(Collectors.groupingBy(UserInterfaceInfo::getInterfaceInfoId));
+
+        //接口ids
+        Set<Long> interfaceInfoIds = userInterfaceInfoListMap.keySet();
+        //接口信息
+        List<InterfaceInfo> interfaceInfoList = interfaceInfoMapper.selectBatchIds(interfaceInfoIds);
+        return interfaceInfoList.stream().map(interfaceInfo -> {
+            UserInterfaceInfoVO userInterfaceInfoVO = new UserInterfaceInfoVO();
+
+            BeanUtils.copyProperties(interfaceInfo,userInterfaceInfoVO);
+            userInterfaceInfoVO.setInterfaceStatus(interfaceInfo.getStatus());
+
+            UserInterfaceInfo userInterfaceInfo = userInterfaceInfoListMap.get(interfaceInfo.getId()).get(0);
+            BeanUtils.copyProperties(userInterfaceInfo,userInterfaceInfoVO);
+            return userInterfaceInfoVO;
+        }).collect(Collectors.toList());
     }
 }
 
