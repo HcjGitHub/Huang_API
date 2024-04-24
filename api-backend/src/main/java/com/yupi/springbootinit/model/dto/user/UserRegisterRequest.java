@@ -1,6 +1,7 @@
 package com.yupi.springbootinit.model.dto.user;
 
 import java.io.Serializable;
+
 import lombok.Data;
 
 /**
@@ -14,9 +15,15 @@ public class UserRegisterRequest implements Serializable {
 
     private static final long serialVersionUID = 3191241716373120793L;
 
+    private String captcha;
+
     private String userAccount;
 
     private String userPassword;
 
     private String checkPassword;
+
+    private String emailNum;
+
+    private String emailCaptcha;
 }

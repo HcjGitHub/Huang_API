@@ -3,11 +3,8 @@ package com.yupi.springbootinit.service;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yupi.springbootinit.common.BaseResponse;
-import com.yupi.springbootinit.model.dto.user.UserAddRequest;
-import com.yupi.springbootinit.model.dto.user.UserQueryRequest;
+import com.yupi.springbootinit.model.dto.user.*;
 import com.anyan.apicommon.model.entity.User;
-import com.yupi.springbootinit.model.dto.user.UserUpdateMyRequest;
-import com.yupi.springbootinit.model.dto.user.UserUpdateRequest;
 import com.yupi.springbootinit.model.vo.LoginUserVO;
 import com.yupi.springbootinit.model.vo.UserDevKeyVO;
 import com.yupi.springbootinit.model.vo.UserVO;
@@ -29,12 +26,11 @@ public interface UserService extends IService<User> {
     /**
      * 用户注册
      *
-     * @param userAccount   用户账户
-     * @param userPassword  用户密码
-     * @param checkPassword 校验密码
+     * @param userRegisterRequest 用户注册请求体
+     * @param signature           验证码唯一标识
      * @return 新用户 id
      */
-    long userRegister(String userAccount, String userPassword, String checkPassword);
+    long userRegister(UserRegisterRequest userRegisterRequest, String signature);
 
     /**
      * 用户登录
@@ -160,4 +156,12 @@ public interface UserService extends IService<User> {
      * @return 用户id
      */
     Long addUser(UserAddRequest userAddRequest);
+
+    /**
+     * 获取验证码
+     *
+     * @param request
+     * @param response
+     */
+    void getCaptcha(HttpServletRequest request, HttpServletResponse response);
 }
