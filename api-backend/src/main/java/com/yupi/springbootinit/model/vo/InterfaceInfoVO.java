@@ -19,6 +19,11 @@ public class InterfaceInfoVO extends InterfaceInfo {
      */
     private Integer totalNum;
 
+    /**
+     * 统计用户每个接口剩余调用的总数
+     */
+    private Integer leftNum;
+
 
     /**
      * 计费规则（元/条）
@@ -31,7 +36,7 @@ public class InterfaceInfoVO extends InterfaceInfo {
     private Long chargingId;
 
     /**
-     * 接口剩余可调用次数
+     * 接口剩余可购买次数
      */
     private String availablePieces;
 

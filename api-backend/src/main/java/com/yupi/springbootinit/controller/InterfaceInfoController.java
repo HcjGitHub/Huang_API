@@ -167,15 +167,18 @@ public class InterfaceInfoController {
         if (interfaceCharging != null) {
             interfaceInfoVO.setCharging(interfaceCharging.getCharging());
             interfaceInfoVO.setChargingId(interfaceCharging.getId());
+            //接口调用次库存
+            interfaceInfoVO.setAvailablePieces(interfaceCharging.getAvailablePieces());
         }
 
-        //填入剩余调用次数
+        //填入已调用次数和剩余调用次数
         QueryWrapper<UserInterfaceInfo> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("userId", userId);
         queryWrapper.eq("interfaceInfoId", id);
         UserInterfaceInfo userInterfaceInfo = userInterfaceInfoService.getOne(queryWrapper);
         if (userInterfaceInfo != null) {
-            interfaceInfoVO.setAvailablePieces(userInterfaceInfo.getLeftNum().toString());
+            interfaceInfoVO.setTotalNum(userInterfaceInfo.getTotalNum());
+            interfaceInfoVO.setLeftNum(userInterfaceInfo.getLeftNum());
         }
         return ResultUtils.success(interfaceInfoVO);
     }
