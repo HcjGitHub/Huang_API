@@ -7,6 +7,9 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/api-client-sdk/pom.xml" />
         <option value="$PROJECT_DIR$/api-order/pom.xml" />
+        <option value="$PROJECT_DIR$/the-thrid-party/pom.xml" />
+        <option value="$PROJECT_DIR$/api-thrid-party/pom.xml" />
+        <option value="$PROJECT_DIR$/api-third-party/pom.xml" />
       </list>
     </option>
   </component>

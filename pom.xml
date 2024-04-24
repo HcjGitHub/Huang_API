@@ -15,5 +15,7 @@
         <module>api-client-sdk</module>
         <module>api-gateway</module>
         <module>api-common</module>
+        <module>api-order</module>
+        <module>api-third-party</module>
     </modules>
 </project>

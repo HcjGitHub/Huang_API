@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="176699f7-e5dd-41b8-9162-5201a3fbf10e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-common/src/main/java/com/anyan/apicommon/constant/RabbitmqConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-common/src/main/java/com/anyan/apicommon/constant/RedisConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-common/target/classes/com/anyan/apicommon/constant/RabbitmqConstant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-common/target/classes/com/anyan/apicommon/constant/RedisConstant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40api-third-party" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40api-backend" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40api-order" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40api-third-party" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40huangapi-rpc-nacos" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-order/orderDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40huangapi-rpc-nacos" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-order/src/main/java/com/anyan/apiorder/listener/OrderPaySuccessListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/sql/alipay_info.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/src/main/java/com/anyan/apithirdparty/ApiThirdPartyApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/src/main/java/com/anyan/apithirdparty/config/AliPayConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/src/main/java/com/anyan/apithirdparty/config/RabbitmqConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/src/main/java/com/anyan/apithirdparty/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/src/main/java/com/anyan/apithirdparty/controller/AliPayInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/src/main/java/com/anyan/apithirdparty/mapper/AlipayInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/src/main/java/com/anyan/apithirdparty/model/dto/AlipayRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/src/main/java/com/anyan/apithirdparty/model/entity/AlipayInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/src/main/java/com/anyan/apithirdparty/service/AlipayInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/src/main/java/com/anyan/apithirdparty/service/impl/AlipayInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/src/main/java/com/anyan/apithirdparty/utils/OrderPaySuccessMqUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/src/main/resources/mapper/AlipayInfoMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-third-party/src/test/java/com/anyan/apithirdparty/ApiThirdPartyApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b1e88ccb-16ab-4a22-b0d0-1c99c914d62a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/21a29195-f062-402f-86bd-7051c7902476.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b1e88ccb-16ab-4a22-b0d0-1c99c914d62a/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/21a29195-f062-402f-86bd-7051c7902476/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/01bc9bad44c47730ea2ef0fa6c7baa4373b8de76" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/02fa719a05c320068e63ca49a91663fb5d141d67" beforeDir="false" afterPath="$PROJECT_DIR$/api-third-party/src/main/resources/application-alipay.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/3/03bb44f180e7bd466539c04dd1ee4df5c004e673" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/3/03fabddfac21426b9d354c70d76fe90a35f75be0" beforeDir="false" afterPath="$PROJECT_DIR$/api-third-party/src/main/resources/application-alipay.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/4/0419bafc2b7bffc00c6bd38e6ac579c603e2839c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/4/04a5c009f873ce4aedc297191dd404ad22964d7a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/05051673dbe29c975346174e508a01cad17d9b86" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/05b8d314fb73f7fbeb626b79cff12ce9c99247ba" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/06891528648b41a0f76282bd79a904ee79d11266" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/06d8bb80945ba10bd8a7a415eda97f6e29b83ce7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/07b36f8981f4d83bcd58c0299f45e693024198eb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/7/07e993f8bebca862ea4dbd274af715b85255d2a0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/094bf657536f0b335d80295ccdbfad25624804a5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/b/0bc2dc619e248bfa63ec74f9b313c15e10b7701c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/c/0ca0c577b622e8d7e72d01d17c03c54aac8f7648" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/e/0e1060665261f40d807f411219a77b196582347c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f7182abec669e557e02d43148091317893ae1ef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/0/10833c885fca435897d6a597a97ace9c24eec655" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/0/108c6c7afdd3327453bee11a96dc712bb6b773b3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/0/10b86cd2339d0f9a9b06bf8b70aa5de09c47d5b7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/1/1174c3bb53a66d15e79fcd0e01828dc25374788b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/1261f02894cbdfcf078e033fa85c0ca3beded71e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/2/127bae948b391271e90f346e4a2f4b66a27ea831" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/13ad258f87b524e3caa27d12887add576f69ad9f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/3/13f79d1daaf92c8cd0e72971f05e34f6cdd69964" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/1406fac7b607e06f376c32bac9297d7a20b23cae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/8/18f1697c3a998e5a240a0a60e89da2d0ddd3000d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/a/1a09823c53e1a35123fdea35f212ac06ac5c6bea" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1b374cf64d7920a8124a89bf84f8a93f8c6044f0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1db9fb3069f4b26b58377b6f8ee2de6c20b55864" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/1/21a22502e7cf38b468d20b596586ecee38f7b2be" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/224dbda98ac28e627f6a2f93bef1d7e5242d4fc6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/3/231a5f9ceeaa7ee411f241a904d1faec04963b5a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/3/23955a6926d52afb0de1c025859ec81e9758bbdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/3/23ab5b2de31e9ce67f8d90d83adacb80b69a5bfd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/2409a94c513687bbc2e1283fc61aee43fa64d318" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/7/27e6cddf36cb3c07c1c61ba33b92c62d0185e62b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/8/285b8cd59248f97615f18fd49baa58f3559bfcae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/9/2976c8cd2a09267ea76360ac001dc68c10f223d1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2ab48adb76fe1868a5fbfc6b6699998a3e6ccf6a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2ab79a923ad4b286fc630b60489aa2b8e1778433" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2b090f1a8d04c3559891de727d9819af5badd813" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2bfa2b108f2439e99e004f4085b58c22cf995f73" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/c/2c0da666e1441bd464d097ae8df2f5e9005bb3a3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/c/2c3b8d5116e9c7897bece82fb061f6e830a3c71c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/c/2c57ae95c381d0c7076d1ce08dec59fb3523640a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/2/32e86c46748cbbc574b9eafb41a0e423eca95cae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/6/36b1a9b4e87800100525d5a23ffb683bbfdcf81f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/6/36dc86c25ab58406e98900495771e42a0f0b6f8f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/7/37dc146876724a6f446897689aae16f8fc5e4d3f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/7/37f5fdff34a4c09f0079087c6dbe6444fdff46be" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/b/3bc1aedfbd17330b0e91166ebbf42b0682e46ac2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/e/3e7806d7773a9ab44ff56109a081281b94f264dd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/f/3f3ba0bddb4576d050f3cc9fcca1c7b414827dff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/0/400b402544ef807db58238a5c92a2263230b4623" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/1/41825e00dddafa946b14b0cf98d8db8c41459b08" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/4260c51ef9367c0c7eb54c77902f02add14654e8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/439b9dbf2ff2e2b44dd6ed9fef2ce66e326eb750" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/43f85c6723c3b6049b8214008b31d667178a8a14" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/8/483338f6fc4aaf10e50a8d3ec60f242f12d2d401" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/8/488ed1956c5dcc1c3b973c491781307b1a70fa56" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/9/49855a78265a22e774db7a7923ee81c848f9af85" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4b3dbd1792a3ea191abf34a437b9cfde2a13f723" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c201eae5bc4ba271e61b3711a9c163a1d1edebf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4d2772e75fa7f3c9efac988860bd0c99299d1abb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4dfdce772aeba9314a86d14cc764154add4281cb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4fd6d9c7a48354fa5a35de539642bd7c56df0caf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/5106b1758564ea11ca62c59d57ae4d5ddd22fa2a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/510ff0cd642e8e37c3a6f77c500c5ff436cec7f6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/3/5354f236eb29f38facadead8c044bf9ab10d4221" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/4/54a1cf8740e0eb5035aac4654ef2ad2adec498df" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/6/564c0c2fa1250efb924c9a9a58c5b99a713b53df" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/57926da2a54d83fc6974be3176033c60eae6f86e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/580f41d6c9f55346f46a5435f895a9f3bb30f1b1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/58693b279bcd6feb1a81311b64c70bafe9fe5d85" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/58764f097961dfd1b460f4e701004f844e7211bb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/588a524b006f9d84e2a88992ee3f957c44ce3285" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/58dd2ac0a211ae716face65657b11ff2546af640" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/9/597010cbed0dfd797eedb895dcb51e65ae2bbd4a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5b65287aa01f18022098bf2ebe64b2ae93d07d58" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5c617e447e7c7f3125ddf3ffcacfc0bc1465499c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/d/5d7bc8f1507b2c59148c3ab48788d1d30c3826e5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5e9cbc50fc77bc00c975e8305e61844c45ae353e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5ea75e3d78a324e2b1fdf204ec5ce0ec62bd5086" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/0/602fae6656cc76802d17c6aced5c288d5f4c5520" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/62d5ac5584c6967f7ecfa5f6ec579878c376e217" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/4/6489cda7bdcb25d15347319d9d204dd95e0dd9ac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/6/66fe02f244b04822ae66db2c6736127d8b2295fb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/679042006d288fdd439be4c2216874b499e53a45" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/67f0d874638891649f41483a4a9d544aff1a7fc4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/8/683b66951a975c0f82d9de966d8826f8a8214cd2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/69e08635bacfa76c76f0ee90ff969bd7775628a3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/a/6aa40a4b9a43fa6fa51378afd01c5c2b1a3a25ad" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6b7ad3d5874e2f9c0c042ffa9b69deef3b198145" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/c/6cbabb832d8bb47a47ae9daef1dd73269fa4a6f4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/d/6d382cf39de199e9d75cf1d2af655e414a6fc714" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e18f4107cc154fc74a586bc0e7747f09a3eabbf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/f/6f6495b580579e60de1b0c3b4a363984ea35d7bc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/72117b742dbd98decee5de632eed7cb03c15bde9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/722fdfd630d7fa5d87b112f174a6cf9cd6ac00d2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/2/7272b73bd43a1340d20c581726dadd71ebe123b3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/7583609cc9a98ada4024aa6aef6074425d0ae4cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/765a653404b11aaff31161f07f44635b90dfd38d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/768a4826214a5468f8a7651ace5c0f86dcb53eb9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/7/770f46979d1337079658702616f4be6a7b3895a5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/8/78cfa5c7ec5b9ce4933397eac4f1f3a93f9cde3c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/9/792a30d811cd2b6935c926acbb61335add77b958" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/9/79f79c20c3a7b2cb78f909b805ab7096e6534c72" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7a8e46cfbd72943a56408813f04fd21d4a0ad1f6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/d/7de5ab3313fa6fa2f1df1d5b6df09b727da2c921" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7eb1b2d634bd69d6ecbb8d60e1da865babc6a913" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/f/7f0e7de2d3e6b2e5cdee7e5b56985af231580802" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/f/7f9671abf373ddafa64360036b2f6d933ddb38a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/1/8192c46df51625efdaf478e643e37307e214ab36" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/826a61ac5a2c02f253477148bb04e37b13759a6a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/2/82998689d9f2fcc1c3543232c30c21c3c30cc4c2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/84540f81effb7ab83915146ca39d26e3d32161f6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/6/868d23c9f209e1cb120f0f3a48081bb0b19d5905" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/88ad79fcccc5cc01d4e4451c123ef0523f1db2ed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/9/890067f432a78a882d9074c58407e902d0f3b27c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/9/89c4117861050345da0d140e784714f593b98640" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8a069de24437ebcb9b4145b3693b6372be082ee5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8a8209942bc80f8bf952d8cd86ab4c5669190c3f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/c/8c1f87484bab71aa346803a897d3674823e3dfe4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/d/8dd3df57cd0f8d98e57aadc78dcbe1e45de231cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8f8492ae3a0e140e8c8f897f8557c5637ede0749" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8fdc4b1c10615a4e07b47604d9101c283c55e07d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/90651975cd29792ebb6375e5eaea5f7e21102188" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/90c41043bb323af2fd2395460672a7d1178f14e5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/90d74b7bcbbacd6a5d8cbf0f6dbc651edc373d5e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/912d60936fb81c8239819c995bda197a7d29e836" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/92b6dd67f06502c50b86982de364db5bfbcebc78" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/932db5ea3b9a24fc85cfea05fcfd489a4d726218" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/4/94da0daea38738b95bab35cb47ca7e7848402eb7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/961db5f1c4b702e0ac8869ded66a6cff1ba5d6b8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/965bea02e5e3115ca1ef7592f56b3e4f4523cc82" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/6/9687eea5062c763dec0b949bf57b66729dbf644b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/978e742997f86671e2ae7f922a68309acc6c82b0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/998324f831841729d7b1bdb5b1b403b42492d806" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9d900315d39e89615ae4819eb8dadfe9a3bfd54a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9dc7b0f5feb88e6cb061e75b33ed69b9b3b9c29f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9df7efa7ab0f76cc606802084fc33ba8dc2049aa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/e/9e844c4238357336be9ca100e9034f3f02bd8fdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a09de3dfd8fae07a9774ce31bab454845d379da8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/1/a10d9b20e96b03e89ce45ac34896b3ef8d03cb27" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/1/a122cee21bfd47896796ea9e8749eb948c61b624" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a378e8682970f725d3025b440ec318411aacb901" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/4/a45ed868ef044aa50a5075078c2a279bc4bcf009" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/6/a6dc308d0bb6245f5888a069aa43dbe1876af82b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/8/a8228b58f4e0a2ffbf9a68c59f9bac8a0fe15f28" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa36c29cb1f27b8fea0ef35a5818e9af2e9c9d03" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/b/ab2885690df1fc545bd8a3f249f03e81f9624995" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/b/ab318ed4c5cbe1c699ecee6de127b470d1c55534" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/accc8e1647ad7376575f1dc4d7e82c8f18957305" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b0770a818b05fd0e22b1d735b234f23520a00ec6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/0/b097e3d3a86653ec32d4f48198c67f6aca477259" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b1e48183f7167c4c57d1ecb06ce23d4c7db0ddcd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b1e4aae08eed5e3273693c7e874400f06ebbd1b0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b1ffbaed1ddb0d471d24aafd800eab2f62e1ca35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b3273ed82f330568c8825791d47d6d3df11eb04a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b3768543f4dc8d9aa009da00ddafdb4eccdb6f98" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b4f54b8da1e7319b3692b39891e407a4bb9f2674" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/5/b507b56a91aa7970f7bcec108116133f96f6771a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b96fd99e6a443aa08f46818da57efc10ac3ae76f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/a/baefbd53a01b10e6a163f4ccf02725fcbf796f1b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/b/bb91553f33ea28fd1d59e595203a9cdda79a9cf5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/c/bcabe3ee0c91487f257e1bdc66fc4828975559d1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/f/bf01ca3b7636bb9504b16980bd0a5db3c5d7206a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/2/c2d6543d75793e305faaec8934f3354f83ec4164" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5320f664c6db277bce6e951f4629b4303261140" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5acc1c5f2f58a8dfb22cda1a5a3f08b15545031" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c75a5e68aa2c9149b4aa6de67e0bb9cef41ee0a7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c8180f296f9c3927eea96e9b6bc7adaacfbf4a23" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c853667d8ef219ea0b2dd99574845e11a8bef8a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c8ffe0163527d39df002d3a2b597135f05d5e718" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c99313103ee0f4e0eec6aab1fcb3165accdb21d3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/a/ca7a7cd2a552b6af676b5729963ab22166290bf5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/b/cbcb17bbbc6ba4b47373aaa7eca56920a7d27c1a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cd5eea4ac693635c0044dc3c6baefd79e67dd577" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/f/cf405fd3f40b73cd9f43858d705fb0f04f82ccab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d0735aee67a0da63d6365cff04cdd067734e558f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d0abc6558b0d4537eb6b74c97a31190deafb8fe5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d0d4361595a85455472e250e5ad661a42b00cc4c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d33986e36cbc6c8029702ad2b867398e84a5e5c3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d492595f863e0a72a3b09437b0e1f264597bfda4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/5/d580941724ae78dfb1c82b4c39216c5a1f171511" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/5/d587cf388cefc26045869c3c02740b250b9348bc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d602451c2a617ec2f44bf0e1133a058ea48bbb9a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d65a568d67972b870ce1a5ae782fcb633f63f6c4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d887cb6d652f75693efdcd34b57e713bd4e5f3a6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/a/da98db113a83b6e24f8a9bed41a6d37c09de053c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/b/db746107da60c94c5a55a1800b496f749198a35d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de3a8ca92f914a8c9e8deadeeb93a5b42e60baa2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/de6ad1dcca5805771b3cd647fa7d31737b200922" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/0/e026e05c64273406343ab26f0222db77a73d6a59" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e23c030630e020d4089c894fd87739e21a304b91" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e2556b2c3a9bc505dca9d5264f11c07958e34d38" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/7/e71124e337a1c8b6d9ed264e6f5f3a483e2f5349" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e80de3c7f918efd5acbfd3cbaf373ec3d18d85ed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/ea8c15fbd8000d3188992bcec4b44a12a2a42638" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/eb03f8368fa23f6a809ca1e2c16e4a48d5ad8e63" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/c/ec6e63222e6f7e3c3166f1061056f674328a6608" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/e/ee50bfcc0f25291fc1e37e14d846a3b6f204b07c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/ef3927f64128190233a06da177ce79d6e1063c12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f04aa06427351629f67b35775e80bcc256e04503" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/2/f2e7443abdee4237c01519ce351481b9a203eb1d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f3245d4960eef2279715f4c3d916977bbbd36d29" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f34583cf9b918eff9f64ce12f5c758f8148c045e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f392a498efa878b19d4511bd70a67493c0787f2a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f3c68d8eaaa1eb22e4964b6dbba6cb36b8721ba5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/4/f4f8047a6787007a46f47e6db371b77f1fd25abe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/6/f6b1400183d8a21fad3113600185dca9470e4aa6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/7/f7b59e07e283a64035875924e9200375c6e14fe8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/7/f7c5254f337be2cc33f4a31399f04175335d6200" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f8521cdc8ef3b36a3b69a0ca99860490622f8ed9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f976536b41ccc466afea2845b7c39d18683eb66c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/d/fd3164d65012081b3eb7146ca20746cd6c3726bf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/d/fdbee9f38447a61c5287b626a052d5642ef3f41a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/d/fdf2fbaae82ad4aa1dabbbafc5a1834c8d473186" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/e/fefcf319055efd52b62ce3797b6d8aeb6db6d8a3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ff1c5d5433a8148c17672f6832c630bb2426e4e9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/.dubbo/dubbo-metadata-huangapi-rpc-nacos-localhost-8848.cache" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/.dubbo/dubbo-metadata-huangapi-rpc-nacos-localhost-8848.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/config/fixed-localhost_8848_nacos/encrypted-data-key/snapshot/mapping/com.anyan.apicommon.service.ApiBackendService" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/controller/InterfaceInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/controller/InterfaceInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/model/vo/InterfaceInfoVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/model/vo/InterfaceInfoVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/.dubbo/.mapping.dubbo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/.dubbo/.mapping.dubbo.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/.dubbo/.metadata.nacoslocalhost%003a8848.dubbo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/.dubbo/.metadata.nacoslocalhost%003a8848.dubbo.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/.dubbo/dubbo-metadata-huangapi-rpc-nacos-localhost-8848.cache" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/.dubbo/dubbo-metadata-huangapi-rpc-nacos-localhost-8848.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/.dubbo/dubbo-registry-huangapi-rpc-nacos-localhost-8848.cache" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/.dubbo/dubbo-registry-huangapi-rpc-nacos-localhost-8848.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/logs/nacos/config.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/logs/nacos/config.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/logs/nacos/naming.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/logs/nacos/naming.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/logs/nacos/remote.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/logs/nacos/remote.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/config/fixed-localhost_8848_nacos/encrypted-data-key/snapshot/mapping/com.anyan.apicommon.service.ApiBackendService" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40api-backend" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40api-backend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40api-order" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40api-order" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40huangapi-rpc-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40huangapi-rpc-nacos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-order/orderDubboCache/.dubbo/.mapping.dubbo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/api-order/orderDubboCache/.dubbo/.mapping.dubbo.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-order/orderDubboCache/.dubbo/.metadata.nacoslocalhost%003a8848.dubbo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/api-order/orderDubboCache/.dubbo/.metadata.nacoslocalhost%003a8848.dubbo.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-order/orderDubboCache/.dubbo/dubbo-metadata-huangapi-rpc-nacos-localhost-8848.cache" beforeDir="false" afterPath="$PROJECT_DIR$/api-order/orderDubboCache/.dubbo/dubbo-metadata-huangapi-rpc-nacos-localhost-8848.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-order/orderDubboCache/.dubbo/dubbo-registry-huangapi-rpc-nacos-localhost-8848.cache" beforeDir="false" afterPath="$PROJECT_DIR$/api-order/orderDubboCache/.dubbo/dubbo-registry-huangapi-rpc-nacos-localhost-8848.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-order/orderDubboCache/logs/nacos/config.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-order/orderDubboCache/logs/nacos/config.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-order/orderDubboCache/logs/nacos/naming.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-order/orderDubboCache/logs/nacos/naming.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-order/orderDubboCache/logs/nacos/remote.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-order/orderDubboCache/logs/nacos/remote.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-order/orderDubboCache/nacos/config/fixed-localhost_8848_nacos/encrypted-data-key/snapshot/mapping/com.anyan.apicommon.service.ApiBackendService" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-order/orderDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40huangapi-rpc-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-order/orderDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40huangapi-rpc-nacos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-order/orderDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" beforeDir="false" afterPath="$PROJECT_DIR$/api-order/orderDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-order/orderDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-order/orderDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-order/orderDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-order/orderDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-order/orderDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" beforeDir="false" afterPath="$PROJECT_DIR$/api-order/orderDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-order/orderDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-order/orderDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-order/orderDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-order/orderDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-order/src/main/java/com/anyan/apiorder/ApiOrderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-order/src/main/java/com/anyan/apiorder/ApiOrderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven\repository" />
+        <option name="mavenHome" value="D:\Java_Data\apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\Java_Data\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectId" id="2fDjKGTpr2yxyWTpJbSnpTjIrnO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../api-third-party" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.20331186" />
+    <property name="settings.editor.selected.configurable" value="spring.boot" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.anyan.thethirdparty" />
+      <recent name="com.anyan.apiorder" />
+      <recent name="com.yupi.springbootinit.service" />
+      <recent name="com.yupi.springbootinit.mapper" />
+      <recent name="com.yupi.springbootinit.utils" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yupi.springbootinit.model.vo" />
+      <recent name="com.anyan.apiorder.config" />
+      <recent name="com.anyan.apiorder.model.dto" />
+      <recent name="com.anyan.apicommon.model.entity" />
+      <recent name="com.yupi.springbootinit.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\projects\idea-projects\Huang-Api\the-thrid-party\src\main\java\com\anyan\thethirdparty" />
+      <recent name="E:\projects\idea-projects\Huang-Api\api-common\src\main\java\com\anyan\apicommon" />
+      <recent name="E:\projects\idea-projects\Huang-Api\api-common\src\main\java\com\anyan\common\model" />
+      <recent name="E:\projects\idea-projects\Huang-Api\api-common\src\main\java\com\anyan\common\model\entity" />
+      <recent name="E:\projects\idea-projects\Huang-Api\api-backend\src\main\java\com\yupi\springbootinit\model\dto" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ApiInterfaceApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiOrderApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api-order" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.anyan.apiorder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.anyan.apiorder" />
+      <option name="MAIN_CLASS_NAME" value="com.anyan.apiorder.ApiOrderApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BeanTest.userTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yupi.springbootinit.common.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yupi.springbootinit.common" />
+      <option name="MAIN_CLASS_NAME" value="com.yupi.springbootinit.common.BeanTest" />
+      <option name="METHOD_NAME" value="userTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PasswordTest.productPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api-backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yupi.springbootinit.common.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yupi.springbootinit.common" />
+      <option name="MAIN_CLASS_NAME" value="com.yupi.springbootinit.common.PasswordTest" />
+      <option name="METHOD_NAME" value="productPassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="the-third-party" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="the-third-party" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="api-gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.anyan.apigateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.anyan.apigateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiInterfaceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="api-interface" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.anyan.apiinterface.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.anyan.apiinterface.ApiInterfaceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiOrderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="api-order" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.anyan.apiorder.ApiOrderApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiThirdPartyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="api-third-party" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.anyan.apithirdparty.ApiThirdPartyApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="api-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yupi.springbootinit.MainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApplication2" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false">
+      <module name="api-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yupi.springbootinit.MainApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="spring.application.name" />
+          <option name="value" value="api-backend2" />
+        </param>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="server.port" />
+          <option name="value" value="8060" />
+        </param>
+      </additionalParameters>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.PasswordTest.productPassword" />
+      <item itemvalue="JUnit.BeanTest.userTest" />
+      <item itemvalue="JUnit.ApiOrderApplicationTests.contextLoads" />
+      <item itemvalue="Spring Boot.MainApplication" />
+      <item itemvalue="Spring Boot.MainApplication2" />
+      <item itemvalue="Spring Boot.ApiOrderApplication" />
+      <item itemvalue="Spring Boot.ApiThirdPartyApplication" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.ApiInterfaceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ApiInterfaceApplication" />
+        <item itemvalue="Spring Boot.ApiGatewayApplication" />
+        <item itemvalue="JUnit.ApiOrderApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.BeanTest.userTest" />
+        <item itemvalue="JUnit.PasswordTest.productPassword" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="176699f7-e5dd-41b8-9162-5201a3fbf10e" name="Default Changelist" comment="" />
+      <created>1713342476536</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713342476536</updated>
+      <workItem from="1713342477568" duration="11110000" />
+      <workItem from="1713410231749" duration="4712000" />
+      <workItem from="1713432381734" duration="7587000" />
+      <workItem from="1713489905972" duration="22044000" />
+      <workItem from="1713574735405" duration="28130000" />
+      <workItem from="1713663008670" duration="27012000" />
+      <workItem from="1713749048369" duration="8100000" />
+      <workItem from="1713776793284" duration="2184000" />
+      <workItem from="1713781649607" duration="81000" />
+      <workItem from="1713781749524" duration="491000" />
+      <workItem from="1713782291743" duration="9391000" />
+      <workItem from="1713833848232" duration="34254000" />
+      <workItem from="1713890146997" duration="1046000" />
+      <workItem from="1713891220324" duration="2947000" />
+      <workItem from="1713918180373" duration="12930000" />
+      <workItem from="1713944921996" duration="502000" />
+    </task>
+    <task id="LOCAL-00001" summary="使用鱼皮的Spring Boot 初始化项目">
+      <created>1713347810944</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713347810944</updated>
+    </task>
+    <task id="LOCAL-00002" summary="完善用户信息的操作，如AK/SK">
+      <created>1713442050414</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713442050414</updated>
+    </task>
+    <task id="LOCAL-00003" summary="实现接口的增删改查等基础操作">
+      <created>1713519461101</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713519461101</updated>
+    </task>
+    <task id="LOCAL-00004" summary="实现接口的增删改查等基础操作">
+      <created>1713519513902</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713519513902</updated>
+    </task>
+    <task id="LOCAL-00005" summary="api服务的提供者">
+      <created>1713519567290</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713519567290</updated>
+    </task>
+    <task id="LOCAL-00006" summary="使用签名认证过的用户才能使用api服务">
+      <created>1713519617627</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713519617627</updated>
+    </task>
+    <task id="LOCAL-00007" summary="完善接口服务">
+      <created>1713539353410</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713539353410</updated>
+    </task>
+    <task id="LOCAL-00008" summary="结合网关服务Gateway + Dubbo框架实现RPC + Nacos做注册中心 实现透明调用">
+      <created>1713541555420</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713541555420</updated>
+    </task>
+    <task id="LOCAL-00009" summary="增加接口调用类">
+      <created>1713584467346</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713584467346</updated>
+    </task>
+    <task id="LOCAL-00010" summary="提取公共模块，并整理">
+      <created>1713584566799</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713584566799</updated>
+    </task>
+    <task id="LOCAL-00011" summary="网关的全局过滤，包括鉴权、日志和接口调用次数">
+      <created>1713584683564</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713584683564</updated>
+    </task>
+    <task id="LOCAL-00012" summary="优化sdk">
+      <created>1713589797705</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713589797705</updated>
+    </task>
+    <task id="LOCAL-00013" summary="将路径匹配的服务主机地址改为根据服务名进行服务的负载均衡(接口管理平台)">
+      <created>1713620084582</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713620084582</updated>
+    </task>
+    <task id="LOCAL-00014" summary="将网关作用于模拟接口的全局过滤器改成指定模拟接口路径过滤器">
+      <created>1713622947490</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713622947490</updated>
+    </task>
+    <task id="LOCAL-00015" summary="实现前端请求到网关全局登录验证">
+      <created>1713704761021</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1713704761021</updated>
+    </task>
+    <task id="LOCAL-00016" summary="跨域配置(前端到网关)">
+      <created>1713704830045</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1713704830045</updated>
+    </task>
+    <task id="LOCAL-00017" summary="加入Redis,对用户增删改查进行优化">
+      <created>1713717051455</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1713717051455</updated>
+    </task>
+    <task id="LOCAL-00018" summary="加入接口单价表操作，为后续实现支付功能">
+      <created>1713799875322</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1713799875322</updated>
+    </task>
+    <task id="LOCAL-00019" summary="对管理平台的对外开放服务进行抽取整合">
+      <created>1713840326571</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1713840326571</updated>
+    </task>
+    <task id="LOCAL-00020" summary="添加订单服务">
+      <created>1713867489650</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1713867489650</updated>
+    </task>
+    <task id="LOCAL-00021" summary="订单支付时间到期，状态更新处理">
+      <created>1713867569281</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1713867569281</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Dubbo缓存改为模块文件下">
+      <created>1713867967906</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1713867967906</updated>
+    </task>
+    <task id="LOCAL-00023" summary="查询登录用户所拥有的接口调用">
+      <created>1713884386226</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1713884386226</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="使用鱼皮的Spring Boot 初始化项目" />
+    <MESSAGE value="完善用户信息的操作，如AK/SK" />
+    <MESSAGE value="实现接口的增删改查等基础操作" />
+    <MESSAGE value="api服务的提供者" />
+    <MESSAGE value="使用签名认证过的用户才能使用api服务" />
+    <MESSAGE value="完善接口服务" />
+    <MESSAGE value="结合网关服务Gateway + Dubbo框架实现RPC + Nacos做注册中心 实现透明调用" />
+    <MESSAGE value="增加接口调用类" />
+    <MESSAGE value="提取公共模块，并整理" />
+    <MESSAGE value="网关的全局过滤，包括鉴权、日志和接口调用次数" />
+    <MESSAGE value="优化sdk" />
+    <MESSAGE value="将路径匹配的服务主机地址改为根据服务名进行服务的负载均衡(接口管理平台)" />
+    <MESSAGE value="将网关作用于模拟接口的全局过滤器改成指定模拟接口路径过滤器" />
+    <MESSAGE value="实现前端请求到网关全局登录验证" />
+    <MESSAGE value="跨域配置(前端到网关)" />
+    <MESSAGE value="加入Redis,对用户增删改查进行优化" />
+    <MESSAGE value="加入接口单价表操作，为后续实现支付功能" />
+    <MESSAGE value="对管理平台的对外开放服务进行抽取整合" />
+    <MESSAGE value="添加订单服务" />
+    <MESSAGE value="订单支付时间到期，状态更新处理" />
+    <MESSAGE value="Dubbo缓存改为模块文件下" />
+    <MESSAGE value="查询登录用户所拥有的接口调用" />
+    <option name="LAST_COMMIT_MESSAGE" value="查询登录用户所拥有的接口调用" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="121" y="0" key="#Project_Structure" timestamp="1713717556659">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="121" y="0" key="#Project_Structure/0.0.1536.816@0.0.1536.816" timestamp="1713717556659" />
+    <state x="184" y="59" width="1352" height="735" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1713922686788">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="184" y="59" width="1352" height="735" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1713922686788" />
+    <state x="527" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1713856794742">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="527" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1713856794742" />
+    <state x="441" y="149" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1713891266443">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="441" y="149" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.816@0.0.1536.816" timestamp="1713891266443" />
+    <state x="320" y="319" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1713886914850">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="320" y="319" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.816@0.0.1536.816" timestamp="1713886914850" />
+    <state x="499" y="254" width="537" height="368" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1713768608442">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="499" y="254" width="537" height="368" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.816@0.0.1536.816" timestamp="1713768608442" />
+    <state x="499" y="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1713886916023">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="499" y="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.816@0.0.1536.816" timestamp="1713886916023" />
+    <state x="171" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1713890218198">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="171" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.816@0.0.1536.816" timestamp="1713890218198" />
+    <state x="433" y="95" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1713578015496">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="433" y="95" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1713578015496" />
+    <state x="345" y="84" width="979" height="732" key="#xdebugger.evaluate" timestamp="1713929546054">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="345" y="84" width="979" height="732" key="#xdebugger.evaluate/0.0.1536.816@0.0.1536.816" timestamp="1713929546054" />
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1713884385026">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1713884385026" />
+    <state width="1006" height="546" key="DebuggerActiveHint" timestamp="1713922586617">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1006" height="546" key="DebuggerActiveHint/0.0.1536.816@0.0.1536.816" timestamp="1713922586617" />
+    <state x="147" y="65" width="1228" height="680" key="DiffContextDialog" timestamp="1713894023360">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="147" y="65" width="1228" height="680" key="DiffContextDialog/0.0.1536.816@0.0.1536.816" timestamp="1713894023360" />
+    <state x="496" y="88" key="FileChooserDialogImpl" timestamp="1713891295032">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="496" y="88" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1713891295032" />
+    <state width="993" height="412" key="GridCell.Tab.0.bottom" timestamp="1713935202794">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="993" height="412" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1713935202794" />
+    <state width="993" height="412" key="GridCell.Tab.0.center" timestamp="1713935202794">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="993" height="412" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1713935202794" />
+    <state width="993" height="412" key="GridCell.Tab.0.left" timestamp="1713935202794">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="993" height="412" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1713935202794" />
+    <state width="993" height="412" key="GridCell.Tab.0.right" timestamp="1713935202794">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="993" height="412" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1713935202794" />
+    <state width="993" height="412" key="GridCell.Tab.1.bottom" timestamp="1713935202794">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="993" height="412" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1713935202794" />
+    <state width="993" height="412" key="GridCell.Tab.1.center" timestamp="1713935202794">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="993" height="412" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1713935202794" />
+    <state width="993" height="412" key="GridCell.Tab.1.left" timestamp="1713935202794">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="993" height="412" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1713935202794" />
+    <state width="993" height="412" key="GridCell.Tab.1.right" timestamp="1713935202794">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="993" height="412" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1713935202794" />
+    <state width="262" height="550" key="HiddenNamespacesPopup" timestamp="1713922701758">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="262" height="550" key="HiddenNamespacesPopup/0.0.1536.816@0.0.1536.816" timestamp="1713922701758" />
+    <state x="446" y="41" key="RollbackChangesDialog" timestamp="1713576994220">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="446" y="41" key="RollbackChangesDialog/0.0.1536.816@0.0.1536.816" timestamp="1713576994220" />
+    <state x="153" y="0" key="SettingsEditor" timestamp="1713885735170">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="153" y="0" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1713885735170" />
+    <state x="423" y="87" width="675" height="655" key="StructurePopup" timestamp="1713533640805">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="423" y="87" width="675" height="655" key="StructurePopup/0.0.1536.816@0.0.1536.816" timestamp="1713533640805" />
+    <state width="623" height="555" key="SwitcherDM" timestamp="1713344141649">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="623" height="555" key="SwitcherDM/0.0.1536.816@0.0.1536.816" timestamp="1713344141649" />
+    <state x="417" y="70" key="Vcs.Push.Dialog.v2" timestamp="1713918207587">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="417" y="70" key="Vcs.Push.Dialog.v2/0.0.1536.816@0.0.1536.816" timestamp="1713918207587" />
+    <state width="775" height="415" key="XDebugger.FullValuePopup" timestamp="1713922406090">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="775" height="415" key="XDebugger.FullValuePopup/0.0.1536.816@0.0.1536.816" timestamp="1713922406090" />
+    <state x="574" y="180" width="650" height="456" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1713436053466">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="574" y="180" width="650" height="456" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1536.816@0.0.1536.816" timestamp="1713436053466" />
+    <state x="543" y="304" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1713348887324">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="543" y="304" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.816@0.0.1536.816" timestamp="1713348887324" />
+    <state x="206" y="73" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1713622800787">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="206" y="73" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.816@0.0.1536.816" timestamp="1713622800787" />
+    <state x="436" y="179" key="extract.method.dialog" timestamp="1713712826331">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="436" y="179" key="extract.method.dialog/0.0.1536.816@0.0.1536.816" timestamp="1713712826331" />
+    <state x="523" y="295" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1713348726095">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="523" y="295" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1536.816@0.0.1536.816" timestamp="1713348726095" />
+    <state x="0" y="0" key="new project wizard" timestamp="1713884460969">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="0" y="0" key="new project wizard/0.0.1536.816@0.0.1536.816" timestamp="1713884460969" />
+    <state x="341" y="181" key="run.anything.popup" timestamp="1713521108619">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="341" y="181" key="run.anything.popup/0.0.1536.816@0.0.1536.816" timestamp="1713521108619" />
+    <state x="347" y="0" width="840" height="1034" key="search.everywhere.popup" timestamp="1713843489278">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="347" y="0" width="840" height="1034" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1713843489278" />
+  </component>
+</project>
