@@ -185,13 +185,12 @@ public class InterfaceInfoController {
     // endregion
 
     /**
-     * 分页获取接口（仅管理员）
+     * 分页获取接口
      *
      * @param interfaceInfoQueryRequest
      * @return
      */
     @PostMapping("/list/page")
-    @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
     public BaseResponse<Page<InterfaceInfo>> listInterfaceInfoByPage(@RequestBody InterfaceInfoQueryRequest interfaceInfoQueryRequest) {
         long current = interfaceInfoQueryRequest.getCurrent();
         long size = interfaceInfoQueryRequest.getPageSize();

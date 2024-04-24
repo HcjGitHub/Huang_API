@@ -27,6 +27,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * 用户接口
@@ -53,7 +54,7 @@ public class UserController {
      * @param request
      * @param response
      */
-    @GetMapping("/getCode")
+    @GetMapping("/getCaptcha")
     public void getCaptcha(HttpServletRequest request, HttpServletResponse response) {
         userService.getCaptcha(request, response);
     }
@@ -71,11 +72,52 @@ public class UserController {
         }
         String signature = request.getHeader("signature");
 
-
         if (StringUtils.isAnyBlank(signature)) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
         long result = userService.userRegister(userRegisterRequest, signature);
+        return ResultUtils.success(result);
+    }
+
+    /**
+     * 发送邮箱注册登录验证码
+     *
+     * @param emailNum    邮箱号码
+     * @param captchaType 验证码类型 login:登录 register:注册
+     */
+    @GetMapping("/sendSMSCode")
+    public BaseResponse<Boolean> sendSMSCode(@RequestParam String emailNum, @RequestParam String captchaType) {
+        if (StringUtils.isAnyBlank(emailNum, captchaType)) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+
+        //^1[3-9]\d{9}$ 手机号正则表达式
+        //^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$    邮箱正则表达式
+        if (!Pattern.matches("^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+$", emailNum)) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "邮箱格式错误");
+        }
+        userService.sendSMSCode(emailNum, captchaType);
+        return ResultUtils.success(true);
+    }
+
+    /**
+     * 用户邮箱注册
+     *
+     * @param userRegisterRequest
+     * @return
+     */
+    @PostMapping("/email/register")
+    public BaseResponse<Long> userEmailRegister(@RequestBody UserRegisterRequest userRegisterRequest, HttpServletRequest request) {
+        if (userRegisterRequest == null) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        String email = userRegisterRequest.getEmailNum();
+        String captcha = userRegisterRequest.getEmailCaptcha();
+
+        if (StringUtils.isAnyBlank(email, captcha)) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        long result = userService.userEmailRegister(email, captcha);
         return ResultUtils.success(result);
     }
 
@@ -98,6 +140,31 @@ public class UserController {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
         LoginUserVO loginUserVO = userService.userLogin(userAccount, userPassword, request, response);
+        return ResultUtils.success(loginUserVO);
+    }
+
+    /**
+     * 用户登录
+     *
+     * @param userLoginRequest
+     * @param request
+     * @return
+     */
+    @PostMapping("/email/login")
+    public BaseResponse<LoginUserVO> userEmailLogin(@RequestBody UserLoginRequest userLoginRequest
+            , HttpServletRequest request, HttpServletResponse response) {
+        if (userLoginRequest == null) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        String email = userLoginRequest.getEmailNum();
+        String captcha = userLoginRequest.getEmailCaptcha();
+        if (StringUtils.isAnyBlank(email, captcha)) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        if (!Pattern.matches("^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\\.[a-zA-Z0-9_-]+)+$", email)) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "邮箱格式错误");
+        }
+        LoginUserVO loginUserVO = userService.userEmailLogin(email, captcha, request, response);
         return ResultUtils.success(loginUserVO);
     }
 

@@ -12,4 +12,9 @@ public interface RabbitmqConstant {
     String QUEUE_ORDER_PAY_SUCCESS = "queue_order_pay_success";
     String ROUTING_KEY_ORDER_PAY_SUCCESS = "routing_key_order_pay_success";
 
+    /* 短信相关 */
+    String EXCHANGE_SMS_INFORM ="exchange_sms_inform";
+    String QUEUE_LOGIN_SMS = "queue_sms_code";
+    String ROUTING_KEY_SMS ="inform_login_sms";
+
 }

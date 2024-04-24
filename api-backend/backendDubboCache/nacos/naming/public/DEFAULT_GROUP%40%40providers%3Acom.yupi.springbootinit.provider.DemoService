@@ -1,1 +1,1 @@
-{"name":"providers:com.yupi.springbootinit.provider.DemoService","groupName":"DEFAULT_GROUP","clusters":"","cacheMillis":10000,"hosts":[],"lastRefTime":1713953373234,"checksum":"","allIPs":false,"reachProtectionThreshold":false,"valid":true}
+{"name":"providers:com.yupi.springbootinit.provider.DemoService","groupName":"DEFAULT_GROUP","clusters":"","cacheMillis":10000,"hosts":[],"lastRefTime":1713978718516,"checksum":"","allIPs":false,"reachProtectionThreshold":false,"valid":true}

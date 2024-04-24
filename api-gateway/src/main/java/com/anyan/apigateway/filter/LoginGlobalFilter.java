@@ -33,8 +33,8 @@ public class LoginGlobalFilter implements GlobalFilter, Ordered {
 
     //不需要用户登录路径
     public static final List<String> NOT_LOGIN_PATH = Arrays.asList(
-            "/api/user/login", "/api/user/loginBySms", "/api/user/register", "/api/user/email/register", "/api/user/smsCaptcha",
-            "/api/user/getCaptcha", "/api/interface/**", "/api/third/alipay/**", "/api/interfaceInfo/sdk","/api/user/get/login");
+            "/api/user/login", "/api/user/email/login", "/api/user/register", "/api/user/email/register", "/api/user/sendSMSCode",
+            "/api/user/getCaptcha", "/api/interface/**", "/api/third/alipay/**", "/api/interfaceInfo/sdk", "/api/user/get/login");
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {

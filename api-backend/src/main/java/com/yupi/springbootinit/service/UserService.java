@@ -164,4 +164,32 @@ public interface UserService extends IService<User> {
      * @param response
      */
     void getCaptcha(HttpServletRequest request, HttpServletResponse response);
+
+    /**
+     * 发送邮箱注册登录验证码
+     *
+     * @param emailNum    邮箱号码
+     * @param captchaType 验证码类型 login:登录 register:注册
+     */
+    void sendSMSCode(String emailNum, String captchaType);
+
+    /**
+     * 用户邮箱注册
+     *
+     * @param email   邮箱
+     * @param captcha 验证码
+     * @return
+     */
+    long userEmailRegister(String email, String captcha);
+
+    /**
+     * 使用邮箱方式进行登录
+     *
+     * @param email    邮箱
+     * @param captcha  验证码
+     * @param request
+     * @param response
+     * @return
+     */
+    LoginUserVO userEmailLogin(String email, String captcha, HttpServletRequest request, HttpServletResponse response);
 }

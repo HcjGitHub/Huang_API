@@ -12,13 +12,14 @@ use huang_api;
 create table if not exists user
 (
     id           bigint auto_increment comment 'id' primary key,
-    userAccount  varchar(256)                           not null comment '账号',
-    userPassword varchar(512)                           not null comment '密码',
+    userAccount  varchar(256)                           null comment '账号',
+    userPassword varchar(512)                           null comment '密码',
     unionId      varchar(256)                           null comment '微信开放平台id',
     mpOpenId     varchar(256)                           null comment '公众号openId',
     userName     varchar(256)                           null comment '用户昵称',
     userAvatar   varchar(1024)                          null comment '用户头像',
     userProfile  varchar(512)                           null comment '用户简介',
+    `email`      varchar(256)                           NULL COMMENT '邮箱',
     userRole     varchar(256) default 'user'            not null comment '用户角色：user/admin/ban',
     `accessKey`  varchar(512) CHARACTER SET utf8        NOT NULL COMMENT 'ak',
     `secretKey`  varchar(512) CHARACTER SET utf8        NOT NULL COMMENT 'sk',
@@ -88,8 +89,8 @@ CREATE TABLE `interface_charging`
     `isDelete`        int(0)                             NULL DEFAULT 0 COMMENT '是否删除(0-未删, 1-已删)',
     PRIMARY KEY (`id`) USING BTREE
 ) comment '接口单价信息' ENGINE = InnoDB
-                 AUTO_INCREMENT = 3
-                 CHARACTER SET = utf8
-                 COLLATE = utf8_general_ci
-                 ROW_FORMAT = DYNAMIC;
+                   AUTO_INCREMENT = 3
+                   CHARACTER SET = utf8
+                   COLLATE = utf8_general_ci
+                   ROW_FORMAT = DYNAMIC;
 

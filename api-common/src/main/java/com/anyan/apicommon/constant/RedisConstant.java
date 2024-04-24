@@ -16,7 +16,8 @@ public interface RedisConstant {
     //支付宝订单成功交易的记录，解决因为网络故障而多次重复收到阿里的回调通知导致的订单重复处理的问题
     String ALIPAY_TRADE_SUCCESS_RECORD = "alipay:trade:success:record:";
 
-    //短信登录key
-    public static String LOGINCODEPRE = "user::email::register::";
+    //短信注册登录key
+    String CODE_LOGIN_PRE = "user:code:login:";
+    String CODE_REGISTER_PRE = "user:code:register:";
 }
 

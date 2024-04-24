@@ -1,10 +1,12 @@
 com\anyan\apicommon\model\entity\User.class
 com\anyan\apicommon\service\ApiBackendService.class
 com\anyan\apicommon\model\entity\PostThumb.class
-com\anyan\apicommon\model\entity\PostFavour.class
-com\anyan\apicommon\vo\OrderVO.class
+com\anyan\apicommon\common\LeakyBucket.class
 com\anyan\apicommon\model\entity\UserInterfaceInfo.class
 com\anyan\apicommon\utils\JwtUtils.class
+com\anyan\apicommon\model\entity\PostFavour.class
+com\anyan\apicommon\vo\OrderVO.class
+com\anyan\apicommon\common\SmsMessage.class
 com\anyan\apicommon\model\entity\InterfaceInfo.class
 com\anyan\apicommon\model\entity\Post.class
 com\anyan\apicommon\model\entity\InterfaceCharging.class
