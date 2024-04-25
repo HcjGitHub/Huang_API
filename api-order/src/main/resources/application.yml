@@ -79,12 +79,14 @@ knife4j:
 # Dubbo 配置
 dubbo:
   application:
-    name: huangapi-rpc-nacos
+    name: huangapi-order-nacos
+    qosEnableL: true
   #  scan:
   #    base-packages: com.anyan.apigateway.provider
   protocol:
-    dubbo:
-      name: dubbo
-      port: 20881
+    name: dubbo
+    port: -1
   registry:
     address: nacos://localhost:8848
+  consumer:
+    check: false

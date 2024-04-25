@@ -158,7 +158,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order>
             orderVO.setOrderNumber(order.getOrderSn());
             orderVO.setTotal(order.getCount());
             orderVO.setCharging(order.getCharging());
-            orderVO.setTotalAmount(order.getTotalAmount().doubleValue());
+            orderVO.setTotalAmount(order.getTotalAmount());
             orderVO.setStatus(type);
             orderVO.setCreateTime(order.getCreateTime());
             orderVO.setExpirationTime(DateUtil.offset(order.getCreateTime(), DateField.MINUTE,30));
@@ -169,6 +169,11 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, Order>
         }).collect(Collectors.toList());
         orderVOPage.setRecords(orderVOList);
         return orderVOPage;
+    }
+
+    @Override
+    public List<OrderVO> listTopInterfaceInfoByStatus(Integer status, Integer limit) {
+        return orderMapper.listTopInterfaceInfoByStatus(status,limit);
     }
 
     /**

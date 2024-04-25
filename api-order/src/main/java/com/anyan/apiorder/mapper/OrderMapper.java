@@ -2,7 +2,11 @@ package com.anyan.apiorder.mapper;
 
 
 import com.anyan.apicommon.model.entity.Order;
+import com.anyan.apicommon.vo.OrderVO;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
 * @author 兕神
@@ -12,6 +16,12 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 */
 public interface OrderMapper extends BaseMapper<Order> {
 
+    /**
+     * 获取status状态下次数
+     * @param status
+     * @return
+     */
+    List<OrderVO> listTopInterfaceInfoByStatus(@Param("status") Integer status, @Param("limit") Integer limit);
 }
 
 

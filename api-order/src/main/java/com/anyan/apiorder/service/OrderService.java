@@ -3,12 +3,14 @@ package com.anyan.apiorder.service;
 
 import com.anyan.apicommon.model.entity.Order;
 import com.anyan.apicommon.vo.OrderVO;
+import com.anyan.apiorder.enums.OrderStatusEnum;
 import com.anyan.apiorder.model.dto.OrderAddRequest;
 import com.anyan.apiorder.model.dto.OrderQueryRequest;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * @description 针对表【order】的数据库操作Service
@@ -33,4 +35,11 @@ public interface OrderService extends IService<Order> {
      * @return
      */
     Page<OrderVO> listOrderByPage(OrderQueryRequest orderQueryRequest, HttpServletRequest request);
+
+    /**
+     * 获取status状态下次数
+     * @param status
+     * @return
+     */
+    List<OrderVO> listTopInterfaceInfoByStatus(Integer status,Integer limit);
 }

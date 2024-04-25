@@ -1,652 +1,198 @@
-2024-04-23 17:10:22.148 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-23 17:10:22.148 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-23 17:10:22.148 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-23 17:10:22.184 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 17:10:22.184 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-23 17:10:24.762 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [2dc45113-131d-4780-9ba1-cae27b86df04_config-0] Connected,notify listen context...
-2024-04-23 17:10:24.792 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-23 17:10:37.891 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-23 17:10:37.891 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 17:10:37.892 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 17:10:37.939 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:10:37.939 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:10:37.955 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 17:10:37.955 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 17:10:37.955 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 17:10:37.955 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 17:10:38.143 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-23 17:10:38.143 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-23 17:10:38.143 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-23 17:10:38.143 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-23 17:10:38.143 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 17:10:38.143 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 17:10:38.355 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 17:10:38.355 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 17:10:38.483 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [6e14bd96-e63c-45d5-a3b6-494aea74ee87_config-0] Connected,notify listen context...
-2024-04-23 17:10:38.491 INFO [restartedMain:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-23 17:10:38.685 INFO [com.alibaba.nacos.client.Worker:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [notify-listener] time cost=0ms in ClientWorker, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, md5=a0610ac4031cb2aa33d735698077db1e, listener=org.apache.dubbo.metadata.store.nacos.NacosMetadataReport$NacosConfigListener@140585fc 
-2024-04-23 17:10:38.685 INFO [nacos.client.cachedata.internal.notifier:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [notify-context] dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, md5=a0610ac4031cb2aa33d735698077db1e
-2024-04-23 17:10:38.685 INFO [nacos.client.cachedata.internal.notifier:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [notify-ok] dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, md5=a0610ac4031cb2aa33d735698077db1e, listener=org.apache.dubbo.metadata.store.nacos.NacosMetadataReport$NacosConfigListener@140585fc ,cost=0 millis.
-2024-04-23 17:10:38.749 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:10:38.749 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:18:06.866 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 17:18:06.866 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 17:18:07.848 INFO [com.alibaba.nacos.client.Worker:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 17:18:20.080 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-23 17:18:20.081 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-23 17:18:20.082 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-23 17:18:20.110 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 17:18:20.116 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-23 17:18:23.008 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [8f74817e-cedf-4bb9-9c1c-7ce77244389d_config-0] Connected,notify listen context...
-2024-04-23 17:18:23.057 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-23 17:18:34.728 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-23 17:18:34.728 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 17:18:34.741 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 17:18:34.806 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:18:34.806 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:18:34.835 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 17:18:34.835 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 17:18:34.844 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 17:18:34.844 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 17:18:35.034 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-23 17:18:35.034 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-23 17:18:35.034 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-23 17:18:35.036 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-23 17:18:35.046 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 17:18:35.046 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 17:18:35.260 INFO [restartedMain:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-23 17:18:35.261 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 17:18:35.261 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 17:18:35.382 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [b8fefd22-601e-49b9-a26f-8314ca2b0097_config-0] Connected,notify listen context...
-2024-04-23 17:18:35.732 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:18:35.732 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:26:26.204 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 17:26:26.204 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 17:26:39.387 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-23 17:26:39.388 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-23 17:26:39.389 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-23 17:26:39.421 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 17:26:39.424 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-23 17:26:42.197 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [6897c590-0e51-4096-b806-d842549c3aa4_config-0] Connected,notify listen context...
-2024-04-23 17:26:42.238 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-23 17:27:05.013 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-23 17:27:05.013 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 17:27:05.021 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 17:27:05.071 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:27:05.071 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:27:05.101 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 17:27:05.101 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 17:27:05.106 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 17:27:05.106 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 17:27:05.321 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-23 17:27:05.322 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-23 17:27:05.322 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-23 17:27:05.322 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-23 17:27:05.332 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 17:27:05.332 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 17:27:05.548 INFO [restartedMain:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-23 17:27:05.548 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 17:27:05.548 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 17:27:05.672 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [47b5e65b-3de0-4521-8fc8-45f718447d3a_config-0] Connected,notify listen context...
-2024-04-23 17:27:06.009 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:27:06.009 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:31:14.192 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 17:31:14.192 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 17:31:25.559 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-23 17:31:25.563 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-23 17:31:25.563 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-23 17:31:25.594 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 17:31:25.599 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-23 17:31:28.220 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [ebba4e43-4b35-4ca3-b396-90094e394408_config-0] Connected,notify listen context...
-2024-04-23 17:31:28.259 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-23 17:31:38.727 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-23 17:31:38.730 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 17:31:38.738 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 17:31:38.782 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:31:38.782 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:31:38.806 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 17:31:38.806 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 17:31:38.810 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 17:31:38.810 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 17:31:38.978 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-23 17:31:38.978 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-23 17:31:38.978 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-23 17:31:38.978 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-23 17:31:38.990 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 17:31:38.990 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 17:31:39.201 INFO [restartedMain:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-23 17:31:39.201 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 17:31:39.201 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 17:31:39.316 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [7e2179ad-5024-402d-a475-7839d1c5740b_config-0] Connected,notify listen context...
-2024-04-23 17:31:39.600 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:31:39.600 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:39:06.323 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 17:39:06.323 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 17:39:20.883 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-23 17:39:20.885 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-23 17:39:20.886 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-23 17:39:20.918 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 17:39:20.928 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-23 17:39:24.175 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [c434481d-0e41-4814-8c23-12d161205319_config-0] Connected,notify listen context...
-2024-04-23 17:39:24.246 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-23 17:39:36.827 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-23 17:39:36.827 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 17:39:36.835 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 17:39:36.891 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:39:36.891 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:39:36.914 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 17:39:36.917 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 17:39:36.923 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 17:39:36.923 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 17:39:37.113 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-23 17:39:37.113 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-23 17:39:37.117 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-23 17:39:37.117 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-23 17:39:37.125 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 17:39:37.125 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 17:39:37.344 INFO [restartedMain:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-23 17:39:37.344 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 17:39:37.344 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 17:39:37.461 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [3ca39874-0329-471c-bdde-408ea5f28048_config-0] Connected,notify listen context...
-2024-04-23 17:39:37.784 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:39:37.785 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:43:38.538 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 17:43:38.538 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 17:44:32.268 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-23 17:44:32.272 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-23 17:44:32.272 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-23 17:44:32.296 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 17:44:32.300 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-23 17:44:35.259 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [e6bfd2ca-4a6b-450f-a5a6-f00aa1b21c34_config-0] Connected,notify listen context...
-2024-04-23 17:44:35.296 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-23 17:44:45.808 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-23 17:44:45.808 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 17:44:45.818 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 17:44:45.868 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:44:45.868 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:44:45.901 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 17:44:45.901 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 17:44:45.908 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 17:44:45.908 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 17:44:46.088 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-23 17:44:46.092 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-23 17:44:46.092 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-23 17:44:46.092 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-23 17:44:46.105 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 17:44:46.105 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 17:44:46.318 INFO [restartedMain:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-23 17:44:46.318 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 17:44:46.318 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 17:44:46.443 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [09aa9195-f207-40f0-80f1-aec409d14574_config-0] Connected,notify listen context...
-2024-04-23 17:44:46.712 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:44:46.712 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:55:05.720 INFO [Thread-2:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 17:55:05.720 INFO [Thread-2:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 17:55:06.435 INFO [com.alibaba.nacos.client.Worker:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 17:55:07.800 INFO [Thread-2:c.a.n.c.c.i.ClientWorker] com.alibaba.nacos.client.config.impl.ClientWorker do shutdown begin
-2024-04-23 17:55:07.800 INFO [Thread-2:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 17:55:07.800 INFO [Thread-2:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 17:55:07.800 INFO [Thread-2:c.a.n.c.c.i.ClientWorker] Trying to shutdown transport client com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient@3c97f01e
-2024-04-23 17:55:07.800 INFO [Thread-2:c.a.n.c.c.i.ClientWorker] Trying to shutdown rpc client e6bfd2ca-4a6b-450f-a5a6-f00aa1b21c34_config-0
-2024-04-23 17:55:07.801 INFO [Thread-2:c.a.n.c.c.i.ClientWorker] Remove rpc client e6bfd2ca-4a6b-450f-a5a6-f00aa1b21c34_config-0
-2024-04-23 17:55:07.801 INFO [Thread-2:c.a.n.c.c.i.ClientWorker] Shutdown executor java.util.concurrent.ScheduledThreadPoolExecutor@664a1dd2[Running, pool size = 16, active threads = 1, queued tasks = 1, completed tasks = 127]
-2024-04-23 17:55:07.801 INFO [Thread-2:c.a.n.c.c.i.ClientWorker] com.alibaba.nacos.client.config.impl.ClientWorker do shutdown stop
-2024-04-23 17:55:11.198 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 17:55:11.309 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [5403b69d-3021-4db6-b8a5-76489181deff_config-0] Connected,notify listen context...
-2024-04-23 17:55:17.662 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 17:55:17.662 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 17:55:17.675 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:55:17.675 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:55:17.683 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 17:55:17.683 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 17:55:17.684 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 17:55:17.684 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 17:55:17.723 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-23 17:55:17.723 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-23 17:55:17.727 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-23 17:55:17.727 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-23 17:55:17.727 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 17:55:17.727 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 17:55:17.948 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 17:55:17.948 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 17:55:18.063 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [40ebdfe5-2d04-4a1c-8e5e-5fc648441f6f_config-0] Connected,notify listen context...
-2024-04-23 17:55:18.080 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:55:18.080 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:55:18.946 INFO [Thread-107:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 17:55:18.946 INFO [Thread-107:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 17:55:21.000 INFO [Thread-107:c.a.n.c.c.i.ClientWorker] com.alibaba.nacos.client.config.impl.ClientWorker do shutdown begin
-2024-04-23 17:55:21.000 INFO [Thread-107:c.a.n.c.c.i.ClientWorker] Trying to shutdown transport client com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient@2c466c82
-2024-04-23 17:55:21.000 INFO [Thread-107:c.a.n.c.c.i.ClientWorker] Trying to shutdown rpc client 5403b69d-3021-4db6-b8a5-76489181deff_config-0
-2024-04-23 17:55:21.000 INFO [Thread-107:c.a.n.c.c.i.ClientWorker] Remove rpc client 5403b69d-3021-4db6-b8a5-76489181deff_config-0
-2024-04-23 17:55:21.000 INFO [Thread-107:c.a.n.c.c.i.ClientWorker] Shutdown executor java.util.concurrent.ScheduledThreadPoolExecutor@5d22004a[Running, pool size = 4, active threads = 1, queued tasks = 1, completed tasks = 2]
-2024-04-23 17:55:21.000 INFO [Thread-107:c.a.n.c.c.i.ClientWorker] com.alibaba.nacos.client.config.impl.ClientWorker do shutdown stop
-2024-04-23 17:55:21.269 INFO [com.alibaba.nacos.client.naming.security:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 17:55:22.431 INFO [Thread-107:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 17:55:22.431 INFO [Thread-107:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 17:55:22.756 INFO [com.alibaba.nacos.client.naming.security:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 17:55:24.968 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [7c7dc516-cc01-455d-ae73-4be68f68f20c_config-0] Connected,notify listen context...
-2024-04-23 17:55:31.275 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 17:55:31.275 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 17:55:31.288 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:55:31.288 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:55:31.294 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 17:55:31.294 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 17:55:31.294 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 17:55:31.294 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 17:55:31.330 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-23 17:55:31.330 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-23 17:55:31.330 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-23 17:55:31.330 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-23 17:55:31.334 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 17:55:31.334 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 17:55:31.473 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 17:55:31.473 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 17:55:31.504 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:55:31.504 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:55:31.593 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [9d029a04-9681-4bfb-bc1c-5f2cf2fcad17_config-0] Connected,notify listen context...
-2024-04-23 17:59:05.957 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-23 17:59:05.962 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-23 17:59:05.962 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-23 17:59:05.985 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 17:59:05.993 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-23 17:59:08.623 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [f043c1b7-fa5d-4ebf-b5b5-6cd1e4fe60c3_config-0] Connected,notify listen context...
-2024-04-23 17:59:08.669 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-23 17:59:18.885 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-23 17:59:18.885 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 17:59:18.903 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 17:59:18.955 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:59:18.955 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:59:18.985 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 17:59:18.985 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 17:59:18.991 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 17:59:18.991 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 17:59:19.236 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-23 17:59:19.236 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-23 17:59:19.236 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-23 17:59:19.236 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-23 17:59:19.248 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 17:59:19.248 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 17:59:19.476 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-23 17:59:19.476 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 17:59:19.476 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 17:59:19.589 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [3c1cc635-99de-4c4c-9185-ac75ce30a675_config-0] Connected,notify listen context...
-2024-04-23 17:59:19.665 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 17:59:19.665 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 17:59:29.297 INFO [SpringApplicationShutdownHook:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 17:59:29.297 INFO [SpringApplicationShutdownHook:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 17:59:29.337 INFO [com.alibaba.nacos.client.naming.security:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 18:00:24.925 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-23 18:00:24.927 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-23 18:00:24.928 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-23 18:00:24.953 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 18:00:24.958 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-23 18:00:27.568 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [8c00bf6e-a575-4f7e-b6d5-877863494398_config-0] Connected,notify listen context...
-2024-04-23 18:00:27.623 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-23 18:00:39.791 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-23 18:00:39.791 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 18:00:39.802 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 18:00:39.851 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 18:00:39.851 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 18:00:39.877 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 18:00:39.877 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 18:00:39.883 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 18:00:39.883 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 18:00:40.070 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-23 18:00:40.070 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-23 18:00:40.071 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-23 18:00:40.071 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-23 18:00:40.080 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 18:00:40.080 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 18:00:40.304 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-23 18:00:40.305 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 18:00:40.305 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 18:00:40.430 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [9059e4d1-2bb0-4ec9-b178-85dd23ff8c0d_config-0] Connected,notify listen context...
-2024-04-23 18:00:40.448 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 18:00:40.448 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 18:01:46.350 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [9059e4d1-2bb0-4ec9-b178-85dd23ff8c0d_config-0] DisConnected,clear listen context...
-2024-04-23 18:01:46.350 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [8c00bf6e-a575-4f7e-b6d5-877863494398_config-0] DisConnected,clear listen context...
-2024-04-23 18:01:46.350 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [9059e4d1-2bb0-4ec9-b178-85dd23ff8c0d_config-0] Connected,notify listen context...
-2024-04-23 18:01:46.350 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [8c00bf6e-a575-4f7e-b6d5-877863494398_config-0] Connected,notify listen context...
-2024-04-23 18:01:46.430 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 18:01:46.430 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 18:01:46.465 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [9059e4d1-2bb0-4ec9-b178-85dd23ff8c0d_config-0] DisConnected,clear listen context...
-2024-04-23 18:01:46.465 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [9059e4d1-2bb0-4ec9-b178-85dd23ff8c0d_config-0] Connected,notify listen context...
-2024-04-23 18:01:46.482 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [8c00bf6e-a575-4f7e-b6d5-877863494398_config-0] DisConnected,clear listen context...
-2024-04-23 18:01:46.482 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [8c00bf6e-a575-4f7e-b6d5-877863494398_config-0] Connected,notify listen context...
-2024-04-23 18:02:24.531 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-23 18:02:24.531 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-23 18:02:24.531 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-23 18:02:24.557 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 18:02:24.565 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-23 18:02:27.187 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [2deacf36-2a59-4d5f-8b76-59a13d1c476c_config-0] Connected,notify listen context...
-2024-04-23 18:02:27.247 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-23 18:02:37.687 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-23 18:02:37.691 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 18:02:37.699 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 18:02:37.757 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 18:02:37.757 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 18:02:37.785 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 18:02:37.785 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 18:02:37.795 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 18:02:37.795 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 18:02:37.989 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-23 18:02:37.989 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-23 18:02:37.989 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-23 18:02:37.989 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-23 18:02:37.998 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 18:02:37.998 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 18:02:38.221 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-23 18:02:38.221 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 18:02:38.221 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 18:02:38.343 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [da8ae699-f8cc-4772-89f1-269919c25d93_config-0] Connected,notify listen context...
-2024-04-23 18:02:38.379 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 18:02:38.379 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 18:04:56.968 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [da8ae699-f8cc-4772-89f1-269919c25d93_config-0] DisConnected,clear listen context...
-2024-04-23 18:04:56.968 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [da8ae699-f8cc-4772-89f1-269919c25d93_config-0] Connected,notify listen context...
-2024-04-23 18:05:01.820 ERROR [com.alibaba.nacos.client.Worker:c.a.n.c.c.i.ClientWorker] Async listen config change error 
-com.alibaba.nacos.api.exception.NacosException: java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 751 milliseconds, 713200 nanoseconds delay) but future completed as timeout expired
-	at com.alibaba.nacos.common.remote.client.grpc.GrpcConnection.request(GrpcConnection.java:78) ~[nacos-client-2.1.0.jar:na]
-	at com.alibaba.nacos.common.remote.client.RpcClient.request(RpcClient.java:653) ~[nacos-client-2.1.0.jar:na]
-	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.requestProxy(ClientWorker.java:1005) [nacos-client-2.1.0.jar:na]
-	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.requestProxy(ClientWorker.java:986) [nacos-client-2.1.0.jar:na]
-	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.executeConfigListen(ClientWorker.java:777) [nacos-client-2.1.0.jar:na]
-	at com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient.lambda$startInternal$2(ClientWorker.java:695) [nacos-client-2.1.0.jar:na]
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_131]
-	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266) ~[na:1.8.0_131]
-	at java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:1.8.0_131]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) ~[na:1.8.0_131]
-	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) ~[na:1.8.0_131]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) ~[na:1.8.0_131]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) ~[na:1.8.0_131]
-	at java.lang.Thread.run(Thread.java:748) ~[na:1.8.0_131]
-Caused by: java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 751 milliseconds, 713200 nanoseconds delay) but future completed as timeout expired
-	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:506) ~[nacos-client-2.1.0.jar:na]
-	at com.alibaba.nacos.common.remote.client.grpc.GrpcConnection.request(GrpcConnection.java:76) ~[nacos-client-2.1.0.jar:na]
-	... 13 common frames omitted
-2024-04-23 18:05:06.781 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [da8ae699-f8cc-4772-89f1-269919c25d93_config-0] DisConnected,clear listen context...
-2024-04-23 18:05:07.806 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [da8ae699-f8cc-4772-89f1-269919c25d93_config-0] Connected,notify listen context...
-2024-04-23 18:05:11.209 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [da8ae699-f8cc-4772-89f1-269919c25d93_config-0] DisConnected,clear listen context...
-2024-04-23 18:05:11.209 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [da8ae699-f8cc-4772-89f1-269919c25d93_config-0] Connected,notify listen context...
-2024-04-23 18:06:15.867 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 18:06:15.867 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 18:06:28.114 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-23 18:06:28.114 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-23 18:06:28.117 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-23 18:06:28.142 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 18:06:28.146 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-23 18:06:30.687 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [31a35244-be0d-462c-9435-01598f7799fc_config-0] Connected,notify listen context...
-2024-04-23 18:06:30.732 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-23 18:06:40.666 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-23 18:06:40.666 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 18:06:40.678 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 18:06:40.719 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 18:06:40.719 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 18:06:40.743 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 18:06:40.743 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 18:06:40.748 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 18:06:40.748 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 18:06:40.920 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-23 18:06:40.920 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-23 18:06:40.920 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-23 18:06:40.920 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-23 18:06:40.928 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 18:06:40.928 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 18:06:41.148 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-23 18:06:41.152 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 18:06:41.152 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 18:06:41.270 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [2bfa55e5-1e1a-45b0-8ead-be5dd1a656f1_config-0] Connected,notify listen context...
-2024-04-23 18:06:41.274 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 18:06:41.274 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 18:08:08.270 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 18:08:08.270 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 18:08:08.278 INFO [com.alibaba.nacos.client.Worker:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 18:08:08.954 INFO [SpringApplicationShutdownHook:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 18:08:08.954 INFO [SpringApplicationShutdownHook:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 18:08:21.338 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-23 18:08:21.338 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-23 18:08:21.342 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-23 18:08:21.373 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 18:08:21.377 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-23 18:08:24.436 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [08a63b0a-cc5c-41ed-b735-af28b97dcc77_config-0] Connected,notify listen context...
-2024-04-23 18:08:24.488 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-23 18:08:34.795 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-23 18:08:34.795 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 18:08:34.803 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 18:08:34.851 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 18:08:34.851 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 18:08:34.868 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 18:08:34.868 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 18:08:34.880 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 18:08:34.880 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 18:08:35.036 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-23 18:08:35.036 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-23 18:08:35.040 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-23 18:08:35.040 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-23 18:08:35.048 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 18:08:35.048 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 18:08:35.262 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-23 18:08:35.262 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 18:08:35.262 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 18:08:35.378 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [179f07b9-06f0-42b1-bfcb-d91a44b5a5f1_config-0] Connected,notify listen context...
-2024-04-23 18:08:35.383 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 18:08:35.383 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 18:21:28.237 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 18:21:28.237 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 18:23:23.719 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-23 18:23:23.731 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-23 18:23:23.733 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-23 18:23:23.748 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 18:23:23.748 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-23 18:23:26.428 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [55272a39-baa5-42c0-9eca-2905c1fc7f64_config-0] Connected,notify listen context...
-2024-04-23 18:23:26.476 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-23 18:23:36.800 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-23 18:23:36.800 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 18:23:36.800 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 18:23:36.851 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 18:23:36.851 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 18:23:36.880 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 18:23:36.880 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 18:23:36.880 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 18:23:36.880 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 18:23:37.043 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-23 18:23:37.043 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-23 18:23:37.043 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-23 18:23:37.043 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-23 18:23:37.060 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 18:23:37.060 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 18:23:37.258 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-23 18:23:37.258 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 18:23:37.258 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 18:23:37.376 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [34668c92-e4f5-4dc8-a2d3-c913f82cae95_config-0] Connected,notify listen context...
-2024-04-23 18:23:37.392 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 18:23:37.392 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 18:26:11.728 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [34668c92-e4f5-4dc8-a2d3-c913f82cae95_config-0] DisConnected,clear listen context...
-2024-04-23 18:26:11.728 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [55272a39-baa5-42c0-9eca-2905c1fc7f64_config-0] DisConnected,clear listen context...
-2024-04-23 18:26:11.728 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [55272a39-baa5-42c0-9eca-2905c1fc7f64_config-0] Connected,notify listen context...
-2024-04-23 18:26:11.728 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [34668c92-e4f5-4dc8-a2d3-c913f82cae95_config-0] Connected,notify listen context...
-2024-04-23 18:26:11.859 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [55272a39-baa5-42c0-9eca-2905c1fc7f64_config-0] DisConnected,clear listen context...
-2024-04-23 18:26:11.859 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [34668c92-e4f5-4dc8-a2d3-c913f82cae95_config-0] DisConnected,clear listen context...
-2024-04-23 18:26:11.859 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [55272a39-baa5-42c0-9eca-2905c1fc7f64_config-0] Connected,notify listen context...
-2024-04-23 18:26:11.859 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [34668c92-e4f5-4dc8-a2d3-c913f82cae95_config-0] Connected,notify listen context...
-2024-04-23 19:08:41.843 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 19:08:41.843 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 19:09:02.130 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-23 19:09:02.130 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-23 19:09:02.130 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-23 19:09:02.163 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 19:09:02.177 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-23 19:09:05.572 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [e806e61a-f928-4de9-a622-f36b07c62d43_config-0] Connected,notify listen context...
-2024-04-23 19:09:05.635 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-23 19:09:17.832 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-23 19:09:17.832 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 19:09:17.832 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 19:09:17.880 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 19:09:17.880 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 19:09:17.898 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 19:09:17.898 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 19:09:17.911 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 19:09:17.911 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 19:09:17.927 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 19:09:17.927 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 19:09:18.154 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-23 19:09:18.154 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 19:09:18.154 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 19:09:18.270 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [696e0c62-5cd8-4eaa-b028-367b6cb95ba7_config-0] Connected,notify listen context...
-2024-04-23 19:09:18.372 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 19:09:18.372 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 19:09:19.894 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 19:09:19.894 INFO [restartedMain:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 19:09:20.448 INFO [com.alibaba.nacos.client.naming.security:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 19:09:22.016 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] com.alibaba.nacos.client.config.impl.ClientWorker do shutdown begin
-2024-04-23 19:09:22.016 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 19:09:22.016 INFO [restartedMain:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 19:09:22.016 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] Trying to shutdown transport client com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient@2a468b57
-2024-04-23 19:09:22.016 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] Trying to shutdown rpc client e806e61a-f928-4de9-a622-f36b07c62d43_config-0
-2024-04-23 19:09:22.016 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] Remove rpc client e806e61a-f928-4de9-a622-f36b07c62d43_config-0
-2024-04-23 19:09:22.016 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] Shutdown executor java.util.concurrent.ScheduledThreadPoolExecutor@2ef0fa08[Running, pool size = 6, active threads = 1, queued tasks = 1, completed tasks = 4]
-2024-04-23 19:09:22.016 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] com.alibaba.nacos.client.config.impl.ClientWorker do shutdown stop
-2024-04-23 19:09:22.711 INFO [com.alibaba.nacos.client.naming.security:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 19:09:23.280 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 19:09:23.280 INFO [restartedMain:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 19:09:42.277 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-23 19:09:42.277 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-23 19:09:42.277 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-23 19:09:42.309 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 19:09:42.325 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-23 19:09:45.362 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [95cf46ab-80cf-4ac0-8a81-4a02459d3055_config-0] Connected,notify listen context...
-2024-04-23 19:09:45.393 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-23 19:09:55.969 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-23 19:09:55.969 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 19:09:55.978 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 19:09:56.026 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 19:09:56.027 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 19:09:56.041 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 19:09:56.041 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 19:09:56.041 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 19:09:56.041 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 19:09:56.194 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-23 19:09:56.194 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-23 19:09:56.194 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-23 19:09:56.194 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-23 19:09:56.210 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 19:09:56.210 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 19:09:56.430 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-23 19:09:56.430 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 19:09:56.430 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 19:09:56.541 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [0c45eaa1-57bc-4fb6-9525-030cd56c9eda_config-0] Connected,notify listen context...
-2024-04-23 19:09:56.541 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 19:09:56.541 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 19:12:33.607 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
-2024-04-23 19:12:33.607 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
-2024-04-23 21:39:29.301 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-23 21:39:29.301 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-23 21:39:29.301 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-23 21:39:29.317 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-23 21:39:29.317 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-23 21:39:32.747 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [bcd787b1-5e3e-4934-99fc-8e2a2806294b_config-0] Connected,notify listen context...
-2024-04-23 21:39:32.794 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-23 21:39:45.501 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-23 21:39:45.501 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-23 21:39:45.501 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-23 21:39:45.549 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 21:39:45.549 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 21:39:45.564 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-23 21:39:45.564 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-23 21:39:45.564 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-23 21:39:45.564 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-23 21:39:45.726 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-23 21:39:45.726 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-23 21:39:45.727 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-23 21:39:45.727 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-23 21:39:45.734 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-23 21:39:45.735 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-23 21:39:45.946 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-23 21:39:45.946 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-23 21:39:45.946 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-23 21:39:46.063 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-23 21:39:46.063 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-23 21:39:46.067 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [e361a7b0-9ccd-4b18-a877-85036f3167bd_config-0] Connected,notify listen context...
-2024-04-24 00:43:32.516 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-24 00:43:32.526 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-24 00:43:32.526 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-24 00:43:32.548 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-24 00:43:32.553 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-24 00:43:35.724 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [43a2ab93-741d-4339-8a77-7ede3e4d51a7_config-0] Connected,notify listen context...
-2024-04-24 00:43:35.756 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-24 00:43:45.288 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-24 00:43:45.288 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-24 00:43:45.288 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-24 00:43:45.335 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-24 00:43:45.335 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-24 00:43:45.351 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-24 00:43:45.351 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-24 00:43:45.351 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-24 00:43:45.351 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-24 00:43:45.511 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-24 00:43:45.511 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-24 00:43:45.511 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-24 00:43:45.511 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-24 00:43:45.511 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-24 00:43:45.511 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-24 00:43:45.728 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-24 00:43:45.728 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-24 00:43:45.728 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-24 00:43:45.831 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-24 00:43:45.831 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-24 00:43:45.845 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [3cc9b520-c2e9-4684-8b34-b2cb775428d4_config-0] Connected,notify listen context...
-2024-04-24 01:02:37.619 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-24 01:02:37.619 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-24 01:02:37.619 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-24 01:02:37.645 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-24 01:02:37.651 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-24 01:02:40.152 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [030c54cd-21db-409b-9e2f-7f4a24de988b_config-0] Connected,notify listen context...
-2024-04-24 01:02:40.184 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-24 01:02:50.300 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-24 01:02:50.300 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-24 01:02:50.310 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-24 01:02:50.368 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-24 01:02:50.368 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-24 01:02:50.411 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-24 01:02:50.411 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-24 01:02:50.417 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-24 01:02:50.417 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-24 01:02:50.602 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-24 01:02:50.602 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-24 01:02:50.602 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-24 01:02:50.602 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-24 01:02:50.618 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-24 01:02:50.618 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-24 01:02:50.809 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-24 01:02:50.809 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-24 01:02:50.809 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-24 01:02:50.935 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [5ab84c2c-9b06-43d9-a4b9-327d39c36815_config-0] Connected,notify listen context...
-2024-04-24 01:02:50.950 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-24 01:02:50.950 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-24 08:31:32.893 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
-2024-04-24 08:31:32.915 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
-2024-04-24 08:31:32.917 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
-2024-04-24 08:31:32.942 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
-2024-04-24 08:31:32.950 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
-2024-04-24 08:31:36.209 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [b6708f3a-fd3d-439d-ab49-947e61ed3c53_config-0] Connected,notify listen context...
-2024-04-24 08:31:36.246 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
-2024-04-24 08:31:52.455 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
-2024-04-24 08:31:52.456 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
-2024-04-24 08:31:52.464 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
-2024-04-24 08:31:52.550 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
-2024-04-24 08:31:52.550 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
-2024-04-24 08:31:52.586 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
-2024-04-24 08:31:52.586 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
-2024-04-24 08:31:52.594 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
-2024-04-24 08:31:52.594 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
-2024-04-24 08:31:52.778 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
-2024-04-24 08:31:52.778 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
-2024-04-24 08:31:52.779 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
-2024-04-24 08:31:52.780 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
-2024-04-24 08:31:52.792 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
-2024-04-24 08:31:52.792 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
-2024-04-24 08:31:53.020 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
-2024-04-24 08:31:53.022 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
-2024-04-24 08:31:53.022 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
-2024-04-24 08:31:53.151 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [8c01ecfb-7730-4be3-9230-3be2521039ee_config-0] Connected,notify listen context...
-2024-04-24 08:31:53.238 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
-2024-04-24 08:31:53.238 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
+2024-04-25 17:45:56.059 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
+2024-04-25 17:45:56.060 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
+2024-04-25 17:45:56.061 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
+2024-04-25 17:45:56.083 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
+2024-04-25 17:45:56.087 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
+2024-04-25 17:45:58.945 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [392263ee-c95d-46d4-9f64-565f28dc01fc_config-0] Connected,notify listen context...
+2024-04-25 17:45:59.040 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
+2024-04-25 17:46:14.293 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
+2024-04-25 17:46:14.294 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-order-nacos.configurators+dubbo
+2024-04-25 17:46:14.307 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-order-nacos.configurators, group=dubbo, cnt=1
+2024-04-25 17:46:14.317 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiOrderService::.configurators+dubbo
+2024-04-25 17:46:14.317 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiOrderService::.configurators, group=dubbo, cnt=1
+2024-04-25 17:46:14.524 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-order-nacos.configurators+dubbo
+2024-04-25 17:46:14.524 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-order-nacos.configurators, group=dubbo, cnt=1
+2024-04-25 17:46:14.781 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-order-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
+2024-04-25 17:46:14.781 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-order-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
+2024-04-25 17:46:16.273 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
+2024-04-25 17:46:16.273 INFO [restartedMain:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
+2024-04-25 17:46:18.354 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] com.alibaba.nacos.client.config.impl.ClientWorker do shutdown begin
+2024-04-25 17:46:18.355 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] Trying to shutdown transport client com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient@2df4091c
+2024-04-25 17:46:18.355 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] Trying to shutdown rpc client 392263ee-c95d-46d4-9f64-565f28dc01fc_config-0
+2024-04-25 17:46:18.356 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] Remove rpc client 392263ee-c95d-46d4-9f64-565f28dc01fc_config-0
+2024-04-25 17:46:18.356 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] Shutdown executor java.util.concurrent.ScheduledThreadPoolExecutor@36262564[Running, pool size = 7, active threads = 1, queued tasks = 1, completed tasks = 5]
+2024-04-25 17:46:18.357 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] com.alibaba.nacos.client.config.impl.ClientWorker do shutdown stop
+2024-04-25 17:46:19.259 INFO [com.alibaba.nacos.client.Worker:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
+2024-04-25 17:46:19.553 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
+2024-04-25 17:46:19.554 INFO [restartedMain:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
+2024-04-25 17:46:19.813 INFO [com.alibaba.nacos.client.naming.security:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
+2024-04-25 17:46:47.384 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
+2024-04-25 17:46:47.385 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
+2024-04-25 17:46:47.386 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
+2024-04-25 17:46:47.411 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
+2024-04-25 17:46:47.417 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
+2024-04-25 17:46:51.134 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [5976fb23-902d-4652-8bb9-0d7556e2912c_config-0] Connected,notify listen context...
+2024-04-25 17:46:51.234 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
+2024-04-25 17:47:08.727 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
+2024-04-25 17:47:08.729 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-order-nacos.configurators+dubbo
+2024-04-25 17:47:08.746 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-order-nacos.configurators, group=dubbo, cnt=1
+2024-04-25 17:47:08.755 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiOrderService::.configurators+dubbo
+2024-04-25 17:47:08.755 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiOrderService::.configurators, group=dubbo, cnt=1
+2024-04-25 17:47:09.150 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-order-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
+2024-04-25 17:47:09.150 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-order-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
+2024-04-25 17:47:09.531 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [ff94310f-94b5-4815-9911-e9eb59630fea_config-0] Connected,notify listen context...
+2024-04-25 17:47:09.543 INFO [restartedMain:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
+2024-04-25 17:47:09.552 INFO [DubboSaveMetadataReport-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [publish-single] ok, dataId=com.anyan.apicommon.service.ApiOrderService:::provider:huangapi-order-nacos, group=dubbo, tenant=, config={"annotations":[],"canonicalName":"com.anyan.apicommon.service.ApiOrderService","codeSource":"file:/...
+2024-04-25 17:47:09.599 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [publish-single] ok, dataId=com.anyan.apicommon.service.ApiOrderService, group=mapping, tenant=, config=huangapi-rpc-nacos,huangapi-order-nacos
+2024-04-25 17:47:09.767 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
+2024-04-25 17:47:09.769 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
+2024-04-25 17:47:09.780 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-order-nacos.condition-router+dubbo
+2024-04-25 17:47:09.780 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-order-nacos.condition-router, group=dubbo, cnt=1
+2024-04-25 17:47:09.981 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
+2024-04-25 17:47:09.981 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
+2024-04-25 17:47:09.983 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
+2024-04-25 17:47:09.983 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
+2024-04-25 17:47:09.992 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
+2024-04-25 17:47:09.992 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
+2024-04-25 17:47:10.231 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
+2024-04-25 17:47:10.232 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
+2024-04-25 17:47:10.453 INFO [com.alibaba.nacos.client.Worker:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [notify-listener] time cost=0ms in ClientWorker, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, md5=a0610ac4031cb2aa33d735698077db1e, listener=org.apache.dubbo.metadata.store.nacos.NacosMetadataReport$NacosConfigListener@30782b16 
+2024-04-25 17:47:10.454 INFO [nacos.client.cachedata.internal.notifier:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [notify-context] dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, md5=a0610ac4031cb2aa33d735698077db1e
+2024-04-25 17:47:10.599 INFO [nacos.client.cachedata.internal.notifier:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [notify-ok] dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, md5=a0610ac4031cb2aa33d735698077db1e, listener=org.apache.dubbo.metadata.store.nacos.NacosMetadataReport$NacosConfigListener@30782b16 ,cost=145 millis.
+2024-04-25 17:47:10.692 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-order-nacos.configurators+dubbo
+2024-04-25 17:47:10.692 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-order-nacos.configurators, group=dubbo, cnt=1
+2024-04-25 17:49:02.431 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
+2024-04-25 17:49:02.432 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
+2024-04-25 17:49:02.433 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
+2024-04-25 17:49:02.453 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
+2024-04-25 17:49:02.459 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
+2024-04-25 17:49:05.499 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [ee1ac7b7-fc38-434c-bae8-0d6a0531ac7f_config-0] Connected,notify listen context...
+2024-04-25 17:49:05.566 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
+2024-04-25 17:49:21.566 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
+2024-04-25 17:49:21.567 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.configurators+dubbo
+2024-04-25 17:49:21.576 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
+2024-04-25 17:49:21.583 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiOrderService::.configurators+dubbo
+2024-04-25 17:49:21.583 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiOrderService::.configurators, group=dubbo, cnt=1
+2024-04-25 17:49:21.903 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
+2024-04-25 17:49:21.903 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
+2024-04-25 17:49:22.198 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [dd15a389-2587-45df-ae84-a28d69103a4c_config-0] Connected,notify listen context...
+2024-04-25 17:49:22.203 INFO [restartedMain:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
+2024-04-25 17:49:22.243 INFO [DubboSaveMetadataReport-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [publish-single] ok, dataId=com.anyan.apicommon.service.ApiOrderService:::provider:huangapi-rpc-nacos, group=dubbo, tenant=, config={"annotations":[],"canonicalName":"com.anyan.apicommon.service.ApiOrderService","codeSource":"file:/...
+2024-04-25 17:49:22.284 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
+2024-04-25 17:49:22.284 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
+2024-04-25 17:49:22.289 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.condition-router+dubbo
+2024-04-25 17:49:22.289 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.condition-router, group=dubbo, cnt=1
+2024-04-25 17:49:22.370 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.MESHAPPRULE+dubbo
+2024-04-25 17:49:22.370 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.MESHAPPRULE, group=dubbo, cnt=1
+2024-04-25 17:49:22.372 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-rpc-nacos.tag-router+dubbo
+2024-04-25 17:49:22.372 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-rpc-nacos.tag-router, group=dubbo, cnt=1
+2024-04-25 17:49:22.378 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
+2024-04-25 17:49:22.378 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
+2024-04-25 17:49:22.593 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
+2024-04-25 17:49:22.594 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
+2024-04-25 17:49:22.831 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators+dubbo
+2024-04-25 17:49:22.831 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-rpc-nacos.configurators, group=dubbo, cnt=1
+2024-04-25 17:58:35.196 INFO [nacos-grpc-client-executor-localhost-117:c.a.n.c.c.i.ClientWorker] [dd15a389-2587-45df-ae84-a28d69103a4c_config-0] [server-push] config changed. dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping,tenant=null
+2024-04-25 17:58:35.208 INFO [com.alibaba.nacos.client.Worker:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [data-received] dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, tenant=, md5=880dfafdd7793f0142808713f0d582e6, content=huangapi-rpc-nacos,huangapi-backkend-nacos, type=text
+2024-04-25 17:58:35.209 INFO [com.alibaba.nacos.client.Worker:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [notify-listener] time cost=0ms in ClientWorker, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, md5=880dfafdd7793f0142808713f0d582e6, listener=org.apache.dubbo.metadata.store.nacos.NacosMetadataReport$NacosConfigListener@6152e54b 
+2024-04-25 17:58:35.233 INFO [nacos.client.cachedata.internal.notifier:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [notify-context] dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, md5=880dfafdd7793f0142808713f0d582e6
+2024-04-25 17:58:35.251 INFO [nacos.client.cachedata.internal.notifier:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [notify-ok] dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, md5=880dfafdd7793f0142808713f0d582e6, listener=org.apache.dubbo.metadata.store.nacos.NacosMetadataReport$NacosConfigListener@6152e54b ,cost=42 millis.
+2024-04-25 17:58:35.667 INFO [Dubbo-framework-registry-notification-2-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-backkend-nacos.MESHAPPRULE+dubbo
+2024-04-25 17:58:35.667 INFO [Dubbo-framework-registry-notification-2-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-backkend-nacos.MESHAPPRULE, group=dubbo, cnt=1
+2024-04-25 17:58:35.668 INFO [Dubbo-framework-registry-notification-2-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-backkend-nacos.tag-router+dubbo
+2024-04-25 17:58:35.668 INFO [Dubbo-framework-registry-notification-2-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-backkend-nacos.tag-router, group=dubbo, cnt=1
+2024-04-25 18:01:04.904 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
+2024-04-25 18:01:04.905 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
+2024-04-25 18:01:04.906 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
+2024-04-25 18:01:04.927 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
+2024-04-25 18:01:04.933 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
+2024-04-25 18:01:07.797 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [65981ce8-9749-4fc0-be1a-ed15c76da0ef_config-0] Connected,notify listen context...
+2024-04-25 18:01:07.833 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
+2024-04-25 18:01:21.913 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
+2024-04-25 18:01:21.914 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-order-nacos.configurators+dubbo
+2024-04-25 18:01:21.925 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-order-nacos.configurators, group=dubbo, cnt=1
+2024-04-25 18:01:21.933 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiOrderService::.configurators+dubbo
+2024-04-25 18:01:21.933 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiOrderService::.configurators, group=dubbo, cnt=1
+2024-04-25 18:01:22.236 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-order-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
+2024-04-25 18:01:22.236 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-order-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
+2024-04-25 18:01:22.528 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [a893c238-2191-4472-ae79-2457748e74d7_config-0] Connected,notify listen context...
+2024-04-25 18:01:22.534 INFO [restartedMain:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
+2024-04-25 18:01:22.551 INFO [DubboSaveMetadataReport-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [publish-single] ok, dataId=com.anyan.apicommon.service.ApiOrderService:::provider:huangapi-order-nacos, group=dubbo, tenant=, config={"annotations":[],"canonicalName":"com.anyan.apicommon.service.ApiOrderService","codeSource":"file:/...
+2024-04-25 18:01:22.621 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
+2024-04-25 18:01:22.621 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
+2024-04-25 18:01:22.626 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-order-nacos.condition-router+dubbo
+2024-04-25 18:01:22.626 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-order-nacos.condition-router, group=dubbo, cnt=1
+2024-04-25 18:01:22.707 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-backkend-nacos.MESHAPPRULE+dubbo
+2024-04-25 18:01:22.707 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-backkend-nacos.MESHAPPRULE, group=dubbo, cnt=1
+2024-04-25 18:01:22.708 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-backkend-nacos.tag-router+dubbo
+2024-04-25 18:01:22.708 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-backkend-nacos.tag-router, group=dubbo, cnt=1
+2024-04-25 18:01:22.714 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
+2024-04-25 18:01:22.714 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
+2024-04-25 18:01:22.940 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
+2024-04-25 18:01:22.940 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
+2024-04-25 18:01:23.024 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-order-nacos.configurators+dubbo
+2024-04-25 18:01:23.024 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-order-nacos.configurators, group=dubbo, cnt=1
+2024-04-25 18:11:14.613 INFO [Thread-2:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
+2024-04-25 18:11:14.613 INFO [Thread-2:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
+2024-04-25 18:11:15.879 INFO [com.alibaba.nacos.client.Worker:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
+2024-04-25 18:11:26.688 INFO [Thread-2:c.a.n.c.c.i.ClientWorker] com.alibaba.nacos.client.config.impl.ClientWorker do shutdown begin
+2024-04-25 18:11:26.688 INFO [Thread-2:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
+2024-04-25 18:11:26.688 INFO [Thread-2:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
+2024-04-25 18:11:26.689 INFO [Thread-2:c.a.n.c.c.i.ClientWorker] Trying to shutdown transport client com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient@2924b32
+2024-04-25 18:11:26.689 INFO [Thread-2:c.a.n.c.c.i.ClientWorker] Trying to shutdown rpc client 65981ce8-9749-4fc0-be1a-ed15c76da0ef_config-0
+2024-04-25 18:11:26.689 INFO [Thread-2:c.a.n.c.c.i.ClientWorker] Remove rpc client 65981ce8-9749-4fc0-be1a-ed15c76da0ef_config-0
+2024-04-25 18:11:26.689 INFO [Thread-2:c.a.n.c.c.i.ClientWorker] Shutdown executor java.util.concurrent.ScheduledThreadPoolExecutor@43635263[Running, pool size = 16, active threads = 1, queued tasks = 1, completed tasks = 125]
+2024-04-25 18:11:26.689 INFO [Thread-2:c.a.n.c.c.i.ClientWorker] com.alibaba.nacos.client.config.impl.ClientWorker do shutdown stop
+2024-04-25 18:11:28.328 INFO [com.alibaba.nacos.client.naming.security:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
+2024-04-25 18:11:31.635 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [59a7f804-b1ce-4c44-a3e7-9947f3a6394d_config-0] Connected,notify listen context...
+2024-04-25 18:11:42.157 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-order-nacos.configurators+dubbo
+2024-04-25 18:11:42.158 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-order-nacos.configurators, group=dubbo, cnt=1
+2024-04-25 18:11:42.163 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiOrderService::.configurators+dubbo
+2024-04-25 18:11:42.163 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiOrderService::.configurators, group=dubbo, cnt=1
+2024-04-25 18:11:42.363 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-order-nacos.configurators+dubbo
+2024-04-25 18:11:42.363 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-order-nacos.configurators, group=dubbo, cnt=1
+2024-04-25 18:11:43.087 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] com.alibaba.nacos.client.config.impl.ClientWorker do shutdown begin
+2024-04-25 18:11:43.087 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
+2024-04-25 18:11:43.087 INFO [restartedMain:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
+2024-04-25 18:11:43.088 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] Trying to shutdown transport client com.alibaba.nacos.client.config.impl.ClientWorker$ConfigRpcTransportClient@314bbd96
+2024-04-25 18:11:43.088 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] Trying to shutdown rpc client 59a7f804-b1ce-4c44-a3e7-9947f3a6394d_config-0
+2024-04-25 18:11:43.088 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] Remove rpc client 59a7f804-b1ce-4c44-a3e7-9947f3a6394d_config-0
+2024-04-25 18:11:43.088 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] Shutdown executor java.util.concurrent.ScheduledThreadPoolExecutor@13d4da5f[Running, pool size = 5, active threads = 1, queued tasks = 1, completed tasks = 3]
+2024-04-25 18:11:43.088 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] com.alibaba.nacos.client.config.impl.ClientWorker do shutdown stop
+2024-04-25 18:11:43.351 INFO [com.alibaba.nacos.client.naming.security:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
+2024-04-25 18:11:44.424 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
+2024-04-25 18:11:44.424 INFO [restartedMain:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
+2024-04-25 18:11:46.698 INFO [com.alibaba.nacos.client.Worker:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
+2024-04-25 18:55:01.521 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [req-serv] nacos-server port:8848
+2024-04-25 18:55:01.523 INFO [restartedMain:c.a.n.c.u.ParamUtil] [settings] [http-client] connect timeout:1000
+2024-04-25 18:55:01.523 INFO [restartedMain:c.a.n.c.u.ParamUtil] PER_TASK_CONFIG_SIZE: 3000.0
+2024-04-25 18:55:01.550 INFO [restartedMain:c.a.n.c.a.r.i.CredentialWatcher] null No credential found
+2024-04-25 18:55:01.550 INFO [restartedMain:c.a.n.c.c.i.LocalConfigInfoProcessor] LOCAL_SNAPSHOT_PATH:E:\projects\idea-projects\Huang-Api//api-order/orderDubboCache\nacos\config
+2024-04-25 18:55:04.292 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [84bb98b8-141a-40f5-850e-ec0dbb7ec677_config-0] Connected,notify listen context...
+2024-04-25 18:55:04.339 INFO [restartedMain:c.a.n.c.c.i.Limiter] limitTime:5.0
+2024-04-25 18:55:18.019 INFO [restartedMain:c.a.n.c.c.i.CacheData] nacos.cache.data.init.snapshot = true 
+2024-04-25 18:55:18.019 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-order-nacos.configurators+dubbo
+2024-04-25 18:55:18.034 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-order-nacos.configurators, group=dubbo, cnt=1
+2024-04-25 18:55:18.034 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiOrderService::.configurators+dubbo
+2024-04-25 18:55:18.034 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiOrderService::.configurators, group=dubbo, cnt=1
+2024-04-25 18:55:18.326 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-order-nacos.migration+DUBBO_SERVICEDISCOVERY_MIGRATION
+2024-04-25 18:55:18.326 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-order-nacos.migration, group=DUBBO_SERVICEDISCOVERY_MIGRATION, cnt=1
+2024-04-25 18:55:18.619 INFO [com.alibaba.nacos.client.remote.worker:c.a.n.c.c.i.ClientWorker] [78c58896-2c8c-4344-a493-8ae0a70adda8_config-0] Connected,notify listen context...
+2024-04-25 18:55:18.619 INFO [restartedMain:c.a.n.c.c.u.JvmUtil] isMultiInstance:false
+2024-04-25 18:55:18.619 INFO [DubboSaveMetadataReport-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [publish-single] ok, dataId=com.anyan.apicommon.service.ApiOrderService:::provider:huangapi-order-nacos, group=dubbo, tenant=, config={"annotations":[],"canonicalName":"com.anyan.apicommon.service.ApiOrderService","codeSource":"file:/...
+2024-04-25 18:55:18.683 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.condition-router+dubbo
+2024-04-25 18:55:18.699 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.condition-router, group=dubbo, cnt=1
+2024-04-25 18:55:18.699 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-order-nacos.condition-router+dubbo
+2024-04-25 18:55:18.699 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-order-nacos.condition-router, group=dubbo, cnt=1
+2024-04-25 18:55:18.762 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-backkend-nacos.MESHAPPRULE+dubbo
+2024-04-25 18:55:18.762 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-backkend-nacos.MESHAPPRULE, group=dubbo, cnt=1
+2024-04-25 18:55:18.762 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] huangapi-backkend-nacos.tag-router+dubbo
+2024-04-25 18:55:18.762 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=huangapi-backkend-nacos.tag-router, group=dubbo, cnt=1
+2024-04-25 18:55:18.778 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService::.configurators+dubbo
+2024-04-25 18:55:18.778 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService::.configurators, group=dubbo, cnt=1
+2024-04-25 18:55:18.986 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] com.anyan.apicommon.service.ApiBackendService+mapping
+2024-04-25 18:55:18.986 INFO [Dubbo-framework-mapping-refreshing-scheduler-thread-1:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=com.anyan.apicommon.service.ApiBackendService, group=mapping, cnt=1
+2024-04-25 18:55:19.067 INFO [restartedMain:c.a.n.c.c.i.ClientWorker] [fixed-localhost_8848] [subscribe] org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-order-nacos.configurators+dubbo
+2024-04-25 18:55:19.067 INFO [restartedMain:c.a.n.c.c.i.CacheData] [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=org.apache.dubbo.metadata.MetadataService:1.0.0:huangapi-order-nacos.configurators, group=dubbo, cnt=1
+2024-04-25 19:12:13.331 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialWatcher] [null] CredentialWatcher is stopped
+2024-04-25 19:12:13.331 INFO [DubboShutdownHook:c.a.n.c.a.r.i.CredentialService] [null] CredentialService is freed
