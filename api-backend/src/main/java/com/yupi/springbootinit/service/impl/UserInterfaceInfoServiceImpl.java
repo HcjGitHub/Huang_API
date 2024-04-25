@@ -126,7 +126,7 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
 
         //获取用户所持有的调用接口
         QueryWrapper<UserInterfaceInfo> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("userId",userId);
+        queryWrapper.eq("userId", userId);
         List<UserInterfaceInfo> userInterfaceInfoList = this.list(queryWrapper);
 
         //转换成map
@@ -140,11 +140,11 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
         return interfaceInfoList.stream().map(interfaceInfo -> {
             UserInterfaceInfoVO userInterfaceInfoVO = new UserInterfaceInfoVO();
 
-            BeanUtils.copyProperties(interfaceInfo,userInterfaceInfoVO);
+            BeanUtils.copyProperties(interfaceInfo, userInterfaceInfoVO);
             userInterfaceInfoVO.setInterfaceStatus(interfaceInfo.getStatus());
 
             UserInterfaceInfo userInterfaceInfo = userInterfaceInfoListMap.get(interfaceInfo.getId()).get(0);
-            BeanUtils.copyProperties(userInterfaceInfo,userInterfaceInfoVO);
+            BeanUtils.copyProperties(userInterfaceInfo, userInterfaceInfoVO);
             return userInterfaceInfoVO;
         }).collect(Collectors.toList());
     }

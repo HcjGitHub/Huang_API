@@ -10,6 +10,7 @@ import com.yupi.springbootinit.constant.UserConstant;
 import com.yupi.springbootinit.exception.BusinessException;
 import com.yupi.springbootinit.exception.ThrowUtils;
 import com.yupi.springbootinit.model.dto.userinterfaceinfo.UserInterfaceInfoAddRequest;
+import com.yupi.springbootinit.model.dto.userinterfaceinfo.UserInterfaceInfoUpdateDTO;
 import com.yupi.springbootinit.model.dto.userinterfaceinfo.UserInterfaceInfoUpdateRequest;
 import com.anyan.apicommon.model.entity.User;
 import com.anyan.apicommon.model.entity.UserInterfaceInfo;
@@ -153,7 +154,25 @@ public class UserInterfaceInfoController {
         if (userId <= 0) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
-        List<UserInterfaceInfoVO> userInterfaceInfoVOList = userInterfaceInfoService.getUserInterfaceInfoVOById(userId,request);
+        List<UserInterfaceInfoVO> userInterfaceInfoVOList = userInterfaceInfoService.getUserInterfaceInfoVOById(userId, request);
         return ResultUtils.success(userInterfaceInfoVOList);
+    }
+
+
+    /**
+     * 获取免费的接口调用
+     *
+     * @param userInterfaceInfoUpdateDTO
+     * @return
+     */
+    @PostMapping("/get/free")
+    public BaseResponse<Boolean> getFreeInterfaceCount(@RequestBody UserInterfaceInfoUpdateDTO userInterfaceInfoUpdateDTO) {
+
+        if (userInterfaceInfoUpdateDTO == null || userInterfaceInfoUpdateDTO.getUserId() <= 0) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+
+        Boolean result = userInterfaceInfoService.updateUserInterfaceInfo(userInterfaceInfoUpdateDTO);
+        return ResultUtils.success(result);
     }
 }

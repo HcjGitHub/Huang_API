@@ -120,6 +120,7 @@ huang:
 dubbo:
   application:
     name: huangapi-backkend-nacos
+    qos-enable: true
   #  scan:
   #    base-packages: com.anyan.apigateway.provider
   protocol:
