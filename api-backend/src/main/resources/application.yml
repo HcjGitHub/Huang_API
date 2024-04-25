@@ -119,12 +119,14 @@ huang:
 # Dubbo 配置
 dubbo:
   application:
-    name: huangapi-rpc-nacos
+    name: huangapi-backkend-nacos
   #  scan:
   #    base-packages: com.anyan.apigateway.provider
   protocol:
-    dubbo:
-      name: dubbo
-      port: 20881
+    name: dubbo
+    #Dubbo 自定义找一个可用端口
+    port: -1
   registry:
     address: nacos://localhost:8848
+  consumer:
+    check: false

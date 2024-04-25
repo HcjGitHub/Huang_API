@@ -81,7 +81,7 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
     }
 
     @Override
-    public List<UserInterfaceInfo> statisticsTopTotalNum(int limit) {
+    public List<UserInterfaceInfo> listTopInterfaceInfoInvoke(int limit) {
         return userInterfaceInfoMapper.statisticsTopTotalNum(limit);
     }
 

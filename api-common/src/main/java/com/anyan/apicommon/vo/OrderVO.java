@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -49,7 +50,7 @@ public class OrderVO implements Serializable {
     /**
      * 交易金额
      */
-    private Double totalAmount;
+    private BigDecimal totalAmount;
 
     /**
      * 交易状态【0->待付款；1->已完成；2->无效订单】

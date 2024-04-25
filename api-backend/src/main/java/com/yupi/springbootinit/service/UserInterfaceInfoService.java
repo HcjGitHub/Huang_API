@@ -36,7 +36,7 @@ public interface UserInterfaceInfoService extends IService<UserInterfaceInfo> {
      * @param limit
      * @return
      */
-    List<UserInterfaceInfo> statisticsTopTotalNum(int limit);
+    List<UserInterfaceInfo> listTopInterfaceInfoInvoke(int limit);
 
     /**
      * 创建或更新用户某接口的剩余调用次数
