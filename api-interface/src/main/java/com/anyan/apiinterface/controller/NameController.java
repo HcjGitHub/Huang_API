@@ -23,17 +23,6 @@ public class NameController {
 
     @PostMapping("/user")
     public String postName(@RequestBody User user, HttpServletRequest request) {
-
-        String sign = request.getHeader("sign");
-        String body = request.getHeader("body");
-        String accessKeys = request.getHeader("accessKey");
-        String secretKey = "d12cbb4792fc7eb89139e18c0cb74020";
-        String accessKey = "70bf15b1924986aba2260b1f262bb71c";
-        secretKey = SignUtils.getSign(body, secretKey);
-
-        if (!sign.equals(secretKey) || !accessKey.equals(accessKeys)) {
-            throw new RuntimeException("参数不正确");
-        }
         return "你的名字是：" + user.getName();
     }
 }

@@ -22,7 +22,7 @@ public interface UserInterfaceInfoService extends IService<UserInterfaceInfo> {
     void validUserInterfaceInfo(UserInterfaceInfo userInterfaceInfo, boolean add);
 
     /**
-     * 调用接口统计
+     * 接口剩余调用次数是否大于0+接口调用次数加1
      *
      * @param interfaceInfoId
      * @param userId
@@ -54,4 +54,13 @@ public interface UserInterfaceInfoService extends IService<UserInterfaceInfo> {
      * @return
      */
     List<UserInterfaceInfoVO> getUserInterfaceInfoVOById(Long userId, HttpServletRequest request);
+
+    /**
+     * 回滚调用接口时接口调用+1
+     *
+     * @param userId
+     * @param interfaceInfoId
+     * @return
+     */
+    boolean recoverInvokeCount(Long userId, Long interfaceInfoId);
 }

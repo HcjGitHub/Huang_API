@@ -1,12 +1,14 @@
 package com.anyan.apigateway.filter;
 
 import com.anyan.apiclientsdk.utils.SignUtils;
+import com.anyan.apicommon.common.UserInterfaceInfoMessage;
 import com.anyan.apicommon.model.entity.InterfaceInfo;
 import com.anyan.apicommon.model.entity.User;
 import com.anyan.apicommon.service.ApiBackendService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.reactivestreams.Publisher;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.core.Ordered;
@@ -18,13 +20,18 @@ import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.http.server.reactive.ServerHttpResponseDecorator;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import javax.annotation.Resource;
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
+
+import static com.anyan.apicommon.constant.RabbitmqConstant.EXCHANGE_INTERFACE_CONSISTENT;
+import static com.anyan.apicommon.constant.RabbitmqConstant.ROUTING_KEY_INTERFACE_CONSISTENT;
 
 /**
  * 模拟接口调用自定义拦截器
@@ -38,6 +45,9 @@ public class InterfaceInfoInvokeFilter implements GatewayFilter, Ordered {
 
     @DubboReference
     private ApiBackendService apiBackendService;
+
+    @Resource
+    private RabbitTemplate rabbitTemplate;
 
     public static final List<String> LIST_WHITE = Arrays.asList(new String[]{"127.0.0.1"});
 
@@ -124,19 +134,26 @@ public class InterfaceInfoInvokeFilter implements GatewayFilter, Ordered {
         Long userId = user.getId();
 
         //判断接口剩余调用次数是否大于0
-        int leftCount = 0;
+        /**
+         * 为保证 接口剩余调用次数是否大于0 调用接口 和接口调用次数加1 的三个操作原子性
+         * 改变执行顺序 （接口剩余调用次数是否大于0+接口调用次数加1）通过注解Transactional保证原子性 再调用接口
+         * 若调用接口报错则回滚接口调用次数加1（即减1）
+         */
+        boolean result = false;
         try {
-            leftCount = apiBackendService.getLeftCount(interfaceInfoId, userId);
+            result = apiBackendService.invokeCount(interfaceInfoId, userId);
         } catch (Exception e) {
+            log.error("统计接口出现问题或者用户恶意调用不存在的接口");
             return handlerInvokeError(response);
         }
-        if (leftCount <= 0 && !user.getUserRole().equals("admin")) {
+        if (!result) {
+            log.error("接口剩余次数不足");
             return handlerInvokeError(response);
         }
 //        6. 转发请求，调用接口
-        if (user.getUserRole().equals("admin")) {
-            return chain.filter(exchange);
-        }
+//        if (user.getUserRole().equals("admin")) {
+//            return chain.filter(exchange);
+//        }
         return handleResponse(exchange, chain, interfaceInfoId, userId);
     }
 
@@ -166,11 +183,10 @@ public class InterfaceInfoInvokeFilter implements GatewayFilter, Ordered {
                         log.info("响应数据: {}", arg);
                         DataBufferUtils.release(dataBuffer);
 
-                        //8. 请求成功，调用次数加1
-                        // 接口调用次数加1
-                        boolean invokeCount = apiBackendService.invokeCount(interfaceInfoId, userId);
-                        if (!invokeCount) {
-                            log.error("<=== 响应code异常：{}", getStatusCode());
+                        //8.接口调用失败，利用消息队列实现接口统计数据的回滚；因为消息队列的可靠性所以我们选择消息队列而不是远程调用来实现
+                        if (!(originalResponse.getStatusCode() == HttpStatus.OK)) {
+                            UserInterfaceInfoMessage vo = new UserInterfaceInfoMessage(userId, interfaceInfoId);
+                            rabbitTemplate.convertAndSend(EXCHANGE_INTERFACE_CONSISTENT, ROUTING_KEY_INTERFACE_CONSISTENT, vo);
                         }
                         return bufferFactory().wrap(content);
                     }));

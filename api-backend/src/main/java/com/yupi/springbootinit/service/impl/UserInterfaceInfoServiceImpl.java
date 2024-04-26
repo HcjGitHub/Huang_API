@@ -1,10 +1,8 @@
 package com.yupi.springbootinit.service.impl;
 
-import java.util.Date;
-
-
 import com.anyan.apicommon.model.entity.InterfaceInfo;
 import com.anyan.apicommon.model.entity.User;
+import com.anyan.apicommon.model.entity.UserInterfaceInfo;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -13,13 +11,14 @@ import com.yupi.springbootinit.constant.UserConstant;
 import com.yupi.springbootinit.exception.BusinessException;
 import com.yupi.springbootinit.mapper.InterfaceInfoMapper;
 import com.yupi.springbootinit.mapper.UserInterfaceInfoMapper;
-import com.anyan.apicommon.model.entity.UserInterfaceInfo;
 import com.yupi.springbootinit.model.dto.userinterfaceinfo.UserInterfaceInfoUpdateDTO;
 import com.yupi.springbootinit.model.vo.UserInterfaceInfoVO;
 import com.yupi.springbootinit.service.UserInterfaceInfoService;
 import com.yupi.springbootinit.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -33,6 +32,7 @@ import java.util.stream.Collectors;
  * @description 针对表【user_interface_info(用户调用接口关系)】的数据库操作Service实现
  * @createDate 2024-04-11 23:15:43
  */
+@Slf4j
 @Service
 public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoMapper, UserInterfaceInfo>
         implements UserInterfaceInfoService {
@@ -65,16 +65,37 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
         }
     }
 
+    @Transactional
     @Override
     public boolean invokeCount(long interfaceInfoId, long userId) {
 
         if (interfaceInfoId < 0 || userId < 0) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
         }
+        //判断用户是否存在
+        User user = userService.getById(userId);
+        if (user == null) {
+            log.info("id为：{}的用户不存在", userId);
+            throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
+        }
+
+        //用户接口调用次数是否大于0
+        QueryWrapper<UserInterfaceInfo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("interfaceInfoId", interfaceInfoId);
+        queryWrapper.eq("userId", userId);
+        UserInterfaceInfo userInterfaceInfo = userInterfaceInfoMapper.selectOne(queryWrapper);
+        Integer leftNum = userInterfaceInfo.getLeftNum();
+        if (leftNum < 1) {
+            log.info("用户{}该接口{}调用次数不足", userId, interfaceInfoId);
+            return false;
+        }
+        //接口总调用次数+1，剩余调用次数-1
 
         UpdateWrapper<UserInterfaceInfo> updateWrapper = new UpdateWrapper<>();
         updateWrapper.eq("interfaceInfoId", interfaceInfoId);
         updateWrapper.eq("userId", userId);
+        //比较再更新
+        updateWrapper.eq("leftNum", leftNum);
         updateWrapper.gt("leftNum", 0);
         updateWrapper.setSql("totalNum = totalNum + 1, leftNum = leftNum - 1");
         return this.update(updateWrapper);
@@ -147,6 +168,19 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
             BeanUtils.copyProperties(userInterfaceInfo, userInterfaceInfoVO);
             return userInterfaceInfoVO;
         }).collect(Collectors.toList());
+    }
+
+    @Override
+    public boolean recoverInvokeCount(Long userId, Long interfaceInfoId) {
+        if (userId < 0 || interfaceInfoId < 0) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "用户或接口不存在");
+        }
+        UpdateWrapper<UserInterfaceInfo> updateWrapper = new UpdateWrapper<>();
+        updateWrapper.eq("userId", userId);
+        updateWrapper.eq("interfaceInfoId", interfaceInfoId);
+        updateWrapper.ge("leftNum", 0);
+        updateWrapper.setSql("totalNum = totalNum -1,leftNum = leftNum+1");
+        return this.update(updateWrapper);
     }
 }
 
