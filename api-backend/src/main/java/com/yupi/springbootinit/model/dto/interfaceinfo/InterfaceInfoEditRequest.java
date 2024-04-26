@@ -57,6 +57,16 @@ public class InterfaceInfoEditRequest implements Serializable {
      */
     private String method;
 
+    /**
+     * 接口对应的SDK类路径
+     */
+    private String sdk;
+
+    /**
+     * 参数示例
+     */
+    private String parameterExample;
+
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
 }

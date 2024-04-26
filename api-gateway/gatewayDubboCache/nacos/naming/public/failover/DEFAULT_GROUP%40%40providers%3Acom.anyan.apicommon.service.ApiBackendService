@@ -1,1 +1,1 @@
-{"name":"providers:com.anyan.apicommon.service.ApiBackendService","groupName":"DEFAULT_GROUP","clusters":"","cacheMillis":10000,"hosts":[],"lastRefTime":1714037096997,"checksum":"","allIPs":false,"reachProtectionThreshold":false,"valid":true}
+{"name":"providers:com.anyan.apicommon.service.ApiBackendService","groupName":"DEFAULT_GROUP","clusters":"","cacheMillis":10000,"hosts":[],"lastRefTime":1714099110951,"checksum":"","allIPs":false,"reachProtectionThreshold":false,"valid":true}

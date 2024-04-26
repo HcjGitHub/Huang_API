@@ -1,4 +1,4 @@
 #Dubbo cache
-#Thu Apr 25 17:55:52 CST 2024
-com.anyan.apicommon.service.ApiBackendService=["huangapi-rpc-nacos"]
-com.yupi.springbootinit.provider.DemoService=["huangapi-rpc-nacos"]
+#Fri Apr 26 18:25:46 CST 2024
+com.anyan.apicommon.service.ApiBackendService=["huangapi-rpc-nacos","huangapi-backkend-nacos"]
+com.yupi.springbootinit.provider.DemoService=["huangapi-backkend-nacos"]

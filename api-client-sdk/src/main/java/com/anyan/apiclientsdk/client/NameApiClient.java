@@ -34,7 +34,7 @@ public class NameApiClient {
     public String getNameApi(String name) {
         HttpRequest httpRequest = HttpUtil.createGet(GATEWAY_HOST + BASIS_PATH + "/name/?name=" + name);
         HttpResponse response = httpRequest
-                .addHeaders(HeaderUtils.getPostHeader(name, accessKey, secretKey))
+                .addHeaders(HeaderUtils.getHeader(name, accessKey, secretKey))
                 .execute();
         return response.body();
     }
@@ -43,7 +43,7 @@ public class NameApiClient {
     public String postNameApi(User user) {
         String json = JSONUtil.toJsonStr(user);
         HttpResponse response = HttpRequest.post(GATEWAY_HOST + BASIS_PATH + "/name/user/")
-                .addHeaders(HeaderUtils.getPostHeader(json, accessKey, secretKey))
+                .addHeaders(HeaderUtils.getHeader(json, accessKey, secretKey))
                 .body(json)
                 .execute();
         return response.body();

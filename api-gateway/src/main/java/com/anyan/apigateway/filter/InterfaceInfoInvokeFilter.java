@@ -130,12 +130,14 @@ public class InterfaceInfoInvokeFilter implements GatewayFilter, Ordered {
         } catch (Exception e) {
             return handlerInvokeError(response);
         }
-        if (leftCount <= 0) {
+        if (leftCount <= 0 && !user.getUserRole().equals("admin")) {
             return handlerInvokeError(response);
         }
 //        6. 转发请求，调用接口
-        Mono<Void> voidMono = handleResponse(exchange, chain, interfaceInfoId, userId);
-        return voidMono;
+        if (user.getUserRole().equals("admin")) {
+            return chain.filter(exchange);
+        }
+        return handleResponse(exchange, chain, interfaceInfoId, userId);
     }
 
     /**

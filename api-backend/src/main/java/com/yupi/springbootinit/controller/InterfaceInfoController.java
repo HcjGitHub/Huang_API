@@ -217,7 +217,7 @@ public class InterfaceInfoController {
         ThrowUtils.throwIf(oldInterfaceInfo == null, ErrorCode.NOT_FOUND_ERROR);
 
         //测试接口
-        Object res = testInterfaceInfo(request, oldInterfaceInfo, null);
+        Object res = testInterfaceInfo(request, oldInterfaceInfo, oldInterfaceInfo.getParameterExample());
         if (res == null) {
             throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
         }

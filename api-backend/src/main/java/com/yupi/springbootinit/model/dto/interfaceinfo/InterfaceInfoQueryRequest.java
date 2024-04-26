@@ -65,4 +65,14 @@ public class InterfaceInfoQueryRequest extends PageRequest implements Serializab
      */
     private String method;
 
+    /**
+     * 接口对应的SDK类路径
+     */
+    private String sdk;
+
+    /**
+     * 参数示例
+     */
+    private String parameterExample;
+
 }

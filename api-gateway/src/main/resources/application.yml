@@ -37,8 +37,9 @@ dubbo:
   #  scan:
   #    base-packages: com.anyan.apigateway.provider
   protocol:
-    dubbo:
-      name: dubbo
-      port: 20881
+    name: dubbo
+    port: 20881
   registry:
     address: nacos://localhost:8848
+  consumer:
+    check: false

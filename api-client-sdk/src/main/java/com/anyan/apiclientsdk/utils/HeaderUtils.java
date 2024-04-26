@@ -13,7 +13,7 @@ import java.util.Map;
  */
 
 public class HeaderUtils {
-    public static Map<String, String> getPostHeader(String body, String accessKey, String secretKey) {
+    public static Map<String, String> getHeader(String body, String accessKey, String secretKey) {
         Map<String, String> map = new HashMap<>();
         map.put("accessKey", accessKey);
         //密钥一定不要明文传输

@@ -22,11 +22,19 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="176699f7-e5dd-41b8-9162-5201a3fbf10e" name="Default Changelist" comment="">
+    <list default="true" id="176699f7-e5dd-41b8-9162-5201a3fbf10e" name="Default Changelist" comment="获取免费的接口调用次数">
+      <change afterPath="$PROJECT_DIR$/api-client-sdk/src/main/java/com/anyan/apiclientsdk/client/DayApiClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-client-sdk/src/main/java/com/anyan/apiclientsdk/client/IPApiClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-client-sdk/src/main/java/com/anyan/apiclientsdk/client/QQApiClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-client-sdk/src/main/java/com/anyan/apiclientsdk/client/RandomApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/.dubbo/.mapping.dubbo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/.dubbo/.mapping.dubbo.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/.dubbo/.metadata.nacoslocalhost%003a8848.dubbo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/.dubbo/.metadata.nacoslocalhost%003a8848.dubbo.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/.dubbo/dubbo-metadata-huangapi-backkend-nacos-localhost-8848.cache" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/.dubbo/dubbo-metadata-huangapi-backkend-nacos-localhost-8848.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/config/fixed-localhost_8848_nacos/encrypted-data-key/snapshot/mapping/com.anyan.apicommon.service.ApiBackendService" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/config/fixed-localhost_8848_nacos/encrypted-data-key/snapshot/mapping/com.anyan.apicommon.service.ApiOrderService" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/config/fixed-localhost_8848_nacos/encrypted-data-key/snapshot/mapping/com.yupi.springbootinit.provider.DemoService" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40huangapi-order-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40huangapi-order-nacos" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40huangapi-rpc-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40huangapi-rpc-nacos" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" afterDir="false" />
@@ -36,9 +44,45 @@
       <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-backkend-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-backkend-nacos" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/controller/UserInterfaceInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/controller/UserInterfaceInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/service/impl/UserInterfaceInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/service/impl/UserInterfaceInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40huangapi-rpc-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40huangapi-rpc-nacos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiOrderService" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiOrderService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiOrderService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiOrderService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/backendDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/controller/InterfaceInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/controller/InterfaceInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/model/dto/interfaceinfo/InterfaceInfoAddRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/model/dto/interfaceinfo/InterfaceInfoAddRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/model/dto/interfaceinfo/InterfaceInfoEditRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/model/dto/interfaceinfo/InterfaceInfoEditRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/model/dto/interfaceinfo/InterfaceInfoQueryRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/model/dto/interfaceinfo/InterfaceInfoQueryRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/model/dto/interfaceinfo/InterfaceInfoUpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/model/dto/interfaceinfo/InterfaceInfoUpdateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-client-sdk/src/main/java/com/anyan/apiclientsdk/client/NameApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-client-sdk/src/main/java/com/anyan/apiclientsdk/client/NameApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-client-sdk/src/main/java/com/anyan/apiclientsdk/utils/HeaderUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-client-sdk/src/main/java/com/anyan/apiclientsdk/utils/HeaderUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/.dubbo/.mapping.dubbo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/.dubbo/.mapping.dubbo.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/.dubbo/.metadata.nacoslocalhost%003a8848.dubbo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/.dubbo/.metadata.nacoslocalhost%003a8848.dubbo.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/.dubbo/dubbo-metadata-huangapi-rpc-nacos-localhost-8848.cache" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/.dubbo/dubbo-metadata-huangapi-rpc-nacos-localhost-8848.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/.dubbo/dubbo-registry-huangapi-rpc-nacos-localhost-8848.cache" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/.dubbo/dubbo-registry-huangapi-rpc-nacos-localhost-8848.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/logs/nacos/config.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/logs/nacos/config.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/logs/nacos/naming.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/logs/nacos/naming.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/logs/nacos/remote.log" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/logs/nacos/remote.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/config/fixed-localhost_8848_nacos/encrypted-data-key/snapshot/mapping/com.anyan.apicommon.service.ApiBackendService" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40api-interface" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40api-interface" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40huangapi-backkend-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40huangapi-backkend-nacos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40huangapi-rpc-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40huangapi-rpc-nacos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40api-interface" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40api-interface" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40huangapi-rpc-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40huangapi-rpc-nacos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.anyan.apicommon.service.ApiBackendService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Acom.yupi.springbootinit.provider.DemoService%3A%3A" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/gatewayDubboCache/nacos/naming/public/failover/DEFAULT_GROUP%40%40providers%3Aorg.apache.dubbo.metadata.MetadataService%3A1.0.0%3Ahuangapi-rpc-nacos" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/anyan/apigateway/filter/InterfaceInfoInvokeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/anyan/apigateway/filter/InterfaceInfoInvokeFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,18 +156,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.anyan.apiinterface" />
       <recent name="com.anyan.thethirdparty" />
       <recent name="com.anyan.apiorder" />
       <recent name="com.yupi.springbootinit.service" />
       <recent name="com.yupi.springbootinit.mapper" />
-      <recent name="com.yupi.springbootinit.utils" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.anyan.apiclientsdk.client" />
       <recent name="com.yupi.springbootinit.model.excel" />
       <recent name="com.yupi.springbootinit.controller" />
       <recent name="com.anyan.apithirdparty.lister" />
       <recent name="com.anyan.apithirdparty.utils" />
-      <recent name="com.yupi.springbootinit.model.vo" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\projects\idea-projects\Huang-Api\api-common" />
@@ -141,7 +185,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MainApplication">
+  <component name="RunManager" selected="Spring Boot.ApiInterfaceApplication">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -171,33 +215,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiOrderApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="api-order" />
+    <configuration name="ApiInterfaceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api-interface" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.anyan.apiorder.*" />
+          <option name="PATTERN" value="com.anyan.apiinterface.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.anyan.apiorder" />
-      <option name="MAIN_CLASS_NAME" value="com.anyan.apiorder.ApiOrderApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.anyan.apiinterface" />
+      <option name="MAIN_CLASS_NAME" value="com.anyan.apiinterface.ApiInterfaceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BeanTest.userTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="api-backend" />
+    <configuration name="ApiInterfaceApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="api-interface" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.yupi.springbootinit.common.*" />
+          <option name="PATTERN" value="com.anyan.apiinterface.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.yupi.springbootinit.common" />
-      <option name="MAIN_CLASS_NAME" value="com.yupi.springbootinit.common.BeanTest" />
-      <option name="METHOD_NAME" value="userTest" />
+      <option name="PACKAGE_NAME" value="com.anyan.apiinterface" />
+      <option name="MAIN_CLASS_NAME" value="com.anyan.apiinterface.ApiInterfaceApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -318,23 +361,23 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.BeanTest.userTest" />
-      <item itemvalue="JUnit.ApiOrderApplicationTests.contextLoads" />
+      <item itemvalue="JUnit.AnalysisOrderTest.test" />
+      <item itemvalue="JUnit.ApiInterfaceApplicationTests.contextLoads" />
+      <item itemvalue="JUnit.ApiInterfaceApplicationTests" />
       <item itemvalue="Spring Boot.MainApplication" />
       <item itemvalue="Spring Boot.MainApplication2" />
       <item itemvalue="Spring Boot.ApiOrderApplication" />
       <item itemvalue="Spring Boot.ApiThirdPartyApplication" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.ApiInterfaceApplication" />
-      <item itemvalue="JUnit.AnalysisOrderTest.test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AnalysisOrderTest.test" />
-        <item itemvalue="JUnit.ApiOrderApplicationTests.contextLoads" />
-        <item itemvalue="Spring Boot.ApiGatewayApplication" />
         <item itemvalue="Spring Boot.ApiInterfaceApplication" />
-        <item itemvalue="JUnit.BeanTest.userTest" />
+        <item itemvalue="Spring Boot.ApiGatewayApplication" />
+        <item itemvalue="JUnit.ApiInterfaceApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.ApiInterfaceApplicationTests" />
+        <item itemvalue="JUnit.AnalysisOrderTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -363,7 +406,9 @@
       <workItem from="1713918180373" duration="12930000" />
       <workItem from="1713944921996" duration="24027000" />
       <workItem from="1714011959076" duration="6711000" />
-      <workItem from="1714026317798" duration="17635000" />
+      <workItem from="1714026317798" duration="23276000" />
+      <workItem from="1714095503742" duration="10357000" />
+      <workItem from="1714118252906" duration="3389000" />
     </task>
     <task id="LOCAL-00001" summary="使用鱼皮的Spring Boot 初始化项目">
       <created>1713347810944</created>
@@ -582,7 +627,21 @@
       <option name="project" value="LOCAL" />
       <updated>1714059330621</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="获取免费的接口调用次数">
+      <created>1714061723273</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1714061723273</updated>
+    </task>
+    <task id="LOCAL-00033" summary="更多模拟接口的实现，但好像需要SSL证书（有异常，后期需要解决）">
+      <created>1714127446374</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1714127446374</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -601,8 +660,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="完善接口服务" />
-    <MESSAGE value="结合网关服务Gateway + Dubbo框架实现RPC + Nacos做注册中心 实现透明调用" />
     <MESSAGE value="增加接口调用类" />
     <MESSAGE value="提取公共模块，并整理" />
     <MESSAGE value="网关的全局过滤，包括鉴权、日志和接口调用次数" />
@@ -626,7 +683,9 @@
     <MESSAGE value="发送验证码时间监听和实现" />
     <MESSAGE value="接口数据统计分析和excel导出" />
     <MESSAGE value="订单数据统计服务对外暴露" />
-    <option name="LAST_COMMIT_MESSAGE" value="订单数据统计服务对外暴露" />
+    <MESSAGE value="获取免费的接口调用次数" />
+    <MESSAGE value="更多模拟接口的实现，但好像需要SSL证书（有异常，后期需要解决）" />
+    <option name="LAST_COMMIT_MESSAGE" value="更多模拟接口的实现，但好像需要SSL证书（有异常，后期需要解决）" />
   </component>
   <component name="WindowStateProjectService">
     <state x="121" y="0" key="#Project_Structure" timestamp="1713717556659">
@@ -637,30 +696,30 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="184" y="59" width="1352" height="735" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1713922686788" />
-    <state x="527" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1714027101890">
+    <state x="527" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1714101430878">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="527" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1714027101890" />
+    <state x="527" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1714101430878" />
     <state x="441" y="149" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1713891266443">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="441" y="149" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.816@0.0.1536.816" timestamp="1713891266443" />
-    <state x="320" y="319" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1714037147765">
+    <state x="320" y="319" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1714062253937">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="320" y="319" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.816@0.0.1536.816" timestamp="1714037147765" />
+    <state x="320" y="319" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.816@0.0.1536.816" timestamp="1714062253937" />
     <state x="499" y="254" width="537" height="368" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1713768608442">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="499" y="254" width="537" height="368" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.816@0.0.1536.816" timestamp="1713768608442" />
-    <state x="499" y="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1713886916023">
+    <state x="499" y="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1714062263707">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="499" y="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.816@0.0.1536.816" timestamp="1713886916023" />
-    <state x="171" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1713890218198">
+    <state x="499" y="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.816@0.0.1536.816" timestamp="1714062263707" />
+    <state x="171" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1714063878747">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="171" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.816@0.0.1536.816" timestamp="1713890218198" />
+    <state x="171" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.816@0.0.1536.816" timestamp="1714063878747" />
     <state x="433" y="95" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1713578015496">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -669,14 +728,14 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="431" y="84" width="979" height="732" key="#xdebugger.evaluate/0.0.1536.816@0.0.1536.816" timestamp="1713951427671" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1714059329523">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1714127445256">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1714059329523" />
-    <state width="1006" height="546" key="DebuggerActiveHint" timestamp="1714043373802">
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1714127445256" />
+    <state width="1006" height="546" key="DebuggerActiveHint" timestamp="1714097990997">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1006" height="546" key="DebuggerActiveHint/0.0.1536.816@0.0.1536.816" timestamp="1714043373802" />
+    <state width="1006" height="546" key="DebuggerActiveHint/0.0.1536.816@0.0.1536.816" timestamp="1714097990997" />
     <state x="147" y="65" width="1228" height="680" key="DiffContextDialog" timestamp="1714059303377">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -685,38 +744,38 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="496" y="88" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1713891295032" />
-    <state width="1087" height="488" key="GridCell.Tab.0.bottom" timestamp="1714061588355">
+    <state width="1295" height="511" key="GridCell.Tab.0.bottom" timestamp="1714127132097">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1087" height="488" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1714061588355" />
-    <state width="1087" height="488" key="GridCell.Tab.0.center" timestamp="1714061588355">
+    <state width="1295" height="511" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1714127132097" />
+    <state width="1295" height="511" key="GridCell.Tab.0.center" timestamp="1714127132096">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1087" height="488" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1714061588355" />
-    <state width="1087" height="488" key="GridCell.Tab.0.left" timestamp="1714061588354">
+    <state width="1295" height="511" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1714127132096" />
+    <state width="1295" height="511" key="GridCell.Tab.0.left" timestamp="1714127132096">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1087" height="488" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1714061588354" />
-    <state width="1087" height="488" key="GridCell.Tab.0.right" timestamp="1714061588355">
+    <state width="1295" height="511" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1714127132096" />
+    <state width="1295" height="511" key="GridCell.Tab.0.right" timestamp="1714127132097">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1087" height="488" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1714061588355" />
-    <state width="1087" height="488" key="GridCell.Tab.1.bottom" timestamp="1714061588355">
+    <state width="1295" height="511" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1714127132097" />
+    <state width="1295" height="511" key="GridCell.Tab.1.bottom" timestamp="1714127132097">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1087" height="488" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1714061588355" />
-    <state width="1087" height="488" key="GridCell.Tab.1.center" timestamp="1714061588355">
+    <state width="1295" height="511" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1714127132097" />
+    <state width="1295" height="511" key="GridCell.Tab.1.center" timestamp="1714127132097">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1087" height="488" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1714061588355" />
-    <state width="1087" height="488" key="GridCell.Tab.1.left" timestamp="1714061588355">
+    <state width="1295" height="511" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1714127132097" />
+    <state width="1295" height="511" key="GridCell.Tab.1.left" timestamp="1714127132097">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1087" height="488" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1714061588355" />
-    <state width="1087" height="488" key="GridCell.Tab.1.right" timestamp="1714061588355">
+    <state width="1295" height="511" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1714127132097" />
+    <state width="1295" height="511" key="GridCell.Tab.1.right" timestamp="1714127132097">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1087" height="488" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1714061588355" />
+    <state width="1295" height="511" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1714127132097" />
     <state width="262" height="550" key="HiddenNamespacesPopup" timestamp="1713922701758">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -737,10 +796,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state width="623" height="555" key="SwitcherDM/0.0.1536.816@0.0.1536.816" timestamp="1713344141649" />
-    <state x="417" y="70" key="Vcs.Push.Dialog.v2" timestamp="1714059338071">
+    <state x="417" y="70" key="Vcs.Push.Dialog.v2" timestamp="1714061845224">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="417" y="70" key="Vcs.Push.Dialog.v2/0.0.1536.816@0.0.1536.816" timestamp="1714059338071" />
+    <state x="417" y="70" key="Vcs.Push.Dialog.v2/0.0.1536.816@0.0.1536.816" timestamp="1714061845224" />
     <state width="775" height="415" key="XDebugger.FullValuePopup" timestamp="1713922406090">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -753,10 +812,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="543" y="304" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.816@0.0.1536.816" timestamp="1713348887324" />
-    <state x="206" y="73" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1713622800787">
+    <state x="206" y="68" width="1111" height="748" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1714098305943">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="206" y="73" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.816@0.0.1536.816" timestamp="1713622800787" />
+    <state x="206" y="68" width="1111" height="748" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.816@0.0.1536.816" timestamp="1714098305943" />
     <state x="625" y="143" key="extract.method.dialog" timestamp="1714020883581">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -777,16 +836,5 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="347" y="0" width="840" height="1034" key="search.everywhere.popup/0.0.1536.816@0.0.1536.816" timestamp="1714037203991" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/api-backend/src/main/java/com/yupi/springbootinit/controller/UserInterfaceInfoController.java</url>
-          <line>170</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
