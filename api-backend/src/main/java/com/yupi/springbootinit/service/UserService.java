@@ -192,4 +192,13 @@ public interface UserService extends IService<User> {
      * @return
      */
     LoginUserVO userEmailLogin(String email, String captcha, HttpServletRequest request, HttpServletResponse response);
+
+    /**
+     * 更新用户头像
+     *
+     * @param url
+     * @param request
+     * @return
+     */
+    Boolean updateAvatar(String url, HttpServletRequest request);
 }

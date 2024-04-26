@@ -621,6 +621,28 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         return setLoginUser(response, user);
     }
 
+    @Override
+    public Boolean updateAvatar(String url, HttpServletRequest request) {
+        if (StringUtils.isBlank(url)) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+
+        //获取当前登录用户
+        User loginUser = getLoginUser(request);
+        if (loginUser == null) {
+            throw new BusinessException(ErrorCode.NOT_LOGIN_ERROR);
+        }
+        User user = new User();
+        user.setId(loginUser.getId());
+        user.setUserAvatar(url);
+        //更新缓存
+        loginUser.setUserAvatar(url);
+        String userToJson = gson.toJson(loginUser);
+        stringRedisTemplate.opsForValue().set(USER_LOGIN_STATE + loginUser.getId(), userToJson
+                , JwtUtils.EXPIRE, TimeUnit.MILLISECONDS);
+        return this.updateById(user);
+    }
+
     private UserDevKeyVO genKey(String userAccount) {
         String accessKey = DigestUtil.md5Hex(SALT + userAccount + RandomUtil.randomNumbers(5));
         String secretKey = DigestUtil.md5Hex(SALT + userAccount + RandomUtil.randomNumbers(8));

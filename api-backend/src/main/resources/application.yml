@@ -131,3 +131,15 @@ dubbo:
     address: nacos://localhost:8848
   consumer:
     check: false
+
+# 二个配置是关于qiniucloud的凭证
+qiniuclould:
+  config:
+    accessKey: 1sD7nDU97xKs3t84G9CIEXah_jtfkCEA0o2kxo3u
+    secretKey: PA-bhJ7l0UO3daKCq44tABcPtALs1T7GoN4EedVR
+    #域名
+    domain: sck5nhwnl.hn-bkt.clouddn.com
+    #存储空间
+    bucket: huang-api
+    #存活时间（秒） 一年：315360000
+    deadline: 315360000
