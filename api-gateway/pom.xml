@@ -68,6 +68,13 @@
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
 
+        <!--谷歌的Ratelimter限流组件-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>23.0</version>
+        </dependency>
+
         <!--自定义的远端调用公共接口-->
         <dependency>
             <groupId>com.anyan</groupId>

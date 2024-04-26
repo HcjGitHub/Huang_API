@@ -4,6 +4,7 @@ import cn.hutool.core.text.AntPathMatcher;
 import com.anyan.apicommon.common.ErrorCode;
 import com.anyan.apicommon.exception.BusinessException;
 import com.anyan.apicommon.utils.JwtUtils;
+import com.google.common.util.concurrent.RateLimiter;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
+import javax.annotation.Resource;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
@@ -31,6 +33,9 @@ import java.util.stream.Collectors;
 @Slf4j
 public class LoginGlobalFilter implements GlobalFilter, Ordered {
 
+    @Resource
+    private RateLimiter rateLimiter;
+
     //不需要用户登录路径
     public static final List<String> NOT_LOGIN_PATH = Arrays.asList(
             "/api/user/login", "/api/user/email/login", "/api/user/register", "/api/user/email/register", "/api/user/sendSMSCode",
@@ -43,6 +48,12 @@ public class LoginGlobalFilter implements GlobalFilter, Ordered {
         ServerHttpRequest request = exchange.getRequest();
         ServerHttpResponse response = exchange.getResponse();
         HttpHeaders headers = request.getHeaders();
+
+        //限流过滤
+        if (!rateLimiter.tryAcquire()) {
+            log.error("请求太频繁了，被限流了!!!");
+            throw new BusinessException(ErrorCode.TOO_MANY_REQUESTS);
+        }
 
         //请求日志
         log.info("全局登录验证请求URI:" + request.getURI());
