@@ -1,3 +1,0 @@
-#Dubbo Registry Cache
-#Thu Apr 25 17:49:22 CST 2024
-com.anyan.apicommon.service.ApiOrderService=dubbo\://192.168.209.1\:20883/com.anyan.apicommon.service.ApiOrderService?anyhost\=true&application\=huangapi-rpc-nacos&background\=false&category\=providers&deprecated\=false&dubbo\=2.0.2&dynamic\=true&generic\=false&interface\=com.anyan.apicommon.service.ApiOrderService&methods\=listTopInterfaceInfoBuy&path\=com.anyan.apicommon.service.ApiOrderService&pid\=23384&protocol\=dubbo&release\=3.0.9&service-name-mapping\=true&side\=provider&timestamp\=1714038560589

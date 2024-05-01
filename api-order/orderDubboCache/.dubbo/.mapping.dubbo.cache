@@ -1,3 +1,0 @@
-#Dubbo cache
-#Thu Apr 25 19:05:18 CST 2024
-com.anyan.apicommon.service.ApiBackendService=["huangapi-rpc-nacos","huangapi-backkend-nacos"]
